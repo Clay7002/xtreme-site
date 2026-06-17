@@ -3,18 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #161719;
-  --charcoal: #14171c;
-  --navy: #111d2b;
-  --panel: #f6f7f8;
-  --panel-warm: #fbf7f0;
-  --line: #dfe3e8;
-  --muted: #5f6875;
-  --red: #d7382d;
-  --red-dark: #ad251c;
-  --orange: #f26a21;
-  --gold: #f2b84b;
-  --green: #2f7668;
-  --steel: #6b7b8d;
+  --charcoal: #080a0f;
+  --navy: #0a1d33;
+  --panel: #f4f7fa;
+  --panel-warm: #eef2f6;
+  --line: #d7dde5;
+  --muted: #5b6673;
+  --red: #1d6fc7;
+  --red-dark: #0f4f91;
+  --orange: #2f9bff;
+  --gold: #c9d1db;
+  --green: #6f7f90;
+  --steel: #9aa8b7;
   --white: #ffffff;
 }
 
@@ -178,12 +178,12 @@ svg {
 
 .button-primary {
   background: var(--orange);
-  color: #111111;
-  box-shadow: 0 14px 34px rgba(242, 106, 33, 0.24);
+  color: #ffffff;
+  box-shadow: 0 14px 34px rgba(47, 155, 255, 0.24);
 }
 
 .button-primary:hover {
-  background: #ff7d31;
+  background: #58b2ff;
 }
 
 .button-secondary {
@@ -452,7 +452,7 @@ svg {
   background: var(--orange);
   box-shadow:
     16px 15px 0 var(--gold),
-    -14px 24px 0 rgba(242, 106, 33, 0.7);
+    -14px 24px 0 rgba(47, 155, 255, 0.7);
 }
 
 .trust-strip {
@@ -502,7 +502,7 @@ svg {
 
 .dark-section {
   background:
-    linear-gradient(135deg, rgba(215, 56, 45, 0.18), transparent 34%),
+    linear-gradient(135deg, rgba(47, 155, 255, 0.18), transparent 34%),
     var(--charcoal);
   color: var(--white);
 }
@@ -702,7 +702,7 @@ svg {
 
 .before-panel {
   background:
-    linear-gradient(160deg, rgba(215, 56, 45, 0.22), transparent 58%),
+    linear-gradient(160deg, rgba(29, 111, 199, 0.24), transparent 58%),
     #29323c;
 }
 
@@ -862,7 +862,7 @@ svg {
 
 .final-cta {
   background:
-    linear-gradient(135deg, rgba(242, 106, 33, 0.24), transparent 34%),
+    linear-gradient(135deg, rgba(47, 155, 255, 0.24), transparent 34%),
     var(--navy);
   color: var(--white);
   padding: 74px 0;
@@ -885,7 +885,7 @@ svg {
 
 .inner-hero {
   background:
-    linear-gradient(135deg, rgba(215, 56, 45, 0.2), transparent 35%),
+    linear-gradient(135deg, rgba(47, 155, 255, 0.2), transparent 35%),
     var(--navy);
   color: var(--white);
 }
@@ -971,7 +971,7 @@ svg {
 .estimate-form select:focus,
 .estimate-form textarea:focus {
   border-color: var(--orange);
-  outline: 3px solid rgba(242, 106, 33, 0.18);
+  outline: 3px solid rgba(47, 155, 255, 0.18);
 }
 
 .form-note {
