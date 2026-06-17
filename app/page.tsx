@@ -21,14 +21,16 @@ export default function Home() {
         <HeroSection />
         <TrustBadges />
 
+        <InsuranceSection />
+
         <section className="section">
           <div className="container">
             <SectionIntro
-              eyebrow="Auto body repair Euless TX"
-              title="Collision repair, paint, dents, hail, and insurance help"
-              text="Customers can quickly understand the shop's core services, request an estimate, and find the next step after an accident or storm."
+              eyebrow="Auto body repair Carrollton TX"
+              title="Full-service collision repair for North Texas drivers"
+              text="Customers can quickly understand the shop's core services, request a free estimate, and find the next step after an accident, hail storm, or insurance claim."
             />
-            <ServicesGrid limit={8} />
+            <ServicesGrid />
           </div>
         </section>
 
@@ -42,8 +44,6 @@ export default function Home() {
             <ProcessPreview />
           </div>
         </section>
-
-        <InsuranceSection />
 
         <section className="section">
           <div className="container">

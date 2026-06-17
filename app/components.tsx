@@ -69,7 +69,7 @@ function Header() {
           <span className="brand-mark">X</span>
           <span>
             <strong>{siteInfo.name}</strong>
-            <small>Euless, Texas</small>
+            <small>{siteInfo.city}, {siteInfo.region}</small>
           </span>
         </Link>
         <nav className="nav-links" aria-label="Main navigation">
@@ -79,7 +79,7 @@ function Header() {
             </Link>
           ))}
         </nav>
-        <ButtonLink href="/contact">Get an Estimate</ButtonLink>
+        <ButtonLink href="/contact">Get a Free Estimate</ButtonLink>
       </div>
     </header>
   );
@@ -94,24 +94,25 @@ export function Footer() {
             <span className="brand-mark">X</span>
             <span>
               <strong>{siteInfo.name}</strong>
-              <small>Collision repair in Euless, TX</small>
+              <small>Collision repair in {siteInfo.city}, TX</small>
             </span>
           </Link>
           <p>
-            A professional, local body shop website structure built for estimate
-            requests, insurance claim support, repair process clarity, and real
-            Google reviews once added.
+            5-Star collision repair in North Texas with estimate requests,
+            insurance claim support, repair process clarity, and space for real
+            Google reviews.
           </p>
           <p className="footer-note">
-            Serving Euless and nearby Bedford, Irving, Arlington, Hurst,
-            Grapevine, Fort Worth, and the Mid-Cities.
+            Serving {nearbyAreas.join(", ")}.
           </p>
         </section>
 
         <section>
           <h2>Business Info</h2>
           <ul className="footer-list">
-            <li>Phone: {siteInfo.phoneLabel}</li>
+            <li>
+              Phone: <a href={siteInfo.phoneHref}>{siteInfo.phoneLabel}</a>
+            </li>
             <li>Address: {siteInfo.addressLabel}</li>
             <li>Hours: {siteInfo.hoursLabel}</li>
             <li>Email: {siteInfo.emailLabel}</li>
@@ -144,11 +145,16 @@ export function Footer() {
       <div className="container footer-map-row">
         <div className="map-placeholder" aria-label="Map placeholder">
           <strong>Map placeholder</strong>
-          <span>Add the verified Google Maps embed for the Euless shop here.</span>
+          <span>
+            Add the verified Google Maps embed for {siteInfo.shortAddressLabel}.
+          </span>
+          <Link className="text-link" href={siteInfo.mapsHref}>
+            Get directions
+          </Link>
         </div>
         <p className="copyright">
-          Copyright {new Date().getFullYear()} {siteInfo.name}. Replace
-          placeholders with verified business details before launch.
+          Copyright {new Date().getFullYear()} {siteInfo.name}. Contact details
+          shown from the provided existing-site information.
         </p>
       </div>
     </footer>
@@ -162,23 +168,24 @@ export function HeroSection() {
         <ShopVisual />
       </div>
       <div className="container hero-content">
-        <p className="eyebrow">Collision repair Euless TX</p>
-        <h1>Euless&apos; Trusted Collision Repair Experts</h1>
+        <p className="eyebrow">Collision repair Carrollton TX</p>
+        <h1>5-Star Collision Repair in North Texas</h1>
         <p className="hero-subheadline">
-          Xtreme Collision Repair restores your vehicle with quality
-          workmanship, clear communication, and help through the insurance claim
-          process.
+          Xtreme Collision Repair helps restore your vehicle with quality
+          workmanship, clear communication, and insurance-claim support.
+          Serving Carrollton, Addison, Dallas, Plano, Frisco, Richardson and
+          surrounding areas.
         </p>
         <div className="hero-actions">
           <ButtonLink href="/contact">Get a Free Estimate</ButtonLink>
           <ButtonLink href={siteInfo.phoneHref} variant="secondary">
-            Call Now
+            Call {siteInfo.phoneLabel}
           </ButtonLink>
         </div>
         <div className="hero-meta">
-          <span>Auto body repair Euless TX</span>
-          <span>Insurance collision repair help</span>
-          <span>Hail damage repair planning</span>
+          <span>Auto body repair Carrollton TX</span>
+          <span>Works with all major insurance companies</span>
+          <span>North Texas hail and collision repair</span>
         </div>
       </div>
     </section>
@@ -248,14 +255,14 @@ export function ServicesGrid({ limit }: { limit?: number }) {
   return (
     <div className="service-grid">
       {items.map((service) => (
-        <article className="service-card" key={service.title}>
+        <article className="service-card" id={service.slug} key={service.title}>
           <div>
             <p className="service-seo">{service.seo}</p>
             <h3>{service.title}</h3>
             <p>{service.summary}</p>
           </div>
           <Link className="text-link" href={service.href}>
-            View service
+            Learn More
           </Link>
         </article>
       ))}
@@ -285,19 +292,25 @@ export function InsuranceSection() {
       <div className="container split-section">
         <div>
           <p className="eyebrow">Insurance claim assistance</p>
-          <h2>Help through the repair and claim process</h2>
+          <h2>We work with all major insurance companies</h2>
           <p>
-            After an accident, customers often need help understanding the
-            estimate, claim number, photos, supplements, and next steps. This
-            section is written to be clear and useful without promising insurer
-            outcomes.
+            After an accident, Xtreme Collision Repair helps customers review
+            claim details, understand estimates and supplements, and advocate
+            for a proper repair plan that returns the vehicle to pre-accident
+            condition.
           </p>
+          <div className="hero-actions compact-actions">
+            <ButtonLink href="/contact">Get a Free Estimate</ButtonLink>
+            <ButtonLink href={siteInfo.phoneHref} variant="secondary">
+              Call {siteInfo.phoneLabel}
+            </ButtonLink>
+          </div>
         </div>
         <div className="check-list">
-          <span>Review claim and estimate details</span>
-          <span>Help organize photos and damage notes</span>
-          <span>Explain supplements if hidden damage is found</span>
-          <span>Keep communication clear from drop off to delivery</span>
+          <span>All major insurance companies</span>
+          <span>Estimate and supplement support</span>
+          <span>Damage documentation and photo review</span>
+          <span>Clear communication from estimate to delivery</span>
         </div>
       </div>
     </section>
@@ -351,11 +364,11 @@ export function ReviewsSection() {
     <div className="reviews-block" id="reviews">
       <div className="review-summary">
         <p className="eyebrow">Google reviews</p>
-        <h2>Real customer reviews belong here</h2>
+        <h2>Google reviews and testimonials</h2>
         <p>
-          This section is ready for verified Google review excerpts, star rating
-          data, and profile links. No fake reviews or invented customer names
-          are included.
+          This section is ready for embedded Google reviews or approved
+          customer testimonials. No fake reviews or invented customer names are
+          included.
         </p>
         <div className="review-actions">
           <ButtonLink href={siteInfo.googleReviewsHref}>Read More Reviews on Google</ButtonLink>
@@ -386,20 +399,20 @@ export function ReviewsSection() {
 export function WhyChooseSection() {
   const reasons = [
     {
-      title: "Clear communication",
-      text: "Customers can see what to expect before requesting an estimate and during the repair process.",
+      title: "Lifetime limited warranty",
+      text: "A concise promise from the existing site, presented clearly near the top and reinforced before customers request an estimate.",
     },
     {
-      title: "Insurance-aware workflow",
-      text: "The site explains claim review, documentation, and supplements in plain language.",
+      title: "State of the art facility & equipment",
+      text: "The design highlights the shop's facility and equipment as a trust signal without crowding the conversion path.",
     },
     {
-      title: "Local search focus",
-      text: "Copy naturally supports body shop Euless TX, auto body repair Euless TX, and related service searches.",
+      title: "Factory-trained technicians",
+      text: "Customers see technician expertise called out clearly alongside repair quality, communication, and claim support.",
     },
     {
-      title: "Built for real proof",
-      text: "Gallery, review, and map modules are ready for actual shop photos and verified Google content.",
+      title: "Insurance claim help",
+      text: "The site keeps claim assistance front and center for customers who need guidance after an accident.",
     },
   ];
 
@@ -434,16 +447,16 @@ export function FinalCTA() {
       <div className="container final-cta-inner">
         <div>
           <p className="eyebrow">Ready for a clear next step?</p>
-          <h2>Request a collision repair estimate in Euless, TX.</h2>
+          <h2>Get a free collision repair estimate in Carrollton, TX.</h2>
           <p>
-            Add the real shop phone, address, and form destination before launch,
-            then use this section to turn visitors into estimate requests.
+            Call {siteInfo.phoneLabel} or send vehicle details, photos, and
+            insurance information. We&apos;ll get back to you within 24-48 hours.
           </p>
         </div>
         <div className="cta-actions">
           <ButtonLink href="/contact">Get a Free Estimate</ButtonLink>
           <ButtonLink href={siteInfo.phoneHref} variant="secondary">
-            Call Now
+            Call {siteInfo.phoneLabel}
           </ButtonLink>
         </div>
       </div>
@@ -509,11 +522,12 @@ export function EstimateForm() {
         </label>
       </div>
       <p className="form-note">
-        Form routing placeholder: connect this form to the shop email, CRM, or
-        estimate intake tool before publishing for customers.
+        We&apos;ll get back to you within 24-48 hours. Form routing placeholder:
+        connect this form to the shop email, CRM, or estimate intake tool before
+        publishing for customers.
       </p>
       <button className="button button-primary" type="submit">
-        Submit Estimate Request
+        Get a Free Estimate
       </button>
     </form>
   );
@@ -547,8 +561,8 @@ export function ServiceDetail({ service }: { service: Service }) {
         <div className="container service-detail-layout">
           <div>
             <SectionIntro
-              title={`${service.title} in Euless, TX`}
-              text={`This page is structured for customers searching for ${service.seo.toLowerCase()} and related auto body repair support in Bedford, Irving, Arlington, Hurst, Grapevine, Fort Worth, and the Mid-Cities.`}
+              title={`${service.title} in Carrollton, TX`}
+              text={`This page is structured for customers searching for ${service.seo.toLowerCase()} and related auto body repair support in ${nearbyAreas.join(", ")}.`}
             />
             <div className="check-list light-list">
               {service.bullets.map((bullet) => (

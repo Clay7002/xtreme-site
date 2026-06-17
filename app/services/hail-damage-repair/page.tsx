@@ -1,7 +1,9 @@
 import { PageShell, ServiceDetail } from "../../components";
 import { services } from "../../site-data";
 
-const service = services.find((item) => item.title === "Hail Damage Repair");
+const service = services.find(
+  (item) => item.slug === "hail-damage-paintless-dent-repair",
+);
 
 export default function HailDamageRepairPage() {
   if (!service) {

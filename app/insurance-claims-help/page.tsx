@@ -12,16 +12,16 @@ export default function InsuranceClaimsHelpPage() {
     <PageShell>
       <main>
         <InnerHero
-          eyebrow="Insurance collision repair Euless TX"
+          eyebrow="Insurance collision repair Carrollton TX"
           title="Insurance claim help after a collision"
-          text="A customer-friendly page for explaining claim numbers, insurance estimates, damage photos, supplements, and next steps without promising insurer decisions."
+          text="A customer-friendly page explaining claim numbers, insurance estimates, damage photos, supplements, and next steps with all major insurance companies."
         />
         <section className="section">
           <div className="container split-section split-section-light">
             <div>
               <SectionIntro
-                title="Make the repair claim process easier to understand"
-                text="Customers can bring their claim number, insurer estimate, damage photos, and vehicle information. The shop can review the information and explain what should happen next."
+                title="Claim help that belongs front and center"
+                text="Customers can bring their claim number, insurer estimate, damage photos, and vehicle information. The shop can review the information, explain supplements, and advocate for a proper repair plan."
               />
               <AreasLine />
             </div>

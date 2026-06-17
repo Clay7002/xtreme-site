@@ -19,9 +19,9 @@ export default function RepairProcessPage() {
         <section className="section">
           <div className="container">
             <SectionIntro
-              eyebrow="Seven-step workflow"
+              eyebrow="Repair workflow"
               title="Know what happens next"
-              text="The process is written to be transparent without promising exact repair times before the vehicle is reviewed."
+              text="The process is written to explain estimate review, insurance coordination, repairs, quality checks, and final delivery without promising exact repair times before the vehicle is reviewed."
             />
             <ProcessPreview full />
           </div>

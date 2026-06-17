@@ -12,9 +12,9 @@ export default function ContactPage() {
     <PageShell>
       <main>
         <InnerHero
-          eyebrow="Contact / Get an Estimate"
+          eyebrow="Contact / Get a Free Estimate"
           title="Request a free collision repair estimate"
-          text="Share vehicle details, insurance information, claim number if available, and damage notes so the shop can review the request."
+          text="Share your phone number, vehicle year, make, model, insurance information, and damage notes. We'll get back to you within 24-48 hours."
         />
         <section className="section">
           <div className="container contact-layout">
@@ -22,14 +22,17 @@ export default function ContactPage() {
               <SectionIntro
                 eyebrow="Estimate request"
                 title="Tell us what happened"
-                text="The form includes the fields customers expect after a collision or hail storm. Connect it to the preferred intake tool before going live."
+                text="The form improves lead quality by collecting contact details, vehicle information, insurance details, and a brief description of the damage."
               />
               <EstimateForm />
             </div>
             <aside className="contact-panel">
               <h2>Business information</h2>
               <p>
-                <strong>Phone:</strong> {siteInfo.phoneLabel}
+                <strong>Phone:</strong>{" "}
+                <a className="text-link" href={siteInfo.phoneHref}>
+                  {siteInfo.phoneLabel}
+                </a>
               </p>
               <p>
                 <strong>Address:</strong> {siteInfo.addressLabel}
@@ -42,7 +45,10 @@ export default function ContactPage() {
               </p>
               <div className="map-placeholder small-map" aria-label="Map placeholder">
                 <strong>Map placeholder</strong>
-                <span>Add verified Google Maps embed.</span>
+                <span>Add verified Google Maps embed for the Carrollton shop.</span>
+                <a className="text-link" href={siteInfo.mapsHref}>
+                  Get directions
+                </a>
               </div>
             </aside>
           </div>

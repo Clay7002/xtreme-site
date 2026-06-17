@@ -13,16 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Xtreme Collision Repair | Collision Repair in Euless, TX",
+  title: "Xtreme Collision Repair | Collision Repair in Carrollton, TX",
   description:
-    "Professional collision repair, auto body repair, hail damage repair, paint refinishing, and insurance claim help in Euless, Texas.",
+    "5-Star collision repair in North Texas for Carrollton, Addison, Dallas, Plano, Frisco, Richardson and surrounding areas.",
   keywords: [
-    "collision repair Euless TX",
-    "auto body repair Euless TX",
-    "body shop Euless TX",
-    "hail damage repair Euless TX",
-    "insurance collision repair Euless TX",
-    "auto paint repair Euless TX",
+    "collision repair Carrollton TX",
+    "auto body repair Carrollton TX",
+    "body shop Carrollton TX",
+    "hail damage repair Carrollton TX",
+    "insurance collision repair Carrollton TX",
+    "auto paint repair Carrollton TX",
+    "collision repair North Texas",
   ],
   icons: {
     icon: "/favicon.svg",

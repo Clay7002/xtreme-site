@@ -14,8 +14,8 @@ export default function AboutPage() {
       <main>
         <InnerHero
           eyebrow="About Xtreme Collision Repair"
-          title="A local Euless body shop focused on clarity and confidence"
-          text="This page introduces the shop in a professional, customer-friendly way while leaving room for verified owner history, team photos, equipment details, and real credentials once provided."
+          title="A local Carrollton body shop focused on clarity and confidence"
+          text="This page introduces the shop with the North Texas positioning, value props, and proof points customers look for before choosing a collision repair center."
         />
         <TrustBadges />
         <section className="section">
@@ -26,7 +26,7 @@ export default function AboutPage() {
             />
             <p>
               Xtreme Collision Repair is positioned as a trustworthy collision
-              repair and auto body repair shop in Euless, Texas. The website
+              repair and auto body repair shop in Carrollton, Texas. The website
               keeps claims grounded and avoids listing certifications, warranty
               terms, or repair-time promises until those details are confirmed by
               the business.

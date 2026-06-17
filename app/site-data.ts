@@ -1,5 +1,6 @@
 export type Service = {
   title: string;
+  slug: string;
   href: string;
   summary: string;
   intro: string;
@@ -9,15 +10,18 @@ export type Service = {
 
 export const siteInfo = {
   name: "Xtreme Collision Repair",
-  city: "Euless",
+  city: "Carrollton",
   region: "Texas",
-  phoneLabel: "Add phone number",
-  phoneHref: "#contact",
-  addressLabel: "Euless, TX address placeholder",
-  hoursLabel: "Hours placeholder",
+  phoneLabel: "(972) 233-0207",
+  phoneHref: "tel:+19722330207",
+  addressLabel: "2025 Midway Road, Suite E, Carrollton, TX 75006",
+  shortAddressLabel: "2025 Midway Rd, Suite E",
+  hoursLabel: "Mon-Thu: 8:00 am - 5:30 pm; Fri: partial day; Sat-Sun: Closed",
   emailLabel: "Add email address",
   googleReviewsHref: "#reviews",
   googleLeaveReviewHref: "#reviews",
+  mapsHref:
+    "https://www.google.com/maps/search/?api=1&query=2025%20Midway%20Road%20Suite%20E%20Carrollton%20TX%2075006",
 };
 
 export const navLinks = [
@@ -31,173 +35,244 @@ export const navLinks = [
 ];
 
 export const trustBadges = [
-  "Local Euless body shop",
-  "Insurance claim guidance",
-  "Clear repair updates",
-  "Quality check before delivery",
+  "Lifetime limited warranty",
+  "State of the art facility & equipment",
+  "Expert, factory-trained technicians",
+  "Works with all major insurance companies",
 ];
 
 export const nearbyAreas = [
-  "Bedford",
-  "Irving",
-  "Arlington",
-  "Hurst",
-  "Grapevine",
-  "Fort Worth",
-  "the Mid-Cities",
+  "Carrollton",
+  "Addison",
+  "Dallas",
+  "Plano",
+  "Frisco",
+  "Richardson",
+  "surrounding North Texas areas",
 ];
+
+export const heroServiceArea =
+  "Serving Carrollton, Addison, Dallas, Plano, Frisco, Richardson and surrounding areas.";
 
 export const services: Service[] = [
   {
     title: "Collision Repair",
+    slug: "collision-repair",
     href: "/services/collision-repair",
     summary:
-      "Repair planning, body work, refinishing coordination, and final checks after a collision.",
+      "Complete collision repair for North Texas drivers, from damage review and repair planning to body work, refinishing coordination, quality checks, and final delivery.",
     intro:
-      "From minor impact damage to more involved collision repair, Xtreme Collision Repair helps Euless drivers understand the next step, document the damage, and move through the repair process with clear communication.",
+      "Xtreme Collision Repair helps customers in Carrollton and surrounding North Texas areas move from accident damage to a clear repair plan. The shop documents visible damage, coordinates insurance information, and focuses on restoring the vehicle with careful workmanship and communication.",
     bullets: [
       "Damage review and repair planning",
-      "Panel repair or replacement guidance",
-      "Refinish coordination for restored appearance",
+      "Body repair and refinishing coordination",
+      "Insurance estimate and supplement support",
       "Quality review before vehicle delivery",
     ],
-    seo: "Collision repair Euless TX",
+    seo: "Collision repair Carrollton TX",
   },
   {
-    title: "Auto Body Repair",
-    href: "/services",
-    summary:
-      "Dent, scratch, bumper, panel, and exterior repair support for daily drivers and family vehicles.",
-    intro:
-      "Auto body repair should feel straightforward. The shop can inspect visible and hidden damage, explain practical repair options, and help customers understand what needs attention.",
-    bullets: [
-      "Bumper and panel damage",
-      "Scratches, scuffs, and exterior blemishes",
-      "Door, fender, quarter panel, and hood repairs",
-      "Repair notes prepared for estimate review",
-    ],
-    seo: "Auto body repair Euless TX",
-  },
-  {
-    title: "Paint & Refinishing",
-    href: "/services/paint-refinishing",
-    summary:
-      "Color-focused refinishing support for repaired panels, scuffs, and paint damage.",
-    intro:
-      "Paint and refinishing work is planned around a clean finish and a consistent appearance. Xtreme Collision Repair can update this page with real paint system details, shop photos, and warranty information once confirmed.",
-    bullets: [
-      "Panel refinishing after body repair",
-      "Paint damage review",
-      "Surface preparation and finish planning",
-      "Final appearance inspection",
-    ],
-    seo: "Auto paint repair Euless TX",
-  },
-  {
-    title: "Hail Damage Repair",
+    title: "Hail Damage & Paintless Dent Repair",
+    slug: "hail-damage-paintless-dent-repair",
     href: "/services/hail-damage-repair",
     summary:
-      "Hail damage review, estimate support, and repair planning for North Texas storm damage.",
+      "North Texas hail can leave dozens of small dents across hoods, roofs, trunks, and side panels. This service focuses on careful damage mapping, photo documentation, and paintless dent repair evaluation when the paint surface is still intact.",
     intro:
-      "Texas storms can leave dents across hoods, roofs, trunks, and body panels. The shop can help document hail damage and coordinate repair planning with the insurance claim process.",
+      "Texas storm damage needs a careful inspection before repairs begin. Xtreme Collision Repair can review hail patterns, document affected panels, help with insurance paperwork, and recommend the right repair approach for the vehicle.",
     bullets: [
-      "Hail damage inspection",
-      "Photo documentation support",
-      "Insurance estimate review",
-      "Repair planning for affected panels",
+      "Hail damage inspection and documentation",
+      "Paintless dent repair evaluation",
+      "Insurance claim photo support",
+      "Panel-by-panel repair planning",
     ],
-    seo: "Hail damage repair Euless TX",
+    seo: "Hail damage repair Carrollton TX",
   },
   {
-    title: "Dent Repair",
-    href: "/services",
+    title: "Dents & Scratches Repair",
+    slug: "dents-scratches-repair",
+    href: "/services#dents-scratches-repair",
     summary:
-      "Repair options for dents, dings, creases, and exterior impact marks.",
+      "Door dings, parking-lot scrapes, bumper scuffs, and deeper scratches are reviewed for the most practical repair path, whether that means paint-safe dent work, surface prep, or refinishing.",
     intro:
-      "Dent repair starts with a careful look at panel condition, paint condition, and access. The shop can recommend the practical repair path once the vehicle is reviewed.",
+      "Small exterior damage can still affect a vehicle's appearance and value. The shop reviews dent depth, paint condition, panel access, and finish needs before recommending the repair plan.",
     bullets: [
-      "Door dings and small dents",
-      "Creases and panel impacts",
-      "Painted panel repair planning",
-      "Estimate notes for approval",
+      "Door ding and crease review",
+      "Scratch depth and paint condition checks",
+      "Bumper, fender, and panel scuff repair",
+      "Refinish planning when paint is broken",
     ],
-    seo: "Body shop Euless TX",
+    seo: "Dents and scratches repair Carrollton TX",
   },
   {
-    title: "Frame / Structural Repair",
-    href: "/services",
-    summary:
-      "Structural damage review and repair coordination when collision impact goes beyond exterior panels.",
-    intro:
-      "When damage may involve structural areas, the repair plan should be documented carefully. This page avoids claiming unverified equipment or certifications and can be updated with confirmed shop capabilities.",
-    bullets: [
-      "Structural damage review",
-      "Repair plan documentation",
-      "Coordination with insurance estimates",
-      "Quality checks before delivery",
-    ],
-    seo: "Insurance collision repair Euless TX",
-  },
-  {
-    title: "Insurance Claim Assistance",
+    title: "Insurance Claims Assistance",
+    slug: "insurance-claims-assistance",
     href: "/insurance-claims-help",
     summary:
-      "Help understanding the estimate, claim number, photos, supplements, and next steps.",
+      "The shop works with all major insurance companies, reviews claim paperwork, explains estimates and supplements, and advocates for a proper repair plan to return the vehicle to pre-accident condition.",
     intro:
-      "Insurance paperwork can be confusing after a collision. Xtreme Collision Repair can help customers organize claim information, review estimate details, and understand what happens if hidden damage is found.",
+      "Insurance claims can be stressful after a collision. Xtreme Collision Repair helps customers organize claim numbers, insurer estimates, photos, supplements, and approvals so the repair process is easier to understand.",
     bullets: [
-      "Estimate and claim information review",
+      "Claim number and insurance company review",
+      "Estimate and supplement explanation",
       "Damage documentation support",
-      "Supplement explanation when needed",
-      "Clear next-step communication",
+      "Repair-plan advocacy through the claim process",
     ],
-    seo: "Insurance collision repair Euless TX",
+    seo: "Insurance collision repair Carrollton TX",
   },
   {
-    title: "ADAS Calibration Coordination",
-    href: "/services",
+    title: "Auto Frame Repair",
+    slug: "auto-frame-repair",
+    href: "/services#auto-frame-repair",
     summary:
-      "Coordination language for advanced driver assistance calibration when needed after repairs.",
+      "When an impact affects the vehicle's frame or structural alignment, the repair plan needs careful measuring, documentation, and correction before cosmetic work can be completed properly.",
     intro:
-      "Modern vehicles may require calibration after certain repairs. This page should be updated with the shop's confirmed calibration process and partners, if applicable.",
+      "Frame-related damage should be reviewed before repairs move forward. The shop can inspect structural concerns, document findings, and plan the repair sequence around safety, alignment, and proper panel fit.",
     bullets: [
-      "ADAS need review based on repair plan",
-      "Calibration coordination when applicable",
-      "Documentation for completed steps",
-      "Customer-friendly explanation of next steps",
+      "Structural damage review",
+      "Frame repair planning",
+      "Measurement documentation",
+      "Panel fit and alignment checks",
     ],
-    seo: "Collision repair Euless TX",
+    seo: "Auto frame repair Carrollton TX",
+  },
+  {
+    title: "Unibody Repair",
+    slug: "unibody-repair",
+    href: "/services#unibody-repair",
+    summary:
+      "Many modern vehicles rely on a unibody structure, so collision damage may affect integrated structural areas. This service emphasizes precise review, measuring, and repair planning for those connected sections.",
+    intro:
+      "Unibody repair requires attention to how panels, rails, and structural sections work together. Xtreme Collision Repair can review impact areas and plan repairs around proper structure and fit.",
+    bullets: [
+      "Unibody structure inspection",
+      "Repair sequence planning",
+      "Integrated panel and rail review",
+      "Quality checks before final delivery",
+    ],
+    seo: "Unibody repair Carrollton TX",
+  },
+  {
+    title: "Airbag Services",
+    slug: "airbag-services",
+    href: "/services#airbag-services",
+    summary:
+      "Collision events can involve airbags, sensors, restraints, and warning lights. This service gives customers a clear path for inspection and coordination of safety-system repairs when applicable.",
+    intro:
+      "Airbag and restraint systems should be handled carefully after a collision. The site avoids unsupported certification claims while clearly explaining that safety-system needs can be reviewed and coordinated as part of the repair plan.",
+    bullets: [
+      "Airbag warning light review",
+      "Restraint-system repair coordination",
+      "Post-collision safety-system planning",
+      "Documentation for completed steps",
+    ],
+    seo: "Airbag service Carrollton TX",
+  },
+  {
+    title: "Computerized Frame / Unibody Measuring",
+    slug: "computerized-frame-unibody-measuring",
+    href: "/services#computerized-frame-unibody-measuring",
+    summary:
+      "Computerized measuring helps compare structural points against specifications, giving the repair team better information when hidden frame or unibody damage is suspected.",
+    intro:
+      "Measurement data helps support better repair decisions. Xtreme Collision Repair can use measuring information to document structural condition and guide frame or unibody correction when needed.",
+    bullets: [
+      "Computerized structural measuring",
+      "Frame and unibody point checks",
+      "Repair documentation support",
+      "Data-informed quality review",
+    ],
+    seo: "Computerized frame measuring Carrollton TX",
+  },
+  {
+    title: "Electrical System Repair",
+    slug: "electrical-system-repair",
+    href: "/services#electrical-system-repair",
+    summary:
+      "A collision can affect lighting, sensors, wiring, battery connections, and warning indicators. Electrical repair support focuses on identifying affected systems and coordinating the right repair steps.",
+    intro:
+      "Modern vehicles include many electrical components around bumpers, panels, and safety systems. The shop can review collision-related electrical issues and coordinate repairs within the broader body repair plan.",
+    bullets: [
+      "Lighting and sensor issue review",
+      "Collision-related wiring checks",
+      "Warning indicator documentation",
+      "Electrical repair coordination",
+    ],
+    seo: "Collision electrical repair Carrollton TX",
+  },
+  {
+    title: "Steering & Suspension",
+    slug: "steering-suspension",
+    href: "/services#steering-suspension",
+    summary:
+      "Impacts near wheels or suspension points can affect how a vehicle tracks, handles, or sits. This service highlights steering and suspension review as part of complete collision repair planning.",
+    intro:
+      "If a vehicle pulls, rides unevenly, or has wheel-area collision damage, steering and suspension concerns should be reviewed before delivery. Xtreme Collision Repair can coordinate the needed inspection and repair steps.",
+    bullets: [
+      "Wheel-area impact review",
+      "Steering and suspension concern checks",
+      "Alignment-related repair planning",
+      "Road-readiness quality review",
+    ],
+    seo: "Steering and suspension repair Carrollton TX",
+  },
+  {
+    title: "Rental Car Scheduling",
+    slug: "rental-car-scheduling",
+    href: "/services#rental-car-scheduling",
+    summary:
+      "Customers often need transportation while repairs are underway. Rental scheduling support helps reduce friction by coordinating next steps around insurance coverage, drop-off timing, and repair status.",
+    intro:
+      "Repair logistics matter. Xtreme Collision Repair can help customers understand rental-car next steps and coordinate scheduling details when a rental is part of the insurance claim or customer plan.",
+    bullets: [
+      "Rental timing guidance",
+      "Insurance rental coverage coordination",
+      "Drop-off and pickup planning",
+      "Customer communication during repairs",
+    ],
+    seo: "Collision rental car scheduling Carrollton TX",
+  },
+  {
+    title: "Color Matching & Refinishing",
+    slug: "color-matching-refinishing",
+    href: "/services/paint-refinishing",
+    summary:
+      "A quality repair should look consistent when finished. Color matching and refinishing focus on surface preparation, paint blend planning, finish quality, and final appearance review.",
+    intro:
+      "Paint and refinishing work is planned around a clean finish and a consistent appearance. Xtreme Collision Repair can support repaired panels with color-focused refinishing and a final visual inspection.",
+    bullets: [
+      "Color matching and blend planning",
+      "Panel surface preparation",
+      "Paint refinishing after body repair",
+      "Final appearance inspection",
+    ],
+    seo: "Auto paint repair Carrollton TX",
   },
 ];
 
 export const processSteps = [
   {
-    title: "Request an Estimate",
-    text: "Share contact details, vehicle information, damage notes, and photos if available.",
+    title: "Estimate",
+    text: "Share vehicle details, damage notes, insurance information, and photos so the shop can review the repair need.",
   },
   {
-    title: "Insurance Review",
-    text: "The claim, estimate, and coverage details are reviewed so expectations are clear.",
+    title: "Insurance Coordination",
+    text: "The claim, estimate, supplement needs, and insurer communication are organized before repairs move forward.",
   },
   {
-    title: "Drop Off Vehicle",
-    text: "Once approved and scheduled, the vehicle is received and checked in for repair planning.",
+    title: "Drop Off & Repair Plan",
+    text: "The vehicle is checked in, inspected more closely, and planned around parts, structure, paint, and safety-system needs.",
   },
   {
-    title: "Repair Planning",
-    text: "Visible damage is reviewed and the plan is adjusted if hidden damage is discovered.",
+    title: "Repairs",
+    text: "Body, frame, unibody, electrical, refinishing, and related repairs are completed according to the approved plan.",
   },
   {
-    title: "Repairs Begin",
-    text: "Body repair, refinishing coordination, and related work move forward according to the plan.",
+    title: "Quality Checks",
+    text: "Completed work is reviewed for fit, finish, function, and final delivery readiness.",
   },
   {
-    title: "Quality Check",
-    text: "Completed work is reviewed before the vehicle is prepared for pickup.",
-  },
-  {
-    title: "Vehicle Delivery",
-    text: "You receive your vehicle back with final notes and any next-step information.",
+    title: "Final Delivery",
+    text: "The customer receives the vehicle back with final notes, warranty expectations, and any follow-up information.",
   },
 ];
 
@@ -205,59 +280,59 @@ export const faqs = [
   {
     question: "Do I need an appointment for an estimate?",
     answer:
-      "The site is set up for estimate requests first. Add the shop's real walk-in and appointment policy here once confirmed.",
+      "Requesting an estimate first is the best starting point. Call (972) 233-0207 or use the form so the shop can review your vehicle details and follow up within 24-48 hours.",
   },
   {
-    question: "Can Xtreme Collision Repair help with insurance claims?",
+    question: "Does Xtreme Collision Repair work with insurance companies?",
     answer:
-      "Yes. The site positions the shop to help customers review claim information, damage documentation, estimates, and next steps without making promises about insurer decisions.",
+      "Yes. The site now highlights that the shop works with all major insurance companies, helps review claim information, explains estimates and supplements, and advocates for a proper repair plan.",
   },
   {
     question: "How long will repairs take?",
     answer:
-      "Repair time depends on damage, parts, insurer approval, and refinishing needs. The copy avoids overpromising and encourages customers to request an estimate for a clearer plan.",
+      "Repair time depends on damage severity, parts, insurance approvals, refinishing needs, and hidden damage. The shop can provide clearer expectations after reviewing the vehicle and claim details.",
   },
   {
     question: "Can I upload photos of the damage?",
     answer:
-      "The form includes an upload placeholder. A live form handler can be connected later for real photo uploads and estimate routing.",
+      "The form includes a photo upload placeholder. A live form handler can be connected later for real photo uploads and estimate routing.",
   },
   {
-    question: "Do you serve drivers outside Euless?",
+    question: "What areas do you serve?",
     answer:
-      "The site naturally mentions nearby areas including Bedford, Irving, Arlington, Hurst, Grapevine, Fort Worth, and the Mid-Cities.",
+      "Xtreme Collision Repair serves Carrollton, Addison, Dallas, Plano, Frisco, Richardson, and surrounding North Texas areas.",
   },
 ];
 
 export const reviewPlaceholders = [
   {
-    label: "Google review placeholder",
-    body: "Real Google review excerpt will be added here after the business approves the exact text.",
+    label: "Verified Google review",
+    body: "Add a real Google review excerpt here once the business approves the exact text and profile link.",
   },
   {
-    label: "Google review placeholder",
-    body: "Use this card for a customer comment about communication, repair quality, or insurance help once verified.",
+    label: "Customer testimonial",
+    body: "Use this card for a verified comment about repair quality, communication, or insurance-claim help.",
   },
   {
-    label: "Google review placeholder",
-    body: "Add another verified review here. No fake ratings or invented customer stories are included.",
+    label: "Before-and-after feedback",
+    body: "Add another approved customer quote here. No fake reviews or invented customer names are included.",
   },
 ];
 
 export const galleryItems = [
   {
-    title: "Front bumper repair placeholder",
-    damage: "Replace with a real before photo",
-    finished: "Replace with a matching after photo",
+    title: "Collision repair before & after",
+    damage: "Replace with the real damage photo",
+    finished: "Replace with the matching delivery photo",
   },
   {
-    title: "Door and quarter panel placeholder",
-    damage: "Show documented damage",
-    finished: "Show completed repair",
+    title: "Hail damage repair example",
+    damage: "Add storm-damage documentation",
+    finished: "Add the completed repair photo",
   },
   {
-    title: "Hail damage placeholder",
-    damage: "Add storm damage photos",
-    finished: "Add final delivery photos",
+    title: "Paint and color match example",
+    damage: "Show the damaged or repaired panel before refinishing",
+    finished: "Show the final color-matched finish",
   },
 ];

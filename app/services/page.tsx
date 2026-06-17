@@ -13,15 +13,15 @@ export default function ServicesPage() {
       <main>
         <InnerHero
           eyebrow="Services"
-          title="Collision repair and auto body services in Euless, TX"
-          text="Explore the core repair services customers search for after an accident, hail storm, parking-lot dent, or paint damage."
+          title="Collision repair and auto body services in Carrollton, TX"
+          text="Explore the full service mix customers need after an accident, hail storm, parking-lot dent, insurance claim, or paint damage."
         />
         <section className="section">
           <div className="container">
             <SectionIntro
-              eyebrow="Body shop Euless TX"
-              title="Service pages built for clear decisions"
-              text="Each service card gives customers a practical starting point, then routes them toward an estimate request or a deeper page where needed."
+              eyebrow="Body shop Carrollton TX"
+              title="Core services with clear, unique descriptions"
+              text="Each service explains a specific repair need and includes a Learn More link so customers can move from research to a free estimate."
             />
             <ServicesGrid />
             <AreasLine />
