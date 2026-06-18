@@ -7,6 +7,12 @@ import {
   ServicesGrid,
 } from "../components";
 
+export const metadata = {
+  title: "Collision Repair Services in Carrollton, TX | Xtreme Collision Repair",
+  description:
+    "Collision repair, hail damage repair, paintless dent repair, frame repair, insurance claim help, and auto paint repair services in Carrollton, TX.",
+};
+
 export default function ServicesPage() {
   return (
     <PageShell>

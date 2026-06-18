@@ -14,7 +14,7 @@ export default function ContactPage() {
         <InnerHero
           eyebrow="Contact / Get a Free Estimate"
           title="Request a free collision repair estimate"
-          text="Share your phone number, vehicle year, make, model, insurance information, and damage notes. We'll get back to you within 24-48 hours."
+          text="Share your phone number, vehicle year, make, model, insurance information, and damage notes. We'll get back to you within 24-48 business hours."
         />
         <section className="section" id="location">
           <div className="container contact-layout">
@@ -30,13 +30,13 @@ export default function ContactPage() {
               <h2>Business information</h2>
               <p>
                 <strong>Phone:</strong>{" "}
-                <a className="text-link" href={siteInfo.phoneHref}>
+                <a className="text-link" data-track="phone:contact-panel" href={siteInfo.phoneHref}>
                   {siteInfo.phoneLabel}
                 </a>
               </p>
               <p>
                 <strong>Address:</strong>{" "}
-                <a className="text-link" href={siteInfo.mapsHref}>
+                <a className="text-link" data-track="directions:contact-panel" href={siteInfo.mapsHref}>
                   {siteInfo.addressLabel}
                 </a>
               </p>
@@ -54,7 +54,7 @@ export default function ContactPage() {
               <div className="map-placeholder small-map" aria-label="Map placeholder">
                 <strong>Google Map</strong>
                 <span>Add verified Google Maps embed for the Carrollton shop.</span>
-                <a className="text-link" href={siteInfo.mapsHref}>
+                <a className="text-link" data-track="directions:contact-map" href={siteInfo.mapsHref}>
                   Get directions
                 </a>
               </div>

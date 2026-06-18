@@ -1,4 +1,5 @@
 import {
+  ButtonLink,
   FAQSection,
   FinalCTA,
   InnerHero,
@@ -24,6 +25,9 @@ export default function RepairProcessPage() {
               text="The process is written to explain estimate review, insurance coordination, repairs, quality checks, and final delivery without promising exact repair times before the vehicle is reviewed."
             />
             <ProcessPreview full />
+            <div className="section-cta-row">
+              <ButtonLink href="/contact" track="estimate:repair-process">Ready to start? Get a Free Estimate</ButtonLink>
+            </div>
           </div>
         </section>
         <section className="section muted-section">

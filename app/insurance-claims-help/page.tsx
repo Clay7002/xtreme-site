@@ -13,15 +13,15 @@ export default function InsuranceClaimsHelpPage() {
       <main>
         <InnerHero
           eyebrow="Insurance collision repair Carrollton TX"
-          title="Insurance claim help after a collision"
-          text="A customer-friendly page explaining claim numbers, insurance estimates, damage photos, supplements, and next steps with all major insurance companies."
+          title="Insurance Claims Assistance for Collision Repair"
+          text="Insurance estimates do not always capture the full damage after an accident. Xtreme Collision Repair helps customers understand estimates, supplements, claim documentation, and repair planning."
         />
         <section className="section">
           <div className="container split-section split-section-light">
             <div>
               <SectionIntro
                 title="Claim help that belongs front and center"
-                text="Customers can bring their claim number, insurer estimate, damage photos, and vehicle information. The shop can review the information, explain supplements, and advocate for a proper repair plan."
+                text="Customers can bring their claim number, insurer estimate, damage photos, and vehicle information. The shop can review the information, explain supplements, and help organize the repair plan."
               />
               <AreasLine />
             </div>

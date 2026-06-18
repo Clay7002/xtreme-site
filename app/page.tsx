@@ -1,6 +1,7 @@
 import {
   AreasLine,
   BeforeAfterSection,
+  ButtonLink,
   CertificationStrip,
   CompanyStorySection,
   FAQSection,
@@ -50,6 +51,9 @@ export default function Home() {
               text="Customers can see the major milestones before they call, including insurance review, repair planning, quality checks, and final delivery."
             />
             <ProcessPreview />
+            <div className="section-cta-row">
+              <ButtonLink href="/contact" track="estimate:process-preview">Ready to start? Get a Free Estimate</ButtonLink>
+            </div>
           </div>
         </section>
 
@@ -57,7 +61,7 @@ export default function Home() {
           <div className="container">
             <SectionIntro
               eyebrow="Why choose Xtreme"
-              title="The repair experience should feel organized, accountable, and local."
+              title="Why Choose Xtreme Collision Repair"
               text="These trust signals mirror what customers look for when comparing collision repair shops after an accident."
             />
             <WhyChooseSection />

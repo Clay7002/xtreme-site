@@ -8,6 +8,15 @@ export type Service = {
   seo: string;
 };
 
+export type ResourceArticle = {
+  title: string;
+  slug: string;
+  href: string;
+  text: string;
+  body: string[];
+  relatedLinks: { label: string; href: string }[];
+};
+
 export const siteInfo = {
   name: "Xtreme Collision Repair",
   city: "Carrollton",
@@ -27,8 +36,11 @@ export const siteInfo = {
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Certifications", href: "/certifications" },
-  { label: "Resources/Blog", href: "/resources" },
+  { label: "Certifications & Equipment", href: "/certifications" },
+  { label: "Repair Process", href: "/repair-process" },
+  { label: "Insurance Claims", href: "/insurance-claims-assistance" },
+  { label: "Resources", href: "/resources" },
+  { label: "Reviews", href: "/reviews" },
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -39,9 +51,12 @@ export const footerQuickLinks = [
   { label: "Repair Process", href: "/repair-process" },
   { label: "Reviews", href: "/reviews" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Certifications", href: "/certifications" },
-  { label: "Resources/Blog", href: "/resources" },
+  { label: "Our Facility", href: "/our-facility" },
+  { label: "Certifications & Equipment", href: "/certifications" },
+  { label: "Resources", href: "/resources" },
   { label: "About Us", href: "/about" },
+  { label: "Careers", href: "/about#careers" },
+  { label: "Repair Authorization", href: "/repair-authorization" },
   { label: "Contact", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy-policy" },
 ];
@@ -55,7 +70,7 @@ export const socialLinks = [
 export const trustBadges = [
   "Lifetime limited warranty",
   "State of the art facility & equipment",
-  "Expert, factory-trained technicians",
+  "Expert repair technicians",
   "Works with all major insurance companies",
 ];
 
@@ -93,77 +108,220 @@ export const nearbyAreas = [
 ];
 
 export const heroServiceArea =
-  "Serving Carrollton, Addison, Dallas, Plano, Frisco, Richardson and surrounding areas.";
+  "Serving Carrollton, Addison, Dallas, Plano, Frisco, Richardson, and surrounding North Texas communities.";
 
 export const servicePanels = [
   {
     title: "Collision Repair Services",
     href: "/services",
+    cta: "View Services",
     text: "Explore full auto body repair support, including collision repair, frame and unibody repair, refinishing, hail damage, dent repair, electrical coordination, and final quality checks.",
   },
   {
     title: "Insurance Claims Assistance",
-    href: "/insurance-claims-help",
+    href: "/insurance-claims-assistance",
+    cta: "Get Help With a Claim",
     text: "Bring the claim number, insurance estimate, and damage photos. Xtreme helps organize the claim path, explain supplements, and advocate for a proper repair plan.",
+  },
+  {
+    title: "Customer Resources",
+    href: "/resources",
+    cta: "Visit Resources",
+    text: "Learn what to do after an accident, how repair estimates work, what supplements are, and why proper structural repair matters.",
   },
   {
     title: "Certifications & Equipment",
     href: "/certifications",
-    text: "Review the shop's repair capability signals, equipment placeholders, and the areas where confirmed OEM or industry credentials can be added as proof.",
-  },
-  {
-    title: "Free Resources & FAQs",
-    href: "/resources",
-    text: "Helpful articles and answers for drivers comparing body shops, starting an insurance claim, preparing photos, and caring for a vehicle after repair.",
+    cta: "Learn More",
+    text: "See the equipment, training placeholders, paint systems, and repair standards that help support quality collision repairs.",
   },
 ];
 
 export const whyChooseItems = [
   {
-    title: "Concierge contact",
-    text: "A single, clear intake path helps customers understand what information is needed and what happens after the estimate request.",
+    title: "Easy Estimate Process",
+    text: "Start online or by phone. We make it simple to get the repair process moving with the right vehicle and damage information.",
   },
   {
-    title: "Hassle-free insurance claims",
-    text: "The shop works with all major insurance companies, reviews estimates and supplements, and keeps claim details organized.",
+    title: "Insurance Claim Support",
+    text: "We help communicate with insurance companies and explain estimates, supplements, approvals, and repair planning clearly.",
   },
   {
-    title: "Lifetime limited warranty",
-    text: "The existing warranty value proposition is presented clearly so customers know workmanship accountability matters.",
+    title: "Advanced Repair Equipment",
+    text: "The facility is presented around professional tools and equipment for structural, body, measuring, and refinish repairs.",
   },
   {
-    title: "Factory-correct repair planning",
-    text: "Repair planning is framed around proper procedures, structural fit, finish quality, and the goal of pre-accident condition.",
+    title: "Paint Color Matching",
+    text: "The refinishing process focuses on color matching, blend planning, clearcoat finish, and final appearance review.",
   },
   {
-    title: "State of the art facility & equipment",
-    text: "Computerized measuring, paint refinishing, and repair-planning language give customers confidence in the shop's capabilities.",
+    title: "Lifetime Limited Warranty",
+    text: "Xtreme stands behind qualifying workmanship for as long as you own the vehicle, subject to warranty terms.",
   },
   {
-    title: "Rental and transport coordination",
-    text: "Rental car scheduling, pickup, and drop-off coordination can be highlighted for customers who need a smoother repair experience.",
+    title: "Clear Communication",
+    text: "Customers are kept oriented around what is happening, what has been approved, and what comes next.",
   },
   {
-    title: "Transparent communication",
-    text: "The site sets expectations around estimates, approvals, supplements, quality checks, and delivery without promising unrealistic timelines.",
+    title: "Rental Car Scheduling",
+    text: "The shop can help coordinate rental options when available so repairs are less disruptive.",
+  },
+  {
+    title: "Local North Texas Shop",
+    text: "Proudly serving Carrollton, Addison, Dallas, Plano, Frisco, Richardson, and nearby communities.",
   },
 ];
 
-export const resourceArticles = [
+export const resourceArticles: ResourceArticle[] = [
   {
-    title: "What to Do After a Collision in North Texas",
-    href: "/resources#after-collision",
-    text: "A practical checklist for photos, claim numbers, estimates, towing, and the questions to ask before repairs begin.",
+    title: "What to Do After a Car Accident in Texas",
+    slug: "what-to-do-after-a-car-accident-in-texas",
+    href: "/resources/what-to-do-after-a-car-accident-in-texas",
+    text: "A practical checklist for photos, claim numbers, estimates, towing, and questions to ask before repairs begin.",
+    body: [
+      "After a collision in Carrollton or anywhere in North Texas, start with safety, photos, exchange information, and claim details. Keep the insurer estimate, claim number, and damage photos together before you request repair help.",
+      "Xtreme Collision Repair can review visible damage, explain the repair intake process, and help you understand what information is useful before drop off.",
+      "This article is educational and is not legal advice.",
+    ],
+    relatedLinks: [
+      { label: "Request an estimate", href: "/contact" },
+      { label: "Insurance claims assistance", href: "/insurance-claims-assistance" },
+    ],
   },
   {
-    title: "How Insurance Supplements Work",
-    href: "/resources#insurance-supplements",
-    text: "Plain-English guidance on hidden damage, updated estimates, approvals, and why supplements are common after teardown.",
+    title: "Do I Have to Use the Insurance Company’s Preferred Body Shop?",
+    slug: "do-i-have-to-use-insurance-preferred-body-shop",
+    href: "/resources/do-i-have-to-use-insurance-preferred-body-shop",
+    text: "A plain-language overview of repair shop choice, insurer estimates, and how to compare body shops.",
+    body: [
+      "Many drivers do not realize they can ask questions and compare repair options before choosing a body shop. Xtreme Collision Repair helps Carrollton and North Texas customers understand estimates and the repair path without turning the conversation into legal advice.",
+      "Look for a shop that explains repair planning, insurance coordination, warranty terms, structural concerns, and quality control clearly.",
+      "This article is educational and is not legal advice.",
+    ],
+    relatedLinks: [
+      { label: "Collision repair services", href: "/services" },
+      { label: "Repair process", href: "/repair-process" },
+    ],
   },
   {
-    title: "Choosing a Body Shop in Carrollton",
-    href: "/resources#choosing-body-shop",
-    text: "What drivers should look for: warranty language, communication, repair process, equipment, reviews, and local accountability.",
+    title: "What Is a Collision Repair Supplement?",
+    slug: "what-is-a-collision-repair-supplement",
+    href: "/resources/what-is-a-collision-repair-supplement",
+    text: "What supplements mean, why hidden damage matters, and how updated estimates fit into collision repair.",
+    body: [
+      "A supplement is an update to the original estimate when additional damage or repair needs are identified. Hidden damage can appear after inspection or disassembly, especially after a major collision.",
+      "Xtreme Collision Repair documents visible and hidden damage, communicates repair-plan needs, and helps customers understand the next step in the claim process.",
+      "This article is educational and is not legal advice.",
+    ],
+    relatedLinks: [
+      { label: "Insurance claims assistance", href: "/insurance-claims-assistance" },
+      { label: "Collision repair", href: "/services/collision-repair" },
+    ],
+  },
+  {
+    title: "Why Frame Measuring Matters After an Accident",
+    slug: "why-frame-measuring-matters-after-an-accident",
+    href: "/resources/why-frame-measuring-matters-after-an-accident",
+    text: "Why structural measurement can matter for alignment, panel fit, safety systems, and long-term vehicle value.",
+    body: [
+      "Collision damage is not always cosmetic. Frame and unibody points can affect alignment, panel fit, suspension behavior, and how future repair decisions are made.",
+      "Computerized measuring helps support repair planning for North Texas vehicles when structural damage is suspected.",
+      "This article is educational and is not legal advice.",
+    ],
+    relatedLinks: [
+      { label: "Frame and unibody repair", href: "/services/frame-unibody-repair" },
+      { label: "Repair process", href: "/repair-process" },
+    ],
+  },
+  {
+    title: "OEM vs Aftermarket Parts: What Drivers Should Know",
+    slug: "oem-vs-aftermarket-parts-what-drivers-should-know",
+    href: "/resources/oem-vs-aftermarket-parts-what-drivers-should-know",
+    text: "A customer-friendly explanation of parts terminology and why part selection should be discussed during repair planning.",
+    body: [
+      "Parts decisions can affect fit, finish, cost, availability, and insurer approvals. Customers should ask what parts are included in the estimate and whether any alternatives are being considered.",
+      "Xtreme can help customers understand the estimate language and how parts fit into the overall repair plan.",
+      "This article is educational and is not legal advice.",
+    ],
+    relatedLinks: [
+      { label: "Collision repair", href: "/services/collision-repair" },
+      { label: "Insurance help", href: "/insurance-claims-assistance" },
+    ],
+  },
+  {
+    title: "How Long Does Collision Repair Take?",
+    slug: "how-long-does-collision-repair-take",
+    href: "/resources/how-long-does-collision-repair-take",
+    text: "Why repair timing depends on damage severity, parts, approvals, refinishing, supplements, and quality checks.",
+    body: [
+      "Repair time depends on the vehicle, visible and hidden damage, parts availability, insurance approvals, paint/refinish needs, calibration coordination, and final quality control.",
+      "The best estimate comes after the vehicle and claim details have been reviewed. Xtreme avoids unrealistic promises before the repair plan is clear.",
+      "This article is educational and is not legal advice.",
+    ],
+    relatedLinks: [
+      { label: "Repair process", href: "/repair-process" },
+      { label: "Get a free estimate", href: "/contact" },
+    ],
+  },
+  {
+    title: "What Is Paintless Dent Repair?",
+    slug: "what-is-paintless-dent-repair",
+    href: "/resources/what-is-paintless-dent-repair",
+    text: "How paintless dent repair may help with hail damage and small dents when the paint surface is intact.",
+    body: [
+      "Paintless dent repair can be a good option for certain dents where the paint surface is still intact and access to the panel allows careful reshaping.",
+      "North Texas hail damage should be inspected panel by panel before deciding whether PDR, conventional repair, or refinishing is appropriate.",
+      "This article is educational and is not legal advice.",
+    ],
+    relatedLinks: [
+      { label: "Hail damage repair", href: "/services/hail-damage-repair" },
+      { label: "Paint and refinishing", href: "/services/paint-refinishing" },
+    ],
+  },
+  {
+    title: "What If the Insurance Estimate Is Too Low?",
+    slug: "what-if-the-insurance-estimate-is-too-low",
+    href: "/resources/what-if-the-insurance-estimate-is-too-low",
+    text: "How estimate reviews, documentation, and supplements can help when the initial number does not appear to match the damage.",
+    body: [
+      "Initial insurance estimates may be based on visible damage only. Once the repair process begins, additional damage may be documented and submitted through the appropriate supplement process.",
+      "Xtreme helps customers understand what the estimate includes and what may need review during repair planning.",
+      "This article is educational and is not legal advice.",
+    ],
+    relatedLinks: [
+      { label: "Insurance claims assistance", href: "/insurance-claims-assistance" },
+      { label: "Start your estimate", href: "/contact" },
+    ],
+  },
+  {
+    title: "Who Guarantees the Repair?",
+    slug: "who-guarantees-the-repair",
+    href: "/resources/who-guarantees-the-repair",
+    text: "What customers should ask about workmanship warranty, paint finish, parts, and written warranty terms.",
+    body: [
+      "Warranty language should be clear before customers authorize repairs. Ask what is covered, what is excluded, and how long workmanship coverage applies.",
+      "Xtreme presents a lifetime limited workmanship warranty message while leaving final terms for the business-approved warranty language.",
+      "This article is educational and is not legal advice.",
+    ],
+    relatedLinks: [
+      { label: "About Xtreme", href: "/about" },
+      { label: "Contact the shop", href: "/contact" },
+    ],
+  },
+  {
+    title: "Why Proper Collision Repair Is a Safety Issue",
+    slug: "why-proper-collision-repair-is-a-safety-issue",
+    href: "/resources/why-proper-collision-repair-is-a-safety-issue",
+    text: "Why repairs should consider structure, restraints, sensors, steering, suspension, refinishing, and quality control.",
+    body: [
+      "Modern vehicles depend on structural design, airbag/restraint systems, sensors, steering, suspension, and correct panel fit. A proper repair is about more than making the vehicle look good.",
+      "Xtreme's repair process explains inspection, documentation, structural repair planning, refinishing, and quality checks for Carrollton and North Texas drivers.",
+      "This article is educational and is not legal advice.",
+    ],
+    relatedLinks: [
+      { label: "Collision repair", href: "/services/collision-repair" },
+      { label: "Frame and unibody repair", href: "/services/frame-unibody-repair" },
+    ],
   },
 ];
 
@@ -173,7 +331,7 @@ export const services: Service[] = [
     slug: "collision-repair",
     href: "/services/collision-repair",
     summary:
-      "Complete collision repair for North Texas drivers, from damage review and repair planning to body work, refinishing coordination, quality checks, and final delivery.",
+      "Complete collision repair for cars, trucks, and SUVs, from damage review and structural repair planning to refinishing, quality checks, and final delivery.",
     intro:
       "Xtreme Collision Repair helps customers in Carrollton and surrounding North Texas areas move from accident damage to a clear repair plan. The shop documents visible damage, coordinates insurance information, and focuses on restoring the vehicle with careful workmanship and communication.",
     bullets: [
@@ -219,7 +377,7 @@ export const services: Service[] = [
   {
     title: "Insurance Claims Assistance",
     slug: "insurance-claims-assistance",
-    href: "/insurance-claims-help",
+    href: "/insurance-claims-assistance",
     summary:
       "The shop works with all major insurance companies, reviews claim paperwork, explains estimates and supplements, and advocates for a proper repair plan to return the vehicle to pre-accident condition.",
     intro:
@@ -235,7 +393,7 @@ export const services: Service[] = [
   {
     title: "Auto Frame Repair",
     slug: "auto-frame-repair",
-    href: "/services#auto-frame-repair",
+    href: "/services/frame-unibody-repair",
     summary:
       "When an impact affects the vehicle's frame or structural alignment, the repair plan needs careful measuring, documentation, and correction before cosmetic work can be completed properly.",
     intro:
@@ -251,7 +409,7 @@ export const services: Service[] = [
   {
     title: "Unibody Repair",
     slug: "unibody-repair",
-    href: "/services#unibody-repair",
+    href: "/services/frame-unibody-repair",
     summary:
       "Many modern vehicles rely on a unibody structure, so collision damage may affect integrated structural areas. This service emphasizes precise review, measuring, and repair planning for those connected sections.",
     intro:
@@ -283,7 +441,7 @@ export const services: Service[] = [
   {
     title: "Computerized Frame / Unibody Measuring",
     slug: "computerized-frame-unibody-measuring",
-    href: "/services#computerized-frame-unibody-measuring",
+    href: "/services/frame-unibody-repair",
     summary:
       "Computerized measuring helps compare structural points against specifications, giving the repair team better information when hidden frame or unibody damage is suspected.",
     intro:
@@ -297,7 +455,7 @@ export const services: Service[] = [
     seo: "Computerized frame measuring Carrollton TX",
   },
   {
-    title: "Electrical System Repair",
+    title: "Electrical Wiring Auto Repair",
     slug: "electrical-system-repair",
     href: "/services#electrical-system-repair",
     summary:
@@ -313,7 +471,7 @@ export const services: Service[] = [
     seo: "Collision electrical repair Carrollton TX",
   },
   {
-    title: "Steering & Suspension",
+    title: "Steering & Suspension Repair",
     slug: "steering-suspension",
     href: "/services#steering-suspension",
     summary:
@@ -349,16 +507,33 @@ export const services: Service[] = [
     slug: "color-matching-refinishing",
     href: "/services/paint-refinishing",
     summary:
-      "A quality repair should look consistent when finished. Color matching and refinishing focus on surface preparation, paint blend planning, finish quality, and final appearance review.",
+      "A quality repair should look consistent when finished. Color matching and refinishing focus on computerized color support, surface preparation, paint blend planning, clearcoat finish, and final appearance review.",
     intro:
       "Paint and refinishing work is planned around a clean finish and a consistent appearance. Xtreme Collision Repair can support repaired panels with color-focused refinishing and a final visual inspection.",
     bullets: [
+      "Computerized color matching support",
       "Color matching and blend planning",
       "Panel surface preparation",
       "Paint refinishing after body repair",
       "Final appearance inspection",
     ],
     seo: "Auto paint repair Carrollton TX",
+  },
+  {
+    title: "Additional Services",
+    slug: "additional-services",
+    href: "/services#additional-services",
+    summary:
+      "Additional collision-related support may include damage documentation, repair logistics, calibration coordination, photo review, and customer communication from estimate through delivery.",
+    intro:
+      "Collision repair often involves more than one service category. Xtreme Collision Repair can help customers understand related needs such as documentation, calibration coordination, rental scheduling, and delivery planning.",
+    bullets: [
+      "Damage photo and estimate intake",
+      "Calibration coordination when applicable",
+      "Repair logistics and delivery planning",
+      "Customer communication support",
+    ],
+    seo: "Auto body repair Carrollton TX",
   },
 ];
 
@@ -368,24 +543,36 @@ export const processSteps = [
     text: "Share contact details, vehicle information, damage notes, claim information, and photos so the shop can begin the review.",
   },
   {
+    title: "Vehicle Inspection",
+    text: "The vehicle details, photos, visible damage, claim information, and customer concerns are reviewed before planning begins.",
+  },
+  {
     title: "Insurance Review",
-    text: "Claim details, insurer estimates, coverage questions, and supplement needs are reviewed before the repair plan is finalized.",
+    text: "Claim details, insurer estimates, coverage questions, and supplement needs are organized and explained.",
   },
   {
-    title: "Drop Off Vehicle",
-    text: "The vehicle is checked in and documented so the team can confirm the visible damage and prepare for deeper inspection.",
+    title: "Disassembly / Hidden Damage Check",
+    text: "When needed, damaged areas are opened up so hidden damage can be documented and reviewed.",
   },
   {
-    title: "Repair Planning",
+    title: "Repair Plan & Parts",
     text: "Parts, structure, paint, safety-system coordination, and production steps are organized around the approved estimate.",
   },
   {
-    title: "Repairs Begin",
+    title: "Structural & Body Repairs",
     text: "Body, frame, unibody, electrical, refinishing, and related repairs move forward according to the repair plan.",
   },
   {
-    title: "Quality Check",
-    text: "Completed work is reviewed for fit, finish, function, and final delivery readiness.",
+    title: "Paint & Refinishing",
+    text: "Repaired panels are prepped, color matched, blended, clearcoated, and reviewed for appearance.",
+  },
+  {
+    title: "Reassembly & Calibration Coordination",
+    text: "The vehicle is reassembled and calibration needs are coordinated when sensors or driver-assist systems are affected.",
+  },
+  {
+    title: "Quality Control",
+    text: "Completed work is reviewed for fit, finish, function, cleanliness, and delivery readiness.",
   },
   {
     title: "Vehicle Delivery",
@@ -400,6 +587,11 @@ export const faqs = [
       "Requesting an estimate first is the best starting point. Call (972) 233-0207 or use the form so the shop can review your vehicle details and follow up within 24-48 hours.",
   },
   {
+    question: "Can I choose my own body shop?",
+    answer:
+      "Customers can ask questions and compare repair options before choosing a shop. Xtreme Collision Repair can explain the estimate, repair plan, and insurance coordination steps in plain language. This is educational information, not legal advice.",
+  },
+  {
     question: "Does Xtreme Collision Repair work with insurance companies?",
     answer:
       "Yes. The site now highlights that the shop works with all major insurance companies, helps review claim information, explains estimates and supplements, and advocates for a proper repair plan.",
@@ -408,6 +600,21 @@ export const faqs = [
     question: "How long will repairs take?",
     answer:
       "Repair time depends on damage severity, parts, insurance approvals, refinishing needs, and hidden damage. The shop can provide clearer expectations after reviewing the vehicle and claim details.",
+  },
+  {
+    question: "What is a supplement?",
+    answer:
+      "A supplement is an update to the original estimate when hidden damage or additional repair needs are found. The shop can document the issue and explain what happens next in the claim process.",
+  },
+  {
+    question: "Do you offer a warranty?",
+    answer:
+      "The site carries forward the existing lifetime limited warranty message. Warranty details should be confirmed with the shop and reflected in the final business-approved warranty terms.",
+  },
+  {
+    question: "Can you help with a rental car?",
+    answer:
+      "Rental car scheduling can be coordinated when available and when it fits the claim or customer plan. Ask about rental options when requesting your estimate.",
   },
   {
     question: "Can I upload photos of the damage?",

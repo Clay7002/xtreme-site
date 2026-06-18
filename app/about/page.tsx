@@ -45,6 +45,15 @@ export default function AboutPage() {
           </div>
         </section>
         <CompanyStorySection />
+        <section className="section" id="careers">
+          <div className="container narrow-content">
+            <SectionIntro
+              eyebrow="Careers"
+              title="Careers at Xtreme Collision Repair"
+              text="Use this section for future hiring needs, technician openings, estimator roles, office positions, and application instructions when the business is ready to publish them."
+            />
+          </div>
+        </section>
         <section className="section muted-section">
           <div className="container">
             <SectionIntro
