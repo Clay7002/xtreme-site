@@ -1,16 +1,21 @@
 import {
   AreasLine,
   BeforeAfterSection,
+  CertificationStrip,
+  CompanyStorySection,
   FAQSection,
   FinalCTA,
   HeroSection,
   InsuranceSection,
+  IntroSection,
+  LocationContactSection,
   PageShell,
   ProcessPreview,
   ReviewsSection,
+  ResourcesPreview,
   SectionIntro,
-  ServicesGrid,
-  TrustBadges,
+  ServicePanels,
+  ValuePropsStrip,
   WhyChooseSection,
 } from "./components";
 
@@ -19,31 +24,48 @@ export default function Home() {
     <PageShell>
       <main>
         <HeroSection />
-        <TrustBadges />
+        <CertificationStrip />
 
-        <InsuranceSection />
+        <IntroSection />
+        <ValuePropsStrip />
 
         <section className="section">
           <div className="container">
             <SectionIntro
               eyebrow="Auto body repair Carrollton TX"
-              title="Full-service collision repair for North Texas drivers"
-              text="Customers can quickly understand the shop's core services, request a free estimate, and find the next step after an accident, hail storm, or insurance claim."
+              title="Start with the service path that fits your repair."
+              text="These panels organize the most important customer journeys: collision repair, insurance claim help, equipment proof points, and practical resources."
             />
-            <ServicesGrid />
+            <ServicePanels />
           </div>
         </section>
+
+        <InsuranceSection />
 
         <section className="section muted-section">
           <div className="container">
             <SectionIntro
               eyebrow="Repair process"
-              title="A simple process from estimate to vehicle delivery"
-              text="The home page previews the major milestones so customers know what to expect without unrealistic repair-time promises."
+              title="A simple process from estimate to vehicle delivery."
+              text="Customers can see the major milestones before they call, including insurance review, repair planning, quality checks, and final delivery."
             />
             <ProcessPreview />
           </div>
         </section>
+
+        <section className="section">
+          <div className="container">
+            <SectionIntro
+              eyebrow="Why choose Xtreme"
+              title="The repair experience should feel organized, accountable, and local."
+              text="These trust signals mirror what customers look for when comparing collision repair shops after an accident."
+            />
+            <WhyChooseSection />
+            <AreasLine />
+          </div>
+        </section>
+
+        <CompanyStorySection />
 
         <section className="section">
           <div className="container">
@@ -65,12 +87,11 @@ export default function Home() {
         <section className="section">
           <div className="container">
             <SectionIntro
-              eyebrow="Why choose Xtreme Collision Repair"
-              title="A trustworthy local body shop website built for real proof"
-              text="The copy keeps claims grounded while making room for verified details, real reviews, and shop photography."
+              eyebrow="Resources / Blog"
+              title="Helpful answers before customers start a claim."
+              text="Resource previews improve SEO while positioning Xtreme as a clear, local guide for repair and insurance decisions."
             />
-            <WhyChooseSection />
-            <AreasLine />
+            <ResourcesPreview />
           </div>
         </section>
 
@@ -85,6 +106,7 @@ export default function Home() {
           </div>
         </section>
 
+        <LocationContactSection />
         <FinalCTA />
       </main>
     </PageShell>

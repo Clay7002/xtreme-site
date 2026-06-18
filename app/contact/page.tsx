@@ -16,13 +16,13 @@ export default function ContactPage() {
           title="Request a free collision repair estimate"
           text="Share your phone number, vehicle year, make, model, insurance information, and damage notes. We'll get back to you within 24-48 hours."
         />
-        <section className="section">
+        <section className="section" id="location">
           <div className="container contact-layout">
             <div>
               <SectionIntro
                 eyebrow="Estimate request"
                 title="Tell us what happened"
-                text="The form improves lead quality by collecting contact details, vehicle information, insurance details, and a brief description of the damage."
+                text="The form improves lead quality by collecting contact details, vehicle information, insurance details, damage photos, and preferred appointment timing."
               />
               <EstimateForm />
             </div>
@@ -35,16 +35,24 @@ export default function ContactPage() {
                 </a>
               </p>
               <p>
-                <strong>Address:</strong> {siteInfo.addressLabel}
+                <strong>Address:</strong>{" "}
+                <a className="text-link" href={siteInfo.mapsHref}>
+                  {siteInfo.addressLabel}
+                </a>
               </p>
-              <p>
+              <p id="hours">
                 <strong>Hours:</strong> {siteInfo.hoursLabel}
               </p>
               <p>
                 <strong>Email:</strong> {siteInfo.emailLabel}
               </p>
+              <p>
+                <strong>Concierge support:</strong> Rental car scheduling,
+                pickup/drop-off coordination, and insurance communication can
+                be discussed when you request your estimate.
+              </p>
               <div className="map-placeholder small-map" aria-label="Map placeholder">
-                <strong>Map placeholder</strong>
+                <strong>Google Map</strong>
                 <span>Add verified Google Maps embed for the Carrollton shop.</span>
                 <a className="text-link" href={siteInfo.mapsHref}>
                   Get directions

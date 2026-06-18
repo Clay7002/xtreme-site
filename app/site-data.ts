@@ -26,12 +26,30 @@ export const siteInfo = {
 
 export const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Process", href: "/repair-process" },
+  { label: "Certifications", href: "/certifications" },
+  { label: "Resources/Blog", href: "/resources" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
+
+export const footerQuickLinks = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Repair Process", href: "/repair-process" },
   { label: "Reviews", href: "/reviews" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Certifications", href: "/certifications" },
+  { label: "Resources/Blog", href: "/resources" },
+  { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+];
+
+export const socialLinks = [
+  { label: "Facebook", href: "#", short: "f" },
+  { label: "Instagram", href: "#", short: "ig" },
+  { label: "Google", href: siteInfo.googleReviewsHref, short: "g" },
 ];
 
 export const trustBadges = [
@@ -39,6 +57,29 @@ export const trustBadges = [
   "State of the art facility & equipment",
   "Expert, factory-trained technicians",
   "Works with all major insurance companies",
+];
+
+export const certificationSignals = [
+  {
+    label: "Factory-Correct Repairs",
+    text: "Repair planning guided by manufacturer repair procedures where applicable.",
+  },
+  {
+    label: "Computerized Measuring",
+    text: "Structural and unibody measurement support for collision repair decisions.",
+  },
+  {
+    label: "Paint & Color Match",
+    text: "Refinishing and color-matching workflow for a clean finished repair.",
+  },
+  {
+    label: "ADAS Coordination",
+    text: "Coordination for calibration needs after repairs involving sensors or driver-assist systems.",
+  },
+  {
+    label: "Lifetime Warranty",
+    text: "Workmanship warranty messaging carried forward from the existing site.",
+  },
 ];
 
 export const nearbyAreas = [
@@ -53,6 +94,78 @@ export const nearbyAreas = [
 
 export const heroServiceArea =
   "Serving Carrollton, Addison, Dallas, Plano, Frisco, Richardson and surrounding areas.";
+
+export const servicePanels = [
+  {
+    title: "Collision Repair Services",
+    href: "/services",
+    text: "Explore full auto body repair support, including collision repair, frame and unibody repair, refinishing, hail damage, dent repair, electrical coordination, and final quality checks.",
+  },
+  {
+    title: "Insurance Claims Assistance",
+    href: "/insurance-claims-help",
+    text: "Bring the claim number, insurance estimate, and damage photos. Xtreme helps organize the claim path, explain supplements, and advocate for a proper repair plan.",
+  },
+  {
+    title: "Certifications & Equipment",
+    href: "/certifications",
+    text: "Review the shop's repair capability signals, equipment placeholders, and the areas where confirmed OEM or industry credentials can be added as proof.",
+  },
+  {
+    title: "Free Resources & FAQs",
+    href: "/resources",
+    text: "Helpful articles and answers for drivers comparing body shops, starting an insurance claim, preparing photos, and caring for a vehicle after repair.",
+  },
+];
+
+export const whyChooseItems = [
+  {
+    title: "Concierge contact",
+    text: "A single, clear intake path helps customers understand what information is needed and what happens after the estimate request.",
+  },
+  {
+    title: "Hassle-free insurance claims",
+    text: "The shop works with all major insurance companies, reviews estimates and supplements, and keeps claim details organized.",
+  },
+  {
+    title: "Lifetime limited warranty",
+    text: "The existing warranty value proposition is presented clearly so customers know workmanship accountability matters.",
+  },
+  {
+    title: "Factory-correct repair planning",
+    text: "Repair planning is framed around proper procedures, structural fit, finish quality, and the goal of pre-accident condition.",
+  },
+  {
+    title: "State of the art facility & equipment",
+    text: "Computerized measuring, paint refinishing, and repair-planning language give customers confidence in the shop's capabilities.",
+  },
+  {
+    title: "Rental and transport coordination",
+    text: "Rental car scheduling, pickup, and drop-off coordination can be highlighted for customers who need a smoother repair experience.",
+  },
+  {
+    title: "Transparent communication",
+    text: "The site sets expectations around estimates, approvals, supplements, quality checks, and delivery without promising unrealistic timelines.",
+  },
+];
+
+export const resourceArticles = [
+  {
+    title: "What to Do After a Collision in North Texas",
+    href: "/resources#after-collision",
+    text: "A practical checklist for photos, claim numbers, estimates, towing, and the questions to ask before repairs begin.",
+  },
+  {
+    title: "How Insurance Supplements Work",
+    href: "/resources#insurance-supplements",
+    text: "Plain-English guidance on hidden damage, updated estimates, approvals, and why supplements are common after teardown.",
+  },
+  {
+    title: "Choosing a Body Shop in Carrollton",
+    href: "/resources#choosing-body-shop",
+    text: "What drivers should look for: warranty language, communication, repair process, equipment, reviews, and local accountability.",
+  },
+];
 
 export const services: Service[] = [
   {
@@ -251,27 +364,31 @@ export const services: Service[] = [
 
 export const processSteps = [
   {
-    title: "Estimate",
-    text: "Share vehicle details, damage notes, insurance information, and photos so the shop can review the repair need.",
+    title: "Request an Estimate",
+    text: "Share contact details, vehicle information, damage notes, claim information, and photos so the shop can begin the review.",
   },
   {
-    title: "Insurance Coordination",
-    text: "The claim, estimate, supplement needs, and insurer communication are organized before repairs move forward.",
+    title: "Insurance Review",
+    text: "Claim details, insurer estimates, coverage questions, and supplement needs are reviewed before the repair plan is finalized.",
   },
   {
-    title: "Drop Off & Repair Plan",
-    text: "The vehicle is checked in, inspected more closely, and planned around parts, structure, paint, and safety-system needs.",
+    title: "Drop Off Vehicle",
+    text: "The vehicle is checked in and documented so the team can confirm the visible damage and prepare for deeper inspection.",
   },
   {
-    title: "Repairs",
-    text: "Body, frame, unibody, electrical, refinishing, and related repairs are completed according to the approved plan.",
+    title: "Repair Planning",
+    text: "Parts, structure, paint, safety-system coordination, and production steps are organized around the approved estimate.",
   },
   {
-    title: "Quality Checks",
+    title: "Repairs Begin",
+    text: "Body, frame, unibody, electrical, refinishing, and related repairs move forward according to the repair plan.",
+  },
+  {
+    title: "Quality Check",
     text: "Completed work is reviewed for fit, finish, function, and final delivery readiness.",
   },
   {
-    title: "Final Delivery",
+    title: "Vehicle Delivery",
     text: "The customer receives the vehicle back with final notes, warranty expectations, and any follow-up information.",
   },
 ];
@@ -306,16 +423,16 @@ export const faqs = [
 
 export const reviewPlaceholders = [
   {
-    label: "Verified Google review",
-    body: "Add a real Google review excerpt here once the business approves the exact text and profile link.",
+    label: "Verified Google review placeholder",
+    body: "Add an approved Google review excerpt here with first-name and last-initial attribution after confirming the exact text and profile source.",
   },
   {
-    label: "Customer testimonial",
-    body: "Use this card for a verified comment about repair quality, communication, or insurance-claim help.",
+    label: "SureCritic or customer testimonial placeholder",
+    body: "Use this card for a verified comment about repair quality, communication, insurance-claim help, or final delivery experience.",
   },
   {
-    label: "Before-and-after feedback",
-    body: "Add another approved customer quote here. No fake reviews or invented customer names are included.",
+    label: "Before-and-after feedback placeholder",
+    body: "Add another approved customer quote here. No fake reviews, invented ratings, or unsupported customer names are included.",
   },
 ];
 

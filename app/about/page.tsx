@@ -1,5 +1,6 @@
 import {
   AreasLine,
+  CompanyStorySection,
   FinalCTA,
   InnerHero,
   PageShell,
@@ -14,32 +15,36 @@ export default function AboutPage() {
       <main>
         <InnerHero
           eyebrow="About Xtreme Collision Repair"
-          title="A local Carrollton body shop focused on clarity and confidence"
-          text="This page introduces the shop with the North Texas positioning, value props, and proof points customers look for before choosing a collision repair center."
+          title="A local Carrollton body shop focused on clarity, confidence, and accountable repairs"
+          text="Learn how Xtreme Collision Repair supports North Texas drivers with insurance help, repair planning, workmanship warranty messaging, and a customer-friendly estimate process."
         />
         <TrustBadges />
         <section className="section">
           <div className="container narrow-content">
             <SectionIntro
-              title="Built around repair quality, communication, and practical help"
-              text="After a collision, customers need more than a repair estimate. They need a clear explanation of damage, help understanding insurance paperwork, and a shop that keeps the process organized."
+              title="Built around repair quality, communication, and practical claim help"
+              text="After a collision, customers need more than a number on a repair estimate. They need clear next steps, organized insurance communication, and a shop that treats the repair plan seriously."
             />
             <p>
               Xtreme Collision Repair is positioned as a trustworthy collision
-              repair and auto body repair shop in Carrollton, Texas. The website
-              keeps claims grounded and avoids listing certifications, warranty
-              terms, or repair-time promises until those details are confirmed by
-              the business.
+              repair and auto body repair shop in Carrollton, Texas. The site
+              keeps customer-facing proof points close to the top: lifetime
+              limited warranty, modern facility and equipment, expert
+              technicians, insurance claim assistance, and service across
+              Carrollton, Addison, Dallas, Plano, Frisco, Richardson, and nearby
+              North Texas communities.
             </p>
             <p>
-              Real shop photography, team bios, equipment details, and verified
-              Google reviews can be added to this page when available. That
-              keeps the site honest today and ready to become more persuasive as
-              the business adds proof.
+              Confirmed founding year, owner or team photography, awards,
+              dealership relationships, community involvement, and verified
+              reviews can be added here when available. That keeps the site
+              honest today and ready to become more persuasive as real proof is
+              gathered.
             </p>
             <AreasLine />
           </div>
         </section>
+        <CompanyStorySection />
         <section className="section muted-section">
           <div className="container">
             <SectionIntro

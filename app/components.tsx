@@ -1,15 +1,22 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
+  certificationSignals,
   faqs,
+  footerQuickLinks,
   galleryItems,
+  heroServiceArea,
   navLinks,
   nearbyAreas,
   processSteps,
   reviewPlaceholders,
+  resourceArticles,
+  servicePanels,
   services,
   siteInfo,
+  socialLinks,
   trustBadges,
+  whyChooseItems,
   type Service,
 } from "./site-data";
 
@@ -46,16 +53,29 @@ function TopContactBar() {
   return (
     <div className="top-contact">
       <div className="container top-contact-inner">
-        <span>
-          <strong>Call:</strong>{" "}
-          <a href={siteInfo.phoneHref}>{siteInfo.phoneLabel}</a>
-        </span>
-        <span>
-          <strong>Address:</strong> {siteInfo.addressLabel}
-        </span>
-        <span>
-          <strong>Hours:</strong> {siteInfo.hoursLabel}
-        </span>
+        <div className="top-contact-links">
+          <a href={siteInfo.phoneHref}>
+            <strong>Call:</strong> {siteInfo.phoneLabel}
+          </a>
+          <Link href="/contact#hours">
+            <strong>Hours:</strong> {siteInfo.hoursLabel}
+          </Link>
+          <a href={siteInfo.mapsHref}>
+            <strong>Address:</strong> {siteInfo.addressLabel}
+          </a>
+        </div>
+        <div className="social-links" aria-label="Social media links">
+          {socialLinks.map((link) => (
+            <a
+              className="social-icon"
+              href={link.href}
+              key={link.label}
+              aria-label={link.label}
+            >
+              {link.short}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -74,12 +94,28 @@ function Header() {
         </Link>
         <nav className="nav-links" aria-label="Main navigation">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href}>
-              {link.label}
-            </Link>
+            link.label === "Services" ? (
+              <details className="nav-dropdown" key={link.href}>
+                <summary>Services</summary>
+                <div className="dropdown-menu">
+                  <Link href="/services">All Services</Link>
+                  {services.slice(0, 8).map((service) => (
+                    <Link href={service.href} key={service.title}>
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
+              </details>
+            ) : (
+              <Link key={link.href} href={link.href}>
+                {link.label}
+              </Link>
+            )
           ))}
         </nav>
-        <ButtonLink href="/contact">Get a Free Estimate</ButtonLink>
+        <div className="header-cta">
+          <ButtonLink href="/contact">Get a Free Estimate</ButtonLink>
+        </div>
       </div>
     </header>
   );
@@ -98,13 +134,25 @@ export function Footer() {
             </span>
           </Link>
           <p>
-            5-Star collision repair in North Texas with estimate requests,
-            insurance claim support, repair process clarity, and space for real
-            Google reviews.
+            Factory-correct collision repair messaging, insurance claim support,
+            lifetime warranty positioning, and a clear estimate path for North
+            Texas drivers.
           </p>
           <p className="footer-note">
             Serving {nearbyAreas.join(", ")}.
           </p>
+          <div className="footer-social social-links" aria-label="Footer social links">
+            {socialLinks.map((link) => (
+              <a
+                className="social-icon"
+                href={link.href}
+                key={link.label}
+                aria-label={link.label}
+              >
+                {link.short}
+              </a>
+            ))}
+          </div>
         </section>
 
         <section>
@@ -113,16 +161,23 @@ export function Footer() {
             <li>
               Phone: <a href={siteInfo.phoneHref}>{siteInfo.phoneLabel}</a>
             </li>
-            <li>Address: {siteInfo.addressLabel}</li>
-            <li>Hours: {siteInfo.hoursLabel}</li>
+            <li>
+              Address: <a href={siteInfo.mapsHref}>{siteInfo.addressLabel}</a>
+            </li>
+            <li>
+              Hours: <Link href="/contact#hours">{siteInfo.hoursLabel}</Link>
+            </li>
             <li>Email: {siteInfo.emailLabel}</li>
           </ul>
+          <div className="footer-cta">
+            <ButtonLink href="/contact">Get a Free Estimate</ButtonLink>
+          </div>
         </section>
 
         <section>
           <h2>Quick Links</h2>
           <ul className="footer-list">
-            {navLinks.map((link) => (
+            {footerQuickLinks.map((link) => (
               <li key={link.href}>
                 <Link href={link.href}>{link.label}</Link>
               </li>
@@ -143,11 +198,9 @@ export function Footer() {
       </div>
 
       <div className="container footer-map-row">
-        <div className="map-placeholder" aria-label="Map placeholder">
-          <strong>Map placeholder</strong>
-          <span>
-            Add the verified Google Maps embed for {siteInfo.shortAddressLabel}.
-          </span>
+        <div className="map-placeholder" aria-label="Google Map placeholder">
+          <strong>{siteInfo.shortAddressLabel}</strong>
+          <span>{siteInfo.addressLabel}</span>
           <Link className="text-link" href={siteInfo.mapsHref}>
             Get directions
           </Link>
@@ -165,56 +218,49 @@ export function HeroSection() {
   return (
     <section className="hero">
       <div className="hero-media" aria-hidden="true">
-        <ShopVisual />
+        <div className="hero-photo" />
       </div>
       <div className="container hero-content">
-        <p className="eyebrow">Collision repair Carrollton TX</p>
-        <h1>5-Star Collision Repair in North Texas</h1>
+        <p className="eyebrow">5-Star collision repair in North Texas</p>
+        <h1>Factory-Certified Auto Body Repair Backed by a Lifetime Warranty.</h1>
         <p className="hero-subheadline">
-          Xtreme Collision Repair helps restore your vehicle with quality
-          workmanship, clear communication, and insurance-claim support.
-          Serving Carrollton, Addison, Dallas, Plano, Frisco, Richardson and
-          surrounding areas.
+          {heroServiceArea}
         </p>
         <div className="hero-actions">
           <ButtonLink href="/contact">Get a Free Estimate</ButtonLink>
-          <ButtonLink href={siteInfo.phoneHref} variant="secondary">
-            Call {siteInfo.phoneLabel}
+          <ButtonLink href="/contact#location" variant="secondary">
+            Location Info
           </ButtonLink>
         </div>
         <div className="hero-meta">
-          <span>Auto body repair Carrollton TX</span>
+          <span>Carrollton auto body repair</span>
           <span>Works with all major insurance companies</span>
-          <span>North Texas hail and collision repair</span>
+          <span>Lifetime limited workmanship warranty</span>
         </div>
       </div>
     </section>
   );
 }
 
-function ShopVisual() {
+export function CertificationStrip() {
   return (
-    <div className="shop-visual" role="img" aria-label="Shop image placeholder">
-      <div className="shop-wall" />
-      <div className="shop-light shop-light-one" />
-      <div className="shop-light shop-light-two" />
-      <div className="shop-floor" />
-      <div className="lift lift-left" />
-      <div className="lift lift-right" />
-      <div className="vehicle">
-        <div className="vehicle-glass" />
-        <div className="vehicle-hood" />
-        <div className="vehicle-door" />
-        <div className="wheel wheel-left" />
-        <div className="wheel wheel-right" />
+    <section className="certification-strip" aria-label="Repair capability signals">
+      <div className="container certification-row">
+        {certificationSignals.map((signal) => (
+          <article className="certification-badge" key={signal.label}>
+            <span aria-hidden="true">{signal.label.slice(0, 1)}</span>
+            <div>
+              <h2>{signal.label}</h2>
+              <p>{signal.text}</p>
+            </div>
+          </article>
+        ))}
       </div>
-      <div className="toolbox" />
-      <div className="spark-accent" />
-    </div>
+    </section>
   );
 }
 
-export function TrustBadges() {
+export function ValuePropsStrip() {
   return (
     <section className="trust-strip">
       <div className="container trust-grid">
@@ -227,6 +273,10 @@ export function TrustBadges() {
       </div>
     </section>
   );
+}
+
+export function TrustBadges() {
+  return <ValuePropsStrip />;
 }
 
 export function SectionIntro({
@@ -249,6 +299,46 @@ export function SectionIntro({
   );
 }
 
+export function IntroSection() {
+  return (
+    <section className="section intro-section" id="intro">
+      <div className="container intro-layout">
+        <div>
+          <p className="eyebrow">Carrollton collision repair</p>
+          <h2>North Texas body repair built around confidence after a collision.</h2>
+        </div>
+        <div>
+          <p>
+            Xtreme Collision Repair serves Carrollton, Addison, Dallas, Plano,
+            Frisco, Richardson, and surrounding North Texas communities with
+            careful repair planning, insurance claim support, and a lifetime
+            limited workmanship warranty. Confirmed founding year, OEM
+            certifications, awards, and team photography can be added here as
+            soon as the business provides them.
+          </p>
+          <ButtonLink href="/contact">Start the Process</ButtonLink>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ServicePanels() {
+  return (
+    <div className="service-panel-grid">
+      {servicePanels.map((panel) => (
+        <article className="service-panel" key={panel.title}>
+          <h3>{panel.title}</h3>
+          <p>{panel.text}</p>
+          <Link className="text-link" href={panel.href}>
+            Learn More
+          </Link>
+        </article>
+      ))}
+    </div>
+  );
+}
+
 export function ServicesGrid({ limit }: { limit?: number }) {
   const items = limit ? services.slice(0, limit) : services;
 
@@ -267,6 +357,104 @@ export function ServicesGrid({ limit }: { limit?: number }) {
         </article>
       ))}
     </div>
+  );
+}
+
+export function CompanyStorySection() {
+  return (
+    <section className="section story-section">
+      <div className="container story-layout">
+        <div className="team-photo-placeholder" aria-label="Team photo placeholder">
+          <span>Team Photo</span>
+        </div>
+        <div>
+          <p className="eyebrow">Local shop story</p>
+          <h2>Built for drivers who want a real shop, clear answers, and accountable work.</h2>
+          <p>
+            This section is structured for Xtreme&apos;s local or family-owned
+            story, including the confirmed founding year, owner or team photo,
+            awards, dealership relationships, and community involvement. The
+            current copy stays honest while giving the business a polished place
+            to add real proof.
+          </p>
+          <div className="story-proof-grid">
+            <span>Local Carrollton presence</span>
+            <span>Owner/team photo ready</span>
+            <span>Awards and community proof ready</span>
+          </div>
+          <ButtonLink href="/about">Learn More</ButtonLink>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ResourcesPreview() {
+  return (
+    <div className="resource-grid">
+      {resourceArticles.map((article) => (
+        <article className="resource-card" key={article.title}>
+          <h3>{article.title}</h3>
+          <p>{article.text}</p>
+          <Link className="text-link" href={article.href}>
+            Read Resource
+          </Link>
+        </article>
+      ))}
+    </div>
+  );
+}
+
+export function LocationContactSection() {
+  return (
+    <section className="section location-section" id="location">
+      <div className="container location-layout">
+        <div>
+          <p className="eyebrow">Location info</p>
+          <h2>Visit Xtreme Collision Repair in Carrollton.</h2>
+          <p>
+            Use the estimate form, call the shop, or get directions before drop
+            off. Concierge services can include rental car scheduling,
+            pickup/drop-off coordination, and claim communication support when
+            applicable.
+          </p>
+          <div className="location-actions">
+            <ButtonLink href="/contact">Get a Free Estimate</ButtonLink>
+            <ButtonLink href={siteInfo.mapsHref} variant="light">
+              Get Directions
+            </ButtonLink>
+          </div>
+        </div>
+        <aside className="location-card">
+          <h3>Shop Information</h3>
+          <p>
+            <strong>Phone:</strong>{" "}
+            <a className="text-link" href={siteInfo.phoneHref}>
+              {siteInfo.phoneLabel}
+            </a>
+          </p>
+          <p>
+            <strong>Address:</strong>{" "}
+            <a className="text-link" href={siteInfo.mapsHref}>
+              {siteInfo.addressLabel}
+            </a>
+          </p>
+          <p id="hours">
+            <strong>Hours:</strong> {siteInfo.hoursLabel}
+          </p>
+          <p>
+            <strong>Email:</strong> {siteInfo.emailLabel}
+          </p>
+          <div className="map-placeholder small-map" aria-label="Google Map placeholder">
+            <strong>Google Map</strong>
+            <span>Embed the verified map for {siteInfo.shortAddressLabel}.</span>
+            <a className="text-link" href={siteInfo.mapsHref}>
+              Open in Google Maps
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
   );
 }
 
@@ -363,21 +551,21 @@ export function ReviewsSection() {
   return (
     <div className="reviews-block" id="reviews">
       <div className="review-summary">
-        <p className="eyebrow">Google reviews</p>
-        <h2>Google reviews and testimonials</h2>
+        <p className="eyebrow">Testimonials & Google reviews</p>
+        <h2>Social proof ready for verified reviews.</h2>
         <p>
-          This section is ready for embedded Google reviews or approved
-          customer testimonials. No fake reviews or invented customer names are
-          included.
+          Add real Google Reviews, SureCritic feedback, or approved customer
+          testimonials here. The placeholders show the intended format without
+          inventing customer names or ratings.
         </p>
         <div className="review-actions">
-          <ButtonLink href={siteInfo.googleReviewsHref}>Read More Reviews on Google</ButtonLink>
+          <ButtonLink href="/reviews">Read More Reviews</ButtonLink>
           <ButtonLink href={siteInfo.googleLeaveReviewHref} variant="light">
             Leave a Review
           </ButtonLink>
         </div>
       </div>
-      <div className="review-card-grid">
+      <div className="review-carousel" aria-label="Review carousel placeholder">
         {reviewPlaceholders.map((review, index) => (
           <article className="review-card" key={`${review.label}-${index}`}>
             <div className="stars" aria-label="Star rating placeholder">
@@ -389,6 +577,7 @@ export function ReviewsSection() {
             </div>
             <h3>{review.label}</h3>
             <p>{review.body}</p>
+            <p className="review-attribution">First name L. - verified review placeholder</p>
           </article>
         ))}
       </div>
@@ -397,29 +586,13 @@ export function ReviewsSection() {
 }
 
 export function WhyChooseSection() {
-  const reasons = [
-    {
-      title: "Lifetime limited warranty",
-      text: "A concise promise from the existing site, presented clearly near the top and reinforced before customers request an estimate.",
-    },
-    {
-      title: "State of the art facility & equipment",
-      text: "The design highlights the shop's facility and equipment as a trust signal without crowding the conversion path.",
-    },
-    {
-      title: "Factory-trained technicians",
-      text: "Customers see technician expertise called out clearly alongside repair quality, communication, and claim support.",
-    },
-    {
-      title: "Insurance claim help",
-      text: "The site keeps claim assistance front and center for customers who need guidance after an accident.",
-    },
-  ];
-
   return (
     <div className="reason-grid">
-      {reasons.map((reason) => (
+      {whyChooseItems.map((reason, index) => (
         <article className="reason-card" key={reason.title}>
+          <span className="reason-icon" aria-hidden="true">
+            {index + 1}
+          </span>
           <h3>{reason.title}</h3>
           <p>{reason.text}</p>
         </article>
@@ -509,8 +682,8 @@ export function EstimateForm() {
           <input name="damage-photos" type="file" multiple />
         </label>
         <label>
-          Preferred appointment date
-          <input name="preferred-date" type="date" />
+          Preferred appointment time
+          <input name="preferred-time" type="datetime-local" />
         </label>
         <label>
           Preferred contact method

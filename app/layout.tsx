@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Xtreme Collision Repair | Collision Repair in Carrollton, TX",
+  title: "Xtreme Collision Repair | Factory-Certified Auto Body Repair in Carrollton, TX",
   description:
-    "5-Star collision repair in North Texas for Carrollton, Addison, Dallas, Plano, Frisco, Richardson and surrounding areas.",
+    "Factory-correct collision repair, insurance claim help, lifetime warranty positioning, and auto body repair service for Carrollton, Addison, Dallas, Plano, Frisco, Richardson and surrounding areas.",
   keywords: [
     "collision repair Carrollton TX",
     "auto body repair Carrollton TX",
