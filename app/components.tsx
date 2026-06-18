@@ -16,7 +16,9 @@ import {
   siteInfo,
   socialLinks,
   trustBadges,
+  workGalleryItems,
   whyChooseItems,
+  type GalleryItem,
   type ResourceArticle,
   type Service,
 } from "./site-data";
@@ -438,7 +440,7 @@ export function CompanyStorySection() {
     <section className="section story-section">
       <div className="container story-layout">
         <div className="team-photo-placeholder" aria-label="Team photo placeholder">
-          <span>Team Photo</span>
+          <span>Shop Equipment</span>
         </div>
         <div>
           <p className="eyebrow">Local shop story</p>
@@ -451,8 +453,8 @@ export function CompanyStorySection() {
           </p>
           <div className="story-proof-grid">
             <span>Local Carrollton presence</span>
-            <span>Repair bay photos ready</span>
-            <span>Owner and team story ready</span>
+            <span>Real repair bay photos</span>
+            <span>Gallery-ready repair work</span>
           </div>
           <ButtonLink href="/about" track="cta:about-story">About Xtreme</ButtonLink>
         </div>
@@ -578,14 +580,15 @@ export function InsuranceSection() {
 }
 
 export function BeforeAfterSection({ full = false }: { full?: boolean }) {
-  const items = full ? galleryItems : galleryItems.slice(0, 2);
+  const items = full ? galleryItems : galleryItems.slice(0, 3);
 
   return (
     <div className="gallery-grid">
       {items.map((item) => (
         <article className="before-after-card" key={item.title}>
-          <BeforeAfterVisual />
+          <BeforeAfterVisual item={item} />
           <div className="before-after-copy">
+            <p className="gallery-category">{item.category}</p>
             <h3>{item.title}</h3>
             <p>
               <strong>Before:</strong> {item.damage}
@@ -600,21 +603,36 @@ export function BeforeAfterSection({ full = false }: { full?: boolean }) {
   );
 }
 
-function BeforeAfterVisual() {
+function BeforeAfterVisual({ item }: { item: GalleryItem }) {
   return (
-    <div className="before-after-visual" aria-label="Before and after photo placeholder">
-      <div className="before-panel">
-        <span>Before</span>
-        <div className="mini-car damaged">
-          <i />
-        </div>
-      </div>
-      <div className="after-panel">
-        <span>After</span>
-        <div className="mini-car repaired">
-          <i />
-        </div>
-      </div>
+    <div className="before-after-visual photo-compare" aria-label={`${item.title} before and after photos`}>
+      <figure className="before-panel before-after-panel">
+        <img src={item.beforeSrc} alt={item.beforeAlt} loading="lazy" decoding="async" />
+        <figcaption>Before</figcaption>
+      </figure>
+      <figure className="after-panel before-after-panel">
+        <img src={item.afterSrc} alt={item.afterAlt} loading="lazy" decoding="async" />
+        <figcaption>After</figcaption>
+      </figure>
+    </div>
+  );
+}
+
+export function WorkGallerySection({ limit }: { limit?: number }) {
+  const items = limit ? workGalleryItems.slice(0, limit) : workGalleryItems;
+
+  return (
+    <div className="work-gallery-grid">
+      {items.map((item) => (
+        <article className="work-photo-card" key={`${item.title}-${item.src}`}>
+          <img src={item.src} alt={item.alt} loading="lazy" decoding="async" />
+          <div className="work-photo-body">
+            <p>{item.tag}</p>
+            <h3>{item.title}</h3>
+            <span>{item.text}</span>
+          </div>
+        </article>
+      ))}
     </div>
   );
 }

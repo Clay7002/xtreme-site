@@ -18,6 +18,7 @@ import {
   ServicePanels,
   ValuePropsStrip,
   WhyChooseSection,
+  WorkGallerySection,
 } from "./components";
 
 export default function Home() {
@@ -75,10 +76,16 @@ export default function Home() {
           <div className="container">
             <SectionIntro
               eyebrow="Gallery / Before & After"
-              title="Ready for real repair photos"
-              text="Use this section for actual shop photography, damage documentation, and finished delivery photos once available."
+              title="Real repair work from the Xtreme shop"
+              text="See recent damage documentation, finished repairs, paint finish examples, and shop equipment photos from real Xtreme Collision Repair work."
             />
             <BeforeAfterSection />
+            <div className="gallery-preview-spacer">
+              <WorkGallerySection limit={6} />
+            </div>
+            <div className="section-cta-row">
+              <ButtonLink href="/gallery" track="gallery:home-preview">View Full Gallery</ButtonLink>
+            </div>
           </div>
         </section>
 

@@ -469,7 +469,7 @@ svg {
   inset: 0;
   background:
     linear-gradient(90deg, rgba(7, 11, 17, 0.1), rgba(7, 11, 17, 0.02)),
-    url("/hero-technicians.jpeg") center right / cover no-repeat,
+    url("/gallery/work/hero-xtreme-gmc.webp") center right / cover no-repeat,
     linear-gradient(135deg, #28323d, #0c1621);
   filter: saturate(0.95) contrast(1.04);
 }
@@ -1025,9 +1025,22 @@ svg {
   overflow: hidden;
 }
 
+.gallery-preview-spacer {
+  margin-top: 18px;
+}
+
+.gallery-category {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .before-after-visual {
   display: grid;
-  min-height: 230px;
+  min-height: 260px;
   grid-template-columns: 1fr 1fr;
   background: #1c242e;
 }
@@ -1038,6 +1051,23 @@ svg {
   display: grid;
   place-items: center;
   overflow: hidden;
+}
+
+.before-after-panel {
+  margin: 0;
+}
+
+.before-after-panel img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: transform 240ms ease;
+}
+
+.before-after-card:hover .before-after-panel img {
+  transform: scale(1.03);
 }
 
 .before-panel {
@@ -1054,7 +1084,8 @@ svg {
 }
 
 .before-panel span,
-.after-panel span {
+.after-panel span,
+.before-after-panel figcaption {
   position: absolute;
   top: 14px;
   left: 14px;
@@ -1064,6 +1095,56 @@ svg {
   color: #1f252c;
   font-size: 12px;
   font-weight: 900;
+}
+
+.work-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.work-photo-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 18px 46px rgba(12, 22, 33, 0.08);
+}
+
+.work-photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #111820;
+}
+
+.work-photo-body {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+}
+
+.work-photo-body p {
+  margin: 0;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.work-photo-body h3 {
+  margin: 0;
+  color: #1e252d;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.work-photo-body span {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .mini-car {
@@ -1211,7 +1292,7 @@ svg {
   border-radius: 8px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent 36%),
-    url("/team-shop-placeholder.jpeg") center / cover no-repeat,
+    url("/gallery/work/facility-frame-rack.webp") center / cover no-repeat,
     linear-gradient(135deg, #2c3947, #111820);
   box-shadow: 0 24px 70px rgba(10, 29, 51, 0.16);
 }
@@ -1324,6 +1405,16 @@ svg {
   color: var(--white);
   font-weight: 900;
   text-align: center;
+}
+
+.facility-photo {
+  display: block;
+  width: 100%;
+  min-height: 190px;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #172230;
 }
 
 .location-section {
@@ -1630,6 +1721,7 @@ svg {
   .service-panel-grid,
   .reason-grid,
   .gallery-grid,
+  .work-gallery-grid,
   .resource-grid,
   .facility-grid,
   .footer-grid {
@@ -1807,6 +1899,7 @@ svg {
   .gallery-grid,
   .review-card-grid,
   .resource-grid,
+  .work-gallery-grid,
   .facility-grid,
   .intro-bullets,
   .footer-grid,

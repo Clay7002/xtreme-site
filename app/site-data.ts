@@ -17,6 +17,25 @@ export type ResourceArticle = {
   relatedLinks: { label: string; href: string }[];
 };
 
+export type GalleryItem = {
+  title: string;
+  category: string;
+  damage: string;
+  finished: string;
+  beforeSrc: string;
+  afterSrc: string;
+  beforeAlt: string;
+  afterAlt: string;
+};
+
+export type WorkGalleryItem = {
+  title: string;
+  tag: string;
+  text: string;
+  src: string;
+  alt: string;
+};
+
 export const siteInfo = {
   name: "Xtreme Collision Repair",
   city: "Carrollton",
@@ -643,20 +662,228 @@ export const reviewPlaceholders = [
   },
 ];
 
-export const galleryItems = [
+export const galleryItems: GalleryItem[] = [
   {
-    title: "Collision repair before & after",
-    damage: "Replace with the real damage photo",
-    finished: "Replace with the matching delivery photo",
+    title: "Subaru rear bumper and quarter repair",
+    category: "Before & After",
+    damage: "Rear impact damage around the bumper cover, liftgate, and left rear body area.",
+    finished: "Clean panel fit, refinished bumper area, and restored rear appearance.",
+    beforeSrc: "/gallery/work/subaru-rear-before.webp",
+    afterSrc: "/gallery/work/subaru-rear-after.webp",
+    beforeAlt: "Damaged rear corner of a gray Subaru before collision repair",
+    afterAlt: "Repaired rear corner of the gray Subaru after collision repair",
   },
   {
-    title: "Hail damage repair example",
-    damage: "Add storm-damage documentation",
-    finished: "Add the completed repair photo",
+    title: "Ram front-end collision repair",
+    category: "Before & After",
+    damage: "Front bumper, grille, and lower front-end damage documented during intake.",
+    finished: "Reassembled front end with clean grille alignment and restored exterior presentation.",
+    beforeSrc: "/gallery/work/ram-front-before.webp",
+    afterSrc: "/gallery/work/ram-front-after.webp",
+    beforeAlt: "Damaged gray Ram truck front end before collision repair",
+    afterAlt: "Repaired gray Ram truck front end after collision repair",
   },
   {
-    title: "Paint and color match example",
-    damage: "Show the damaged or repaired panel before refinishing",
-    finished: "Show the final color-matched finish",
+    title: "Kia Sportage front-end repair",
+    category: "Before & After",
+    damage: "Front impact damage with broken bumper cover components and exposed front structure.",
+    finished: "Finished front-quarter view showing restored panels, lighting, and exterior fit.",
+    beforeSrc: "/gallery/work/kia-front-before.webp",
+    afterSrc: "/gallery/work/kia-front-after.webp",
+    beforeAlt: "White Kia Sportage with front-end collision damage before repair",
+    afterAlt: "White Kia Sportage after front-end collision repair",
+  },
+  {
+    title: "Genesis front-end reconstruction",
+    category: "Before & After",
+    damage: "Front fascia, cooling-area, and passenger-side front-end damage documented before teardown.",
+    finished: "Finished Genesis front end with restored hood, grille, and bumper alignment.",
+    beforeSrc: "/gallery/work/genesis-front-before.webp",
+    afterSrc: "/gallery/work/genesis-front-after.webp",
+    beforeAlt: "Dark Genesis sedan with front-end collision damage before repair",
+    afterAlt: "Dark Genesis sedan after front-end collision repair",
+  },
+  {
+    title: "Toyota Tacoma front-end repair",
+    category: "Before & After",
+    damage: "Red Tacoma with hood, headlamp, bumper, and front-corner collision damage.",
+    finished: "Finished Tacoma with restored front panels, lighting, bumper fit, and street-ready appearance.",
+    beforeSrc: "/gallery/work/tacoma-red-before.webp",
+    afterSrc: "/gallery/work/tacoma-red-after-angle.webp",
+    beforeAlt: "Red Toyota Tacoma with front-end collision damage before repair",
+    afterAlt: "Red Toyota Tacoma after front-end collision repair",
+  },
+  {
+    title: "Honda side-impact body repair",
+    category: "Before & After",
+    damage: "Side damage across the doors and rocker area documented before repair planning.",
+    finished: "Clean side profile with repaired panels and restored exterior appearance.",
+    beforeSrc: "/gallery/work/honda-side-before.webp",
+    afterSrc: "/gallery/work/honda-side-after.webp",
+    beforeAlt: "White Honda sedan with side body damage before repair",
+    afterAlt: "White Honda sedan side profile after body repair",
+  },
+  {
+    title: "GMC front-end repair",
+    category: "Before & After",
+    damage: "Front-end damage shown during intake with bumper and lower fascia repair needs.",
+    finished: "Finished GMC front end photographed at the shop with restored grille and bumper fit.",
+    beforeSrc: "/gallery/work/gmc-front-before.webp",
+    afterSrc: "/gallery/work/gmc-front-after.webp",
+    beforeAlt: "White GMC with front-end collision damage before repair",
+    afterAlt: "White GMC front end after repair at Xtreme Collision Repair",
+  },
+  {
+    title: "Rear glass and roof-area repair",
+    category: "Before & After",
+    damage: "Rear glass and surrounding roof-area damage documented before repair.",
+    finished: "Finished rear view showing restored glass area and clean exterior presentation.",
+    beforeSrc: "/gallery/work/subaru-glass-before.webp",
+    afterSrc: "/gallery/work/subaru-glass-after.webp",
+    beforeAlt: "White Subaru with rear glass and roof-area damage before repair",
+    afterAlt: "White Subaru rear view after glass and roof-area repair",
+  },
+];
+
+export const workGalleryItems: WorkGalleryItem[] = [
+  {
+    title: "Frame Rack Setup",
+    tag: "Facility",
+    text: "Shop equipment photo showing structural repair and measuring workflow support.",
+    src: "/gallery/work/facility-frame-rack.webp",
+    alt: "Vehicle on a frame rack inside the Xtreme Collision Repair facility",
+  },
+  {
+    title: "Alignment Rack Work",
+    tag: "Facility",
+    text: "Repair equipment used for vehicle setup, inspection, and post-repair checks.",
+    src: "/gallery/work/facility-alignment-rack.webp",
+    alt: "Truck on an alignment rack inside a collision repair facility",
+  },
+  {
+    title: "Subaru Rear Damage",
+    tag: "Damage Documentation",
+    text: "Rear bumper and quarter-area impact documented before repair work begins.",
+    src: "/gallery/work/subaru-rear-before.webp",
+    alt: "Subaru rear corner damage before repair",
+  },
+  {
+    title: "Subaru Rear Repair",
+    tag: "Finished Repair",
+    text: "Completed rear repair with restored bumper and panel alignment.",
+    src: "/gallery/work/subaru-rear-after.webp",
+    alt: "Subaru rear corner after repair",
+  },
+  {
+    title: "Ram Front Damage",
+    tag: "Damage Documentation",
+    text: "Front bumper and grille damage documented for repair planning.",
+    src: "/gallery/work/ram-front-before.webp",
+    alt: "Ram truck front-end damage before repair",
+  },
+  {
+    title: "Ram Front Repair",
+    tag: "Finished Repair",
+    text: "Repaired front end with restored grille, bumper, and chrome finish.",
+    src: "/gallery/work/ram-front-after.webp",
+    alt: "Ram truck front end after repair",
+  },
+  {
+    title: "Kia Front Damage",
+    tag: "Damage Documentation",
+    text: "Front impact damage with damaged bumper and exposed components.",
+    src: "/gallery/work/kia-front-before.webp",
+    alt: "Kia Sportage front-end damage before repair",
+  },
+  {
+    title: "Kia Front Repair",
+    tag: "Finished Repair",
+    text: "Finished front-quarter repair with clean panel and light alignment.",
+    src: "/gallery/work/kia-front-after.webp",
+    alt: "Kia Sportage after front-end repair",
+  },
+  {
+    title: "Genesis Front Damage",
+    tag: "Damage Documentation",
+    text: "Front-end teardown view showing cooling-area and fascia damage.",
+    src: "/gallery/work/genesis-front-before.webp",
+    alt: "Genesis front-end damage before repair",
+  },
+  {
+    title: "Genesis Hood Finish",
+    tag: "Paint & Finish",
+    text: "Finished hood and front-end view showing a clean, reflective finish.",
+    src: "/gallery/work/genesis-hood-after.webp",
+    alt: "Genesis hood and front end after refinishing",
+  },
+  {
+    title: "Genesis Front Repair",
+    tag: "Finished Repair",
+    text: "Completed Genesis front-end repair with restored grille and bumper presentation.",
+    src: "/gallery/work/genesis-front-after.webp",
+    alt: "Genesis front end after repair",
+  },
+  {
+    title: "Honda Side Damage",
+    tag: "Damage Documentation",
+    text: "Side-impact damage across door and lower body areas before repair.",
+    src: "/gallery/work/honda-side-before.webp",
+    alt: "Honda side body damage before repair",
+  },
+  {
+    title: "Honda Side Repair",
+    tag: "Finished Repair",
+    text: "Finished side profile after body repair and exterior cleanup.",
+    src: "/gallery/work/honda-side-after.webp",
+    alt: "Honda side profile after body repair",
+  },
+  {
+    title: "GMC Front Damage",
+    tag: "Damage Documentation",
+    text: "Night intake photo documenting front bumper and fascia repair needs.",
+    src: "/gallery/work/gmc-front-before.webp",
+    alt: "GMC front-end damage before repair",
+  },
+  {
+    title: "GMC Front Repair",
+    tag: "Finished Repair",
+    text: "Finished GMC front end photographed in front of the shop signage.",
+    src: "/gallery/work/gmc-front-after.webp",
+    alt: "GMC front end after repair at Xtreme Collision Repair",
+  },
+  {
+    title: "Tacoma Front Damage",
+    tag: "Damage Documentation",
+    text: "Red Tacoma with front-corner impact damage before repair.",
+    src: "/gallery/work/tacoma-red-before.webp",
+    alt: "Red Toyota Tacoma front-end damage before repair",
+  },
+  {
+    title: "Tacoma Finished Front",
+    tag: "Finished Repair",
+    text: "Finished front view after bumper, light, and panel repair.",
+    src: "/gallery/work/tacoma-red-after-front.webp",
+    alt: "Red Toyota Tacoma front end after repair",
+  },
+  {
+    title: "Tacoma Finished Angle",
+    tag: "Finished Repair",
+    text: "Final angled view showing restored front-end fit and exterior finish.",
+    src: "/gallery/work/tacoma-red-after-angle.webp",
+    alt: "Red Toyota Tacoma after front-end repair",
+  },
+  {
+    title: "Rear Glass Damage",
+    tag: "Damage Documentation",
+    text: "Rear glass and roof-area damage documented before repair planning.",
+    src: "/gallery/work/subaru-glass-before.webp",
+    alt: "White Subaru rear glass damage before repair",
+  },
+  {
+    title: "Rear Glass Repair",
+    tag: "Finished Repair",
+    text: "Completed rear-area repair with restored glass and clean rear view.",
+    src: "/gallery/work/subaru-glass-after.webp",
+    alt: "White Subaru rear view after repair",
   },
 ];
