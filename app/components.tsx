@@ -120,8 +120,8 @@ function Header() {
         </Link>
         <nav className="nav-links" aria-label="Main navigation">
           <Link className="nav-active" href="/">Home</Link>
-          <details className="nav-dropdown">
-            <summary>Services</summary>
+          <div className="nav-dropdown">
+            <Link className="nav-dropdown-trigger" href="/services">Services</Link>
             <div className="dropdown-menu">
               <Link href="/services">All Services</Link>
               {services.slice(0, 8).map((service) => (
@@ -130,18 +130,18 @@ function Header() {
                 </Link>
               ))}
             </div>
-          </details>
-          <details className="nav-dropdown">
-            <summary>Certifications</summary>
+          </div>
+          <div className="nav-dropdown">
+            <Link className="nav-dropdown-trigger" href="/certifications">Certifications</Link>
             <div className="dropdown-menu">
               <Link href="/certifications">OEM Certifications</Link>
               <Link href="/our-facility">Shop Equipment</Link>
               <Link href="/gallery">Work Gallery</Link>
             </div>
-          </details>
+          </div>
           <Link href="/contact">Concierge Pick Up & Delivery</Link>
-          <details className="nav-dropdown">
-            <summary>About</summary>
+          <div className="nav-dropdown">
+            <Link className="nav-dropdown-trigger" href="/about">About</Link>
             <div className="dropdown-menu">
               <Link href="/about">About Us</Link>
               <Link href="/repair-process">Repair Process</Link>
@@ -150,7 +150,7 @@ function Header() {
               <Link href="/reviews">Reviews</Link>
               <Link href="/contact">Contact</Link>
             </div>
-          </details>
+          </div>
         </nav>
         <details className="mobile-menu">
           <summary aria-label="Open navigation menu">Menu</summary>

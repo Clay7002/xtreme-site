@@ -284,7 +284,7 @@ svg {
 }
 
 .nav-links a,
-.nav-dropdown summary {
+.nav-dropdown-trigger {
   position: relative;
   padding: 10px 0;
   font-weight: 800;
@@ -311,20 +311,14 @@ svg {
   position: relative;
 }
 
-.nav-dropdown summary {
+.nav-dropdown-trigger {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  cursor: pointer;
-  list-style: none;
   white-space: nowrap;
 }
 
-.nav-dropdown summary::-webkit-details-marker {
-  display: none;
-}
-
-.nav-dropdown summary::after {
+.nav-dropdown-trigger::after {
   width: 6px;
   height: 6px;
   border-right: 2px solid currentColor;
@@ -344,7 +338,32 @@ svg {
   border-radius: 8px;
   background: #0d141d;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
+  opacity: 0;
   padding: 10px;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition:
+    opacity 140ms ease,
+    transform 140ms ease;
+  visibility: hidden;
+}
+
+.nav-dropdown::after {
+  position: absolute;
+  top: 100%;
+  right: -18px;
+  left: -18px;
+  height: 24px;
+  content: "";
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:has(.nav-dropdown-trigger:focus-visible) .dropdown-menu,
+.nav-dropdown:has(.dropdown-menu a:focus-visible) .dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  visibility: visible;
 }
 
 .dropdown-menu a {
@@ -357,7 +376,7 @@ svg {
 }
 
 .nav-links a:hover,
-.nav-dropdown summary:hover,
+.nav-dropdown-trigger:hover,
 .footer-list a:hover,
 .text-link:hover {
   color: var(--orange);
