@@ -77,16 +77,18 @@ function TopContactBar() {
     <div className="top-contact">
       <div className="container top-contact-inner">
         <div className="top-contact-links">
-          <a data-track="phone:top-bar" href={siteInfo.phoneHref}>
-            <strong>Call:</strong> {siteInfo.phoneLabel}
+          <a className="top-contact-item top-contact-call" data-track="phone:top-bar" href={siteInfo.phoneHref}>
+            <strong>Call:</strong>
+            <span className="top-contact-value">{siteInfo.phoneLabel}</span>
           </a>
-          <Link href="/contact#hours">
-            <strong>Hours:</strong> {siteInfo.hoursLabel}
+          <Link className="top-contact-item" href="/contact#hours">
+            <span className="top-contact-icon top-contact-icon-clock" aria-hidden="true" />
+            <span>{siteInfo.hoursLabel}</span>
           </Link>
-          <a data-track="directions:top-bar" href={siteInfo.mapsHref}>
-            <strong>Address:</strong> {siteInfo.addressLabel}
+          <a className="top-contact-item top-contact-address" data-track="directions:top-bar" href={siteInfo.mapsHref}>
+            <span className="top-contact-icon top-contact-icon-pin" aria-hidden="true" />
+            <span>{siteInfo.addressLabel}</span>
           </a>
-          <span className="top-service-area">Serving North Texas</span>
         </div>
         <div className="social-links" aria-label="Social media links">
           {socialLinks.map((link) => (
@@ -111,32 +113,45 @@ function Header() {
       <div className="container header-inner">
         <Link className="brand" href="/" aria-label="Xtreme Collision Repair home">
           <img className="brand-logo" src="/brand/xtreme-logo.webp" alt="Xtreme Collision & Hail" />
-          <span>
-            <strong>{siteInfo.name}</strong>
+          <span className="brand-copy">
+            <strong>Factory-Correct Auto Body Repair</strong>
             <small>{siteInfo.city}, {siteInfo.region}</small>
           </span>
         </Link>
         <nav className="nav-links" aria-label="Main navigation">
-          {navLinks.map((link) => (
-            link.label === "Services" ? (
-              <details className="nav-dropdown" key={link.href}>
-                <summary>Services</summary>
-                <div className="dropdown-menu">
-                  <Link href="/services">All Services</Link>
-                  {services.slice(0, 8).map((service) => (
-                    <Link href={service.href} key={service.title}>
-                      {service.title}
-                    </Link>
-                  ))}
-                </div>
-              </details>
-            ) : (
-              <Link key={link.href} href={link.href}>
-                {link.label}
-              </Link>
-            )
-          ))}
-          </nav>
+          <Link className="nav-active" href="/">Home</Link>
+          <details className="nav-dropdown">
+            <summary>Services</summary>
+            <div className="dropdown-menu">
+              <Link href="/services">All Services</Link>
+              {services.slice(0, 8).map((service) => (
+                <Link href={service.href} key={service.title}>
+                  {service.title}
+                </Link>
+              ))}
+            </div>
+          </details>
+          <details className="nav-dropdown">
+            <summary>Certifications</summary>
+            <div className="dropdown-menu">
+              <Link href="/certifications">OEM Certifications</Link>
+              <Link href="/our-facility">Shop Equipment</Link>
+              <Link href="/gallery">Work Gallery</Link>
+            </div>
+          </details>
+          <Link href="/contact">Concierge Pick Up & Delivery</Link>
+          <details className="nav-dropdown">
+            <summary>About</summary>
+            <div className="dropdown-menu">
+              <Link href="/about">About Us</Link>
+              <Link href="/repair-process">Repair Process</Link>
+              <Link href="/insurance-claims-assistance">Insurance Claims</Link>
+              <Link href="/resources">Resources / Blog</Link>
+              <Link href="/reviews">Reviews</Link>
+              <Link href="/contact">Contact</Link>
+            </div>
+          </details>
+        </nav>
         <details className="mobile-menu">
           <summary aria-label="Open navigation menu">Menu</summary>
           <div className="mobile-menu-panel">

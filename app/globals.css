@@ -64,38 +64,93 @@ svg {
 }
 
 .top-contact {
-  background: #0c1016;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #020305;
   color: #f5f7fa;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .top-contact-inner {
   display: flex;
-  min-height: 42px;
+  min-height: 36px;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
+  gap: 24px;
 }
 
 .top-contact-links {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 16px;
+  gap: 28px;
 }
 
-.top-contact a,
-.top-contact .social-icon {
-  color: var(--gold);
+.top-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #d7dde5;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.top-contact-call {
+  gap: 5px;
+  text-transform: uppercase;
+}
+
+.top-contact-call strong {
+  color: var(--white);
+  font-weight: 900;
+}
+
+.top-contact-value {
+  color: #58b2ff;
+  font-weight: 900;
+}
+
+.top-contact-icon {
+  position: relative;
+  display: inline-grid;
+  width: 19px;
+  height: 19px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 0 2px rgba(47, 155, 255, 0.18);
+}
+
+.top-contact-icon::before,
+.top-contact-icon::after {
+  position: absolute;
+  content: "";
+}
+
+.top-contact-icon-clock::before {
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+}
+
+.top-contact-icon-clock::after {
+  width: 4px;
+  height: 4px;
+  border-top: 2px solid var(--white);
+  border-left: 2px solid var(--white);
+  transform: translate(1px, -1px);
+}
+
+.top-contact-icon-pin::before {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--white);
 }
 
 .top-contact a:hover {
   color: var(--white);
-}
-
-.top-service-area {
-  color: #dbe5ef;
-  font-weight: 800;
 }
 
 .social-links {
@@ -106,13 +161,13 @@ svg {
 
 .social-icon {
   display: grid;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 50%;
-  color: #dfe7ef;
-  font-size: 11px;
+  color: rgba(223, 231, 239, 0.54);
+  font-size: 10px;
   font-weight: 900;
   line-height: 1;
   text-transform: uppercase;
@@ -129,17 +184,31 @@ svg {
   top: 0;
   z-index: 20;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(17, 29, 43, 0.96);
+  background:
+    linear-gradient(90deg, rgba(2, 3, 5, 0.96), rgba(9, 16, 25, 0.82)),
+    rgba(2, 3, 5, 0.86);
   color: var(--white);
   backdrop-filter: blur(16px);
 }
 
+.site-header::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 54px;
+  height: 5px;
+  border-radius: 0 0 2px 2px;
+  background: var(--orange);
+  content: "";
+  transform: translateX(-50%);
+}
+
 .header-inner {
   display: flex;
-  min-height: 78px;
+  min-height: 118px;
   align-items: center;
   justify-content: space-between;
-  gap: 22px;
+  gap: 28px;
 }
 
 .brand {
@@ -149,6 +218,13 @@ svg {
   gap: 12px;
 }
 
+.site-header .brand {
+  min-width: 250px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
 .brand-logo {
   display: block;
   width: clamp(142px, 13vw, 188px);
@@ -156,6 +232,16 @@ svg {
   flex: 0 0 auto;
   border-radius: 6px;
   object-fit: contain;
+}
+
+.site-header .brand-logo {
+  width: clamp(210px, 16vw, 270px);
+  max-height: 82px;
+  border-radius: 0;
+}
+
+.brand-copy {
+  padding-left: 7px;
 }
 
 .brand-mark {
@@ -191,14 +277,34 @@ svg {
   display: flex;
   flex: 1;
   align-items: center;
-  justify-content: center;
-  gap: 18px;
-  color: #dce3eb;
-  font-size: 14px;
+  justify-content: flex-end;
+  gap: clamp(18px, 2vw, 34px);
+  color: #e5ebf1;
+  font-size: 15px;
 }
 
-.nav-links a {
+.nav-links a,
+.nav-dropdown summary {
+  position: relative;
+  padding: 10px 0;
+  font-weight: 800;
+  line-height: 1;
   white-space: nowrap;
+}
+
+.nav-links .nav-active {
+  color: #58b2ff;
+}
+
+.nav-links .nav-active::after {
+  position: absolute;
+  right: 0;
+  bottom: -13px;
+  left: 0;
+  height: 2px;
+  border-radius: 99px;
+  background: var(--orange);
+  content: "";
 }
 
 .nav-dropdown {
@@ -229,7 +335,7 @@ svg {
 
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 18px);
+  top: calc(100% + 22px);
   left: -18px;
   z-index: 40;
   display: grid;
@@ -261,6 +367,15 @@ svg {
   flex: 0 0 auto;
 }
 
+.header-cta .button {
+  min-height: 44px;
+  border-radius: 3px;
+  padding: 14px 26px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 .mobile-menu {
   display: none;
   position: relative;
@@ -288,13 +403,17 @@ svg {
   top: calc(100% + 12px);
   right: 0;
   z-index: 60;
-  display: grid;
+  display: none;
   width: min(340px, calc(100vw - 28px));
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
   background: #0d141d;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
   padding: 12px;
+}
+
+.mobile-menu[open] .mobile-menu-panel {
+  display: grid;
 }
 
 .mobile-menu-panel a,
@@ -1733,7 +1852,7 @@ svg {
   text-align: right;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1180px) {
   .header-inner {
     flex-wrap: wrap;
     padding: 14px 0;
@@ -1808,8 +1927,8 @@ svg {
 
   .top-contact-inner {
     min-height: 0;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     gap: 6px;
     padding: 9px 0;
   }
@@ -1819,8 +1938,17 @@ svg {
     gap: 6px;
   }
 
+  .top-contact-address {
+    display: none;
+  }
+
+  .top-contact .social-links {
+    display: none;
+  }
+
   .header-inner {
     gap: 14px;
+    min-height: 88px;
   }
 
   .brand {
@@ -1829,6 +1957,15 @@ svg {
 
   .brand-logo {
     width: 156px;
+  }
+
+  .site-header .brand-logo {
+    width: 190px;
+    max-height: 66px;
+  }
+
+  .brand-copy {
+    display: none;
   }
 
   .site-header .button {
