@@ -110,7 +110,7 @@ function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <Link className="brand" href="/" aria-label="Xtreme Collision Repair home">
-          <span className="brand-mark">X</span>
+          <img className="brand-logo" src="/brand/xtreme-logo.webp" alt="Xtreme Collision & Hail" />
           <span>
             <strong>{siteInfo.name}</strong>
             <small>{siteInfo.city}, {siteInfo.region}</small>
@@ -169,7 +169,7 @@ export function Footer() {
       <div className="container footer-grid">
         <section>
           <Link className="brand footer-brand" href="/">
-            <span className="brand-mark">X</span>
+            <img className="brand-logo" src="/brand/xtreme-logo.webp" alt="Xtreme Collision & Hail" />
             <span>
               <strong>{siteInfo.name}</strong>
               <small>Collision repair in {siteInfo.city}, TX</small>

@@ -144,9 +144,18 @@ svg {
 
 .brand {
   display: inline-flex;
-  min-width: 214px;
+  min-width: 286px;
   align-items: center;
   gap: 12px;
+}
+
+.brand-logo {
+  display: block;
+  width: clamp(142px, 13vw, 188px);
+  height: auto;
+  flex: 0 0 auto;
+  border-radius: 6px;
+  object-fit: contain;
 }
 
 .brand-mark {
@@ -168,7 +177,7 @@ svg {
 }
 
 .brand strong {
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.2;
 }
 
@@ -1702,6 +1711,10 @@ svg {
   margin-bottom: 18px;
 }
 
+.footer-brand .brand-logo {
+  width: 218px;
+}
+
 .footer-map-row {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -1812,6 +1825,10 @@ svg {
 
   .brand {
     min-width: 0;
+  }
+
+  .brand-logo {
+    width: 156px;
   }
 
   .site-header .button {

@@ -29,8 +29,9 @@ export const metadata: Metadata = {
     "North Texas collision repair",
   ],
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/brand/xtreme-favicon.png",
+    shortcut: "/brand/xtreme-favicon.png",
+    apple: "/brand/xtreme-favicon.png",
   },
 };
 
