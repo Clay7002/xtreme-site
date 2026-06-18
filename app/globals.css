@@ -652,12 +652,18 @@ svg {
 
 .certification-strip {
   border-bottom: 1px solid var(--line);
-  background: #101722;
+  background:
+    linear-gradient(135deg, rgba(47, 155, 255, 0.12), transparent 38%),
+    #101722;
   color: var(--white);
 }
 
 .certification-heading {
-  padding: 28px 0 20px;
+  display: grid;
+  grid-template-columns: 0.95fr 1fr;
+  gap: 28px;
+  align-items: end;
+  padding: 30px 0 24px;
 }
 
 .certification-heading h2 {
@@ -669,49 +675,65 @@ svg {
   line-height: 1.1;
 }
 
+.certification-heading > p {
+  margin: 0;
+  color: #c7d2dd;
+  line-height: 1.65;
+}
+
 .certification-row {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1px;
-  background: rgba(255, 255, 255, 0.12);
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  padding: 0 0 34px;
 }
 
-.certification-badge {
-  display: flex;
-  min-height: 116px;
-  align-items: center;
-  gap: 13px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent),
-    #101722;
-  padding: 18px;
-}
-
-.certification-badge > span {
+.certification-logo-card {
   display: grid;
-  width: 42px;
-  height: 42px;
-  flex: 0 0 auto;
-  place-items: center;
-  border: 1px solid rgba(201, 209, 219, 0.52);
+  min-height: 126px;
+  align-content: center;
+  justify-items: center;
+  gap: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 209, 219, 0.56);
   border-radius: 8px;
-  background: rgba(47, 155, 255, 0.16);
-  color: var(--orange);
-  font-weight: 900;
+  background:
+    linear-gradient(180deg, #ffffff, #eef3f8);
+  padding: 14px;
+  box-shadow: 0 16px 34px rgba(1, 8, 20, 0.24);
 }
 
-.certification-badge h2 {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 900;
-  line-height: 1.15;
+.certification-logo-card-dark {
+  border-color: rgba(201, 209, 219, 0.24);
+  background:
+    linear-gradient(180deg, #192333, #070d16);
 }
 
-.certification-badge p {
-  margin: 6px 0 0;
-  color: #b8c4cf;
-  font-size: 12px;
-  line-height: 1.45;
+.certification-logo-card img {
+  display: block;
+  width: 100%;
+  max-width: 156px;
+  max-height: 68px;
+  object-fit: contain;
+}
+
+.certification-logo-card span {
+  color: #26313c;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.certification-logo-card-dark span {
+  color: #f1f5f9;
+}
+
+.certification-note {
+  border-left: 4px solid var(--blue);
+  background: var(--panel);
+  padding: 16px 18px;
+  color: #3e4b59;
 }
 
 .trust-grid {
@@ -1734,7 +1756,8 @@ svg {
   .story-layout,
   .location-layout,
   .service-detail-layout,
-  .contact-layout {
+  .contact-layout,
+  .certification-heading {
     grid-template-columns: 1fr;
   }
 

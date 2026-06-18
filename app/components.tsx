@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
-  certificationSignals,
+  certificationLogos,
   faqs,
   footerQuickLinks,
   galleryItems,
@@ -308,19 +308,26 @@ export function HeroSection() {
 
 export function CertificationStrip() {
   return (
-    <section className="certification-strip" aria-label="Repair capability signals">
+    <section className="certification-strip" aria-label="OEM certification logos">
       <div className="container certification-heading">
-        <p className="eyebrow">Professional repair standards</p>
-        <h2>Trusted Collision Repair. Professional Standards. Local Service.</h2>
+        <div>
+          <p className="eyebrow">OEM certifications & repair programs</p>
+          <h2>Brand Certifications Customers Can Recognize</h2>
+        </div>
+        <p>
+          Xtreme Collision Repair displays manufacturer and repair program
+          badges here so customers can quickly recognize familiar brands before
+          they start an estimate.
+        </p>
       </div>
       <div className="container certification-row">
-        {certificationSignals.map((signal) => (
-          <article className="certification-badge" key={signal.label}>
-            <span aria-hidden="true">{signal.label.slice(0, 1)}</span>
-            <div>
-              <h2>{signal.label}</h2>
-              <p>{signal.text}</p>
-            </div>
+        {certificationLogos.map((logo) => (
+          <article
+            className={`certification-logo-card certification-logo-card-${logo.tone ?? "light"}`}
+            key={logo.name}
+          >
+            <img src={logo.src} alt={logo.alt} loading="lazy" decoding="async" />
+            <span>{logo.name}</span>
           </article>
         ))}
       </div>

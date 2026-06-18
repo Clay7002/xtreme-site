@@ -13,8 +13,8 @@ export default function CertificationsPage() {
       <main>
         <InnerHero
           eyebrow="Certifications & equipment"
-          title="Repair capability signals ready for verified credentials"
-          text="This page gives Xtreme a professional place to display confirmed OEM certifications, I-CAR credentials, equipment details, and warranty information as they are provided."
+          title="OEM Certification Logos & Repair Equipment"
+          text="Customers can review the brand certification badges, repair equipment, and quality standards that support Xtreme Collision Repair's workmanship."
         />
         <CertificationStrip />
         <section className="section">
@@ -22,14 +22,19 @@ export default function CertificationsPage() {
             <SectionIntro
               eyebrow="Factory-correct repair planning"
               title="Show customers the standards behind the repair."
-              text="Customers want to know that collision repairs are planned carefully, documented clearly, and reviewed before delivery. Add verified certification logos here when Xtreme confirms them."
+              text="Manufacturer and repair-program badges help customers understand that repair planning, documentation, equipment, and final quality checks matter after a collision."
             />
             <p>
-              The site currently uses service-related trust signals instead of
-              unsupported manufacturer or industry certification claims. This
-              keeps the presentation polished, accurate, and ready for real
-              proof such as OEM badges, I-CAR Gold Class status, equipment
-              photography, or documented training information.
+              The logo section above is built to stay easy to update as
+              certification status changes or additional brand credentials are
+              approved. Xtreme can continue adding verified badges, equipment
+              photos, training information, and warranty details in this same
+              section.
+            </p>
+            <p className="certification-note">
+              Certification logos should reflect current, business-approved
+              credentials and should be reviewed whenever manufacturer program
+              participation changes.
             </p>
           </div>
         </section>

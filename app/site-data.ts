@@ -36,6 +36,13 @@ export type WorkGalleryItem = {
   alt: string;
 };
 
+export type CertificationLogo = {
+  name: string;
+  src: string;
+  alt: string;
+  tone?: "light" | "dark";
+};
+
 export const siteInfo = {
   name: "Xtreme Collision Repair",
   city: "Carrollton",
@@ -116,6 +123,80 @@ export const certificationSignals = [
   },
 ];
 
+export const certificationLogos: CertificationLogo[] = [
+  {
+    name: "Kia",
+    src: "/certifications/kia-certified.webp",
+    alt: "Kia certified collision repair logo",
+  },
+  {
+    name: "Hyundai",
+    src: "/certifications/hyundai-certified.webp",
+    alt: "Hyundai certified collision center logo",
+    tone: "dark",
+  },
+  {
+    name: "Jeep",
+    src: "/certifications/jeep-certified.webp",
+    alt: "Jeep certified collision center logo",
+  },
+  {
+    name: "Chrysler",
+    src: "/certifications/chrysler-certified.webp",
+    alt: "Chrysler certified collision center logo",
+  },
+  {
+    name: "Dodge",
+    src: "/certifications/dodge-certified.webp",
+    alt: "Dodge certified collision center logo",
+  },
+  {
+    name: "GMC",
+    src: "/certifications/gmc-certified.webp",
+    alt: "GMC certified collision repair logo",
+  },
+  {
+    name: "Chevrolet",
+    src: "/certifications/chevrolet-certified.webp",
+    alt: "Chevrolet certified collision repair logo",
+  },
+  {
+    name: "Cadillac",
+    src: "/certifications/cadillac-certified.webp",
+    alt: "Cadillac certified collision repair logo",
+  },
+  {
+    name: "Buick",
+    src: "/certifications/buick-certified.webp",
+    alt: "Buick certified collision repair logo",
+  },
+  {
+    name: "Subaru",
+    src: "/certifications/subaru-certified.webp",
+    alt: "Subaru certified collision repair logo",
+  },
+  {
+    name: "Nissan",
+    src: "/certifications/nissan-certified.webp",
+    alt: "Nissan certified collision repair logo",
+  },
+  {
+    name: "INFINITI",
+    src: "/certifications/infiniti-certified.webp",
+    alt: "INFINITI certified collision repair logo",
+  },
+  {
+    name: "Ford",
+    src: "/certifications/ford-certified.webp",
+    alt: "Ford certified collision center logo",
+  },
+  {
+    name: "Lincoln",
+    src: "/certifications/lincoln-certified.webp",
+    alt: "Lincoln certified collision repair logo",
+  },
+];
+
 export const nearbyAreas = [
   "Carrollton",
   "Addison",
@@ -152,7 +233,7 @@ export const servicePanels = [
     title: "Certifications & Equipment",
     href: "/certifications",
     cta: "Learn More",
-    text: "See the equipment, training placeholders, paint systems, and repair standards that help support quality collision repairs.",
+    text: "See OEM certification logos, repair equipment, paint systems, and repair standards that help support quality collision repairs.",
   },
 ];
 
