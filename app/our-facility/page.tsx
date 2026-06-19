@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import {
   FinalCTA,
   InnerHero,
@@ -58,7 +60,7 @@ export default function OurFacilityPage() {
               {areas.map((area) => (
                 <article className="facility-card" key={area.title}>
                   {area.image ? (
-                    <img className="facility-photo" src={area.image} alt={area.alt ?? area.title} loading="lazy" decoding="async" />
+                    <Image className="facility-photo" src={area.image} alt={area.alt ?? area.title} width={1200} height={900} />
                   ) : (
                     <div className="facility-photo-placeholder">{area.title}</div>
                   )}

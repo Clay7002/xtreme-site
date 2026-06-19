@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { ReactNode } from "react";
 import {
   certificationLogos,
@@ -112,7 +113,14 @@ function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <Link className="brand" href="/" aria-label="Xtreme Collision Repair home">
-          <img className="brand-logo" src="/brand/xtreme-logo.webp" alt="Xtreme Collision & Hail" />
+          <Image
+            className="brand-logo"
+            src="/brand/xtreme-logo.webp"
+            alt="Xtreme Collision & Hail"
+            width={768}
+            height={256}
+            priority
+          />
           <span className="brand-copy">
             <strong>Factory-Correct Auto Body Repair</strong>
             <small>{siteInfo.city}, {siteInfo.region}</small>
@@ -184,7 +192,13 @@ export function Footer() {
       <div className="container footer-grid">
         <section>
           <Link className="brand footer-brand" href="/">
-            <img className="brand-logo" src="/brand/xtreme-logo.webp" alt="Xtreme Collision & Hail" />
+            <Image
+              className="brand-logo"
+              src="/brand/xtreme-logo.webp"
+              alt="Xtreme Collision & Hail"
+              width={768}
+              height={256}
+            />
             <span>
               <strong>{siteInfo.name}</strong>
               <small>Collision repair in {siteInfo.city}, TX</small>
@@ -341,7 +355,7 @@ export function CertificationStrip() {
             className={`certification-logo-card certification-logo-card-${logo.tone ?? "light"}`}
             key={logo.name}
           >
-            <img src={logo.src} alt={logo.alt} loading="lazy" decoding="async" />
+            <Image src={logo.src} alt={logo.alt} width={353} height={170} />
             <span>{logo.name}</span>
           </article>
         ))}
@@ -629,11 +643,11 @@ function BeforeAfterVisual({ item }: { item: GalleryItem }) {
   return (
     <div className="before-after-visual photo-compare" aria-label={`${item.title} before and after photos`}>
       <figure className="before-panel before-after-panel">
-        <img src={item.beforeSrc} alt={item.beforeAlt} loading="lazy" decoding="async" />
+        <Image src={item.beforeSrc} alt={item.beforeAlt} width={1200} height={820} />
         <figcaption>Before</figcaption>
       </figure>
       <figure className="after-panel before-after-panel">
-        <img src={item.afterSrc} alt={item.afterAlt} loading="lazy" decoding="async" />
+        <Image src={item.afterSrc} alt={item.afterAlt} width={1200} height={820} />
         <figcaption>After</figcaption>
       </figure>
     </div>
@@ -647,7 +661,7 @@ export function WorkGallerySection({ limit }: { limit?: number }) {
     <div className="work-gallery-grid">
       {items.map((item) => (
         <article className="work-photo-card" key={`${item.title}-${item.src}`}>
-          <img src={item.src} alt={item.alt} loading="lazy" decoding="async" />
+          <Image src={item.src} alt={item.alt} width={1200} height={820} />
           <div className="work-photo-body">
             <p>{item.tag}</p>
             <h3>{item.title}</h3>
@@ -795,10 +809,14 @@ export function EstimateForm() {
           Description of damage
           <textarea name="damage-description" rows={5} required />
         </label>
-        <label className="form-wide">
-          Upload photos placeholder
-          <input name="damage-photos" type="file" multiple />
-        </label>
+        <div className="form-wide form-callout">
+          <strong>Have damage photos?</strong>
+          <span>
+            Photo upload is intentionally not active on this draft form yet.
+            Call the shop and we&apos;ll explain the best way to share photos for
+            review.
+          </span>
+        </div>
         <label>
           Preferred appointment date
           <input name="preferred-date" type="date" />
