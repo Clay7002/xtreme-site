@@ -341,12 +341,12 @@ export function CertificationStrip() {
       <div className="container certification-heading">
         <div>
           <p className="eyebrow">OEM certifications & repair programs</p>
-          <h2>Brand Certifications Customers Can Recognize</h2>
+          <h2>Certified repair programs for today&apos;s vehicles</h2>
         </div>
         <p>
-          Xtreme Collision Repair displays manufacturer and repair program
-          badges here so customers can quickly recognize familiar brands before
-          they start an estimate.
+          Xtreme Collision Repair maintains manufacturer and repair program
+          credentials that support proper repair planning, equipment standards,
+          and workmanship expectations for modern vehicles.
         </p>
       </div>
       <div className="container certification-row">
