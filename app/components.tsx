@@ -515,6 +515,49 @@ export function ResourcesPreview() {
   );
 }
 
+
+const repairStartItems = [
+  {
+    title: "Vehicle details",
+    text: "Year, make, model, VIN if available, and the best contact number for follow-up.",
+  },
+  {
+    title: "Insurance information",
+    text: "Claim number, insurance estimate, adjuster contact, and rental details if a claim is already open.",
+  },
+  {
+    title: "Damage notes",
+    text: "Where the vehicle was hit, warning lights, drivability concerns, and any photos you can discuss with the shop.",
+  },
+  {
+    title: "Timing needs",
+    text: "Preferred drop-off timing, rental needs, and any deadline the shop should know before repair planning starts.",
+  },
+];
+
+export function RepairStartChecklist() {
+  return (
+    <div className="repair-start-card">
+      <div>
+        <p className="eyebrow">Before you request an estimate</p>
+        <h3>Have these details ready to speed up the first call.</h3>
+        <p>
+          A clear first request helps Xtreme review the situation faster and
+          explain the right next step without overpromising before inspection.
+        </p>
+      </div>
+      <div className="repair-start-grid">
+        {repairStartItems.map((item) => (
+          <article key={item.title}>
+            <strong>{item.title}</strong>
+            <span>{item.text}</span>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function LocationContactSection() {
   return (
     <section className="section location-section" id="location">
@@ -812,9 +855,8 @@ export function EstimateForm() {
         <div className="form-wide form-callout">
           <strong>Have damage photos?</strong>
           <span>
-            Photo upload is intentionally not active on this draft form yet.
-            Call the shop and we&apos;ll explain the best way to share photos for
-            review.
+            Photo upload is not active on this preview form yet. Call the shop
+            and we&apos;ll explain the best way to share photos for review.
           </span>
         </div>
         <label>
@@ -838,8 +880,8 @@ export function EstimateForm() {
         </label>
       </div>
       <p className="form-note">
-        We&apos;ll review your request and follow up within 24-48 business
-        hours. Need help now?{" "}
+        This preview form does not submit to a live backend yet. For now, call
+        the shop for the fastest response. Need help now?{" "}
         <a className="text-link" data-track="phone:form-note" href={siteInfo.phoneHref}>
           Call {siteInfo.phoneLabel}
         </a>

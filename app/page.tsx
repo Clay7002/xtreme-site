@@ -12,6 +12,7 @@ import {
   LocationContactSection,
   PageShell,
   ProcessPreview,
+  RepairStartChecklist,
   ReviewsSection,
   ResourcesPreview,
   SectionIntro,
@@ -43,6 +44,12 @@ export default function Home() {
         </section>
 
         <InsuranceSection />
+
+        <section className="section">
+          <div className="container">
+            <RepairStartChecklist />
+          </div>
+        </section>
 
         <section className="section muted-section">
           <div className="container">

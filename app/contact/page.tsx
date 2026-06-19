@@ -3,6 +3,7 @@ import {
   FinalCTA,
   InnerHero,
   PageShell,
+  RepairStartChecklist,
   SectionIntro,
 } from "../components";
 import { siteInfo } from "../site-data";
@@ -14,7 +15,7 @@ export default function ContactPage() {
         <InnerHero
           eyebrow="Contact / Get a Free Estimate"
           title="Request a free collision repair estimate"
-          text="Share your phone number, vehicle year, make, model, insurance information, and damage notes. We'll get back to you within 24-48 business hours."
+          text="Share your phone number, vehicle year, make, model, insurance information, and damage notes. For the fastest response while this preview form is not connected to a live backend, call the shop directly."
         />
         <section className="section" id="location">
           <div className="container contact-layout">
@@ -22,8 +23,9 @@ export default function ContactPage() {
               <SectionIntro
                 eyebrow="Estimate request"
                 title="Tell us what happened"
-                text="The form improves lead quality by collecting contact details, vehicle information, insurance details, damage photos, and preferred appointment timing."
+                text="The form shows the intended estimate intake flow for review. Live submission and photo upload still need backend approval before launch."
               />
+              <RepairStartChecklist />
               <EstimateForm />
             </div>
             <aside className="contact-panel">
