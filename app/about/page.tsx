@@ -48,7 +48,7 @@ export default function AboutPage() {
             <SectionIntro
               eyebrow="Careers"
               title="Careers at Xtreme Collision Repair"
-              text="Interested in joining Xtreme Collision Repair? Future openings for technicians, estimators, and office roles can be shared here when positions are available."
+              text="Interested in joining Xtreme Collision Repair? Contact the shop to ask about technician, estimator, or office opportunities."
             />
           </div>
         </section>
@@ -57,7 +57,7 @@ export default function AboutPage() {
             <SectionIntro
               eyebrow="Why customers choose local"
               title="A repair experience that feels easier to understand"
-              text="The site emphasizes the decisions customers care about: communication, insurance help, repair planning, and confidence before pickup."
+              text="Xtreme focuses on the decisions customers care about: communication, insurance help, repair planning, and confidence before pickup."
             />
             <WhyChooseSection />
           </div>

@@ -10,7 +10,7 @@ import {
 const areas: { title: string; text: string; image?: string; alt?: string }[] = [
   {
     title: "Estimating Area",
-    text: "Add intake, office, and customer communication photos when available.",
+    text: "A clear intake experience helps customers share vehicle details, claim information, and repair concerns up front.",
   },
   {
     title: "Body Repair Area",
@@ -24,7 +24,7 @@ const areas: { title: string; text: string; image?: string; alt?: string }[] = [
   },
   {
     title: "Paint & Refinishing Area",
-    text: "Add paint booth, prep, color-matching, and refinishing photography when available.",
+    text: "Paint and refinishing work is planned around surface preparation, color support, blending, clearcoat finish, and final appearance checks.",
   },
   {
     title: "Quality Control",
@@ -47,14 +47,14 @@ export default function OurFacilityPage() {
         <InnerHero
           eyebrow="Shop tour"
           title="Take a Look Inside Xtreme Collision Repair"
-          text="See real Xtreme shop equipment, repair bays, and finished vehicle examples as the facility gallery continues to grow."
+          text="See Xtreme shop equipment, repair areas, and finished vehicle examples from the Carrollton facility."
         />
         <section className="section">
           <div className="container">
             <SectionIntro
               eyebrow="Facility overview"
-              title="A professional repair environment customers can trust"
-              text="Real facility and repair photos help customers see the equipment, process, and workmanship behind the shop."
+              title="A professional repair environment built for quality"
+              text="Facility and repair photos help show the equipment, process, and workmanship behind the shop."
             />
             <div className="facility-grid">
               {areas.map((area) => (

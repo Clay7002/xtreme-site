@@ -21,7 +21,7 @@ export default function ResourcesPage() {
             <SectionIntro
               eyebrow="Collision repair education"
               title="Practical answers that help customers feel prepared."
-              text="Use these preview cards as the starting point for real blog posts, FAQs, and customer education content."
+              text="Browse practical articles and FAQs that explain repair steps, insurance questions, and what to expect after a collision."
             />
             <ResourcesPreview />
           </div>
@@ -31,7 +31,7 @@ export default function ResourcesPage() {
             <SectionIntro
               eyebrow="FAQ"
               title="Common questions before an estimate"
-              text="These answers support SEO and reduce uncertainty for customers comparing local body shops."
+              text="These answers help drivers compare body shops, understand insurance terms, and prepare for an estimate."
             />
             <FAQSection />
           </div>

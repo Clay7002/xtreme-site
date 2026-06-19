@@ -10,7 +10,7 @@ import {
   navLinks,
   nearbyAreas,
   processSteps,
-  reviewPlaceholders,
+  customerExperienceItems,
   resourceArticles,
   servicePanels,
   services,
@@ -734,7 +734,7 @@ export function ReviewsSection() {
         </div>
       </div>
       <div className="review-carousel" aria-label="Customer review section">
-        {reviewPlaceholders.map((review, index) => (
+        {customerExperienceItems.map((review, index) => (
           <article className="review-card" key={`${review.label}-${index}`}>
             <span className="reason-icon" aria-hidden="true">{index + 1}</span>
             <h3>{review.label}</h3>
@@ -847,8 +847,8 @@ export function EstimateForm() {
         <div className="form-wide form-callout">
           <strong>Have damage photos?</strong>
           <span>
-            Online photo upload is not active yet. Call the shop and we&apos;ll
-            explain the best way to share photos for review.
+            Call the shop and we&apos;ll explain the best way to share damage photos
+            for review.
           </span>
         </div>
         <label>
@@ -872,8 +872,7 @@ export function EstimateForm() {
         </label>
       </div>
       <p className="form-note">
-        Online estimate requests are being finalized. For the fastest response,
-        call the shop directly. Need help now?{" "}
+        For the fastest response, call the shop directly. Need help now?{" "}
         <a className="text-link" data-track="phone:form-note" href={siteInfo.phoneHref}>
           Call {siteInfo.phoneLabel}
         </a>

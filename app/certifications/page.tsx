@@ -13,28 +13,25 @@ export default function CertificationsPage() {
       <main>
         <InnerHero
           eyebrow="Certifications & equipment"
-          title="OEM Certification Logos & Repair Equipment"
-          text="Customers can review the brand certification badges, repair equipment, and quality standards that support Xtreme Collision Repair's workmanship."
+          title="OEM Certifications & Repair Equipment"
+          text="Review the brand certification badges, repair equipment, and quality standards that support Xtreme Collision Repair's workmanship."
         />
         <CertificationStrip />
         <section className="section">
           <div className="container narrow-content">
             <SectionIntro
               eyebrow="Factory-correct repair planning"
-              title="Show customers the standards behind the repair."
-              text="Manufacturer and repair-program badges help customers understand that repair planning, documentation, equipment, and final quality checks matter after a collision."
+              title="Standards behind the repair"
+              text="Manufacturer and repair-program badges help explain why repair planning, documentation, equipment, and final quality checks matter after a collision."
             />
             <p>
-              The logo section above is built to stay easy to update as
-              certification status changes or additional brand credentials are
-              approved. Xtreme can continue adding verified badges, equipment
-              photos, training information, and warranty details in this same
-              section.
+              Xtreme maintains certification and repair-program information so
+              drivers can better understand the standards, equipment, and repair
+              planning behind the work.
             </p>
             <p className="certification-note">
-              Certification logos should reflect current, business-approved
-              credentials and should be reviewed whenever manufacturer program
-              participation changes.
+              Certification and program details should always reflect current
+              credentials and active manufacturer program participation.
             </p>
           </div>
         </section>

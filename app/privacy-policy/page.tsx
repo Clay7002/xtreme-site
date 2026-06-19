@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
           <div className="container narrow-content">
             <SectionIntro
               title="Information collected through the estimate form"
-              text="Estimate requests may include contact information, vehicle details, insurance details, damage descriptions, appointment preferences, and photos if online upload is added in the future."
+              text="Estimate requests may include contact information, vehicle details, insurance details, damage descriptions, appointment preferences, and any photos shared with the shop for review."
             />
             <p>
               Xtreme Collision Repair uses customer information to respond to

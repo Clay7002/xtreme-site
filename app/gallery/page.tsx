@@ -21,7 +21,7 @@ export default function GalleryPage() {
             <SectionIntro
               eyebrow="Before and after"
               title="Documented repair transformations"
-              text="Each card pairs visible damage with the finished repair so customers can see the quality of the work and the care taken through the process."
+              text="Each card pairs visible damage with the finished repair to show the quality of the work and the care taken through the process."
             />
             <BeforeAfterSection full />
           </div>
@@ -30,8 +30,8 @@ export default function GalleryPage() {
           <div className="container">
             <SectionIntro
               eyebrow="Work photos"
-              title="More real shop and repair photos"
-              text="This gallery can keep growing as new approved shop photos, repair documentation, and final delivery images are added."
+              title="Shop and repair photos"
+              text="See Xtreme's repair environment, equipment, repair documentation, and completed vehicle examples."
             />
             <WorkGallerySection />
           </div>

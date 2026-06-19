@@ -399,7 +399,7 @@ export const resourceArticles: ResourceArticle[] = [
     text: "What customers should ask about workmanship warranty, paint finish, parts, and written warranty terms.",
     body: [
       "Warranty language should be clear before customers authorize repairs. Ask what is covered, what is excluded, and how long workmanship coverage applies.",
-      "Xtreme presents a lifetime limited workmanship warranty message while leaving final terms for the business-approved warranty language.",
+      "Xtreme offers lifetime limited workmanship warranty support on qualifying repairs. Ask the shop for the written terms that apply to your repair.",
       "This article is educational and is not legal advice.",
     ],
     relatedLinks: [
@@ -496,7 +496,7 @@ export const services: Service[] = [
     summary:
       "When an impact affects the vehicle's frame or structural alignment, the repair plan needs careful measuring, documentation, and correction before cosmetic work can be completed properly.",
     intro:
-      "Frame-related damage should be reviewed before repairs move forward. The shop can inspect structural concerns, document findings, and plan the repair sequence around safety, alignment, and proper panel fit.",
+      "Frame-related damage needs careful inspection before repairs move forward. The shop can document structural concerns and plan the repair sequence around safety, alignment, and proper panel fit.",
     bullets: [
       "Structural damage review",
       "Frame repair planning",
@@ -528,7 +528,7 @@ export const services: Service[] = [
     summary:
       "Collision events can involve airbags, sensors, restraints, and warning lights. This service gives customers a clear path for inspection and coordination of safety-system repairs when applicable.",
     intro:
-      "Airbag and restraint systems should be handled carefully after a collision. The site avoids unsupported certification claims while clearly explaining that safety-system needs can be reviewed and coordinated as part of the repair plan.",
+      "Airbag and restraint systems should be handled carefully after a collision. Xtreme can review safety-system concerns and coordinate applicable repair steps as part of the broader collision repair plan.",
     bullets: [
       "Airbag warning light review",
       "Restraint-system repair coordination",
@@ -576,7 +576,7 @@ export const services: Service[] = [
     summary:
       "Impacts near wheels or suspension points can affect how a vehicle tracks, handles, or sits. This service highlights steering and suspension review as part of complete collision repair planning.",
     intro:
-      "If a vehicle pulls, rides unevenly, or has wheel-area collision damage, steering and suspension concerns should be reviewed before delivery. Xtreme Collision Repair can coordinate the needed inspection and repair steps.",
+      "If a vehicle pulls, rides unevenly, or has wheel-area collision damage, steering and suspension concerns need attention before delivery. Xtreme Collision Repair can coordinate the needed inspection and repair steps.",
     bullets: [
       "Wheel-area impact review",
       "Steering and suspension concern checks",
@@ -693,7 +693,7 @@ export const faqs = [
   {
     question: "Does Xtreme Collision Repair work with insurance companies?",
     answer:
-      "Yes. The site now highlights that the shop works with all major insurance companies, helps review claim information, explains estimates and supplements, and advocates for a proper repair plan.",
+      "Yes. Xtreme works with all major insurance companies, helps review claim information, explains estimates and supplements, and advocates for a proper repair plan.",
   },
   {
     question: "How long will repairs take?",
@@ -718,7 +718,7 @@ export const faqs = [
   {
     question: "Can I upload photos of the damage?",
     answer:
-      "Online photo upload is not active yet. Call the shop and the team can explain the best way to share damage photos for review.",
+      "Call the shop and the team can explain the best way to share damage photos for review.",
   },
   {
     question: "What areas do you serve?",
@@ -727,7 +727,7 @@ export const faqs = [
   },
 ];
 
-export const reviewPlaceholders = [
+export const customerExperienceItems = [
   {
     label: "Repair quality",
     body: "A careful repair plan, quality checks, and a clean finished repair are central to the Xtreme customer experience.",

@@ -28,7 +28,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "AutoBodyShop",
   name: "Xtreme Collision Repair",
-  url: "https://xtreme-collision-repair.collision-te-9566.chatgpt-team.site",
+  url: "https://xtreme-site.vercel.app",
   telephone: "+1-972-233-0207",
   address: {
     "@type": "PostalAddress",
