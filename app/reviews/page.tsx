@@ -11,9 +11,9 @@ export default function ReviewsPage() {
     <PageShell>
       <main>
         <InnerHero
-          eyebrow="Reviews"
-          title="Google reviews and customer feedback"
-          text="Read customer feedback about repair quality, communication, insurance support, and the delivery experience."
+          eyebrow="Customer experience"
+          title="Repair quality, communication, and confidence at delivery"
+          text="Learn what Xtreme prioritizes during the repair experience, from estimate review to final pickup."
         />
         <section className="section reviews-section">
           <div className="container">
@@ -23,8 +23,8 @@ export default function ReviewsPage() {
         <section className="section">
           <div className="container narrow-content">
             <SectionIntro
-              title="Verified customer feedback"
-              text="Xtreme will feature real review excerpts from approved sources so customers can compare the shop with confidence."
+              title="A customer experience built around clarity"
+              text="Xtreme focuses on clear repair communication, organized insurance support, careful quality checks, and a smoother pickup experience."
             />
           </div>
         </section>

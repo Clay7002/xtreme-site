@@ -730,15 +730,15 @@ export const faqs = [
 export const reviewPlaceholders = [
   {
     label: "Repair quality",
-    body: "Verified customer review excerpts will appear here after the official review source is connected.",
+    body: "A careful repair plan, quality checks, and a clean finished repair are central to the Xtreme customer experience.",
   },
   {
     label: "Communication",
-    body: "Customer feedback about updates, insurance coordination, and repair experience can be featured here once approved.",
+    body: "Customers should know what is happening, what information is needed, and what comes next during the repair process.",
   },
   {
     label: "Delivery experience",
-    body: "Real customer comments about final pickup, finished repairs, and overall service can be added after verification.",
+    body: "Final pickup should feel organized, clear, and confidence-building before the vehicle leaves the shop.",
   },
 ];
 

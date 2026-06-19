@@ -719,16 +719,15 @@ export function ReviewsSection() {
   return (
     <div className="reviews-block" id="reviews">
       <div className="review-summary">
-        <p className="eyebrow">Testimonials & Google reviews</p>
-        <h2>From Our Customers</h2>
+        <p className="eyebrow">Customer experience</p>
+        <h2>What Drivers Can Expect From Xtreme</h2>
         <p>
-          Customer review content should be connected to verified Google or
-          approved testimonial sources before final domain launch. Until then,
-          this section keeps the review path visible without inventing customer
-          feedback.
+          Xtreme focuses on repair quality, clear communication, insurance
+          coordination, and an organized delivery experience from estimate to
+          pickup.
         </p>
         <div className="review-actions">
-          <ButtonLink href="/reviews" track="review:read-more">Read More Reviews</ButtonLink>
+          <ButtonLink href="/reviews" track="review:read-more">Customer Experience</ButtonLink>
           <ButtonLink href={siteInfo.googleLeaveReviewHref} track="review:leave-review" variant="light">
             Leave a Review
           </ButtonLink>
@@ -737,16 +736,9 @@ export function ReviewsSection() {
       <div className="review-carousel" aria-label="Customer review section">
         {reviewPlaceholders.map((review, index) => (
           <article className="review-card" key={`${review.label}-${index}`}>
-            <div className="stars" aria-label="Five star review format">
-              <span aria-hidden="true">&#9733;</span>
-              <span aria-hidden="true">&#9733;</span>
-              <span aria-hidden="true">&#9733;</span>
-              <span aria-hidden="true">&#9733;</span>
-              <span aria-hidden="true">&#9733;</span>
-            </div>
+            <span className="reason-icon" aria-hidden="true">{index + 1}</span>
             <h3>{review.label}</h3>
             <p>{review.body}</p>
-            <p className="review-attribution">Verified review source needed before final launch</p>
           </article>
         ))}
       </div>
@@ -780,42 +772,6 @@ export function FAQSection() {
         </details>
       ))}
     </div>
-  );
-}
-
-export function LaunchReadinessSection() {
-  return (
-    <section className="section launch-readiness-section">
-      <div className="container launch-readiness-card">
-        <div>
-          <p className="eyebrow">Before replacing the existing domain</p>
-          <h2>Details to confirm before the final domain switch.</h2>
-          <p>
-            Before connecting the primary Xtreme domain, confirm the business
-            details that affect customer trust, contact flow, and estimate
-            requests.
-          </p>
-        </div>
-        <div className="launch-readiness-grid">
-          <article>
-            <strong>Contact details</strong>
-            <span>Confirm phone, address, hours, email preference, and map link.</span>
-          </article>
-          <article>
-            <strong>Reviews & social links</strong>
-            <span>Add verified Google review link and only real approved testimonials.</span>
-          </article>
-          <article>
-            <strong>Photos & certifications</strong>
-            <span>Confirm shop photos, before/after images, and OEM certification badges.</span>
-          </article>
-          <article>
-            <strong>Estimate intake</strong>
-            <span>Decide whether online requests should email the shop, connect to an intake workflow, or stay call-first.</span>
-          </article>
-        </div>
-      </div>
-    </section>
   );
 }
 
