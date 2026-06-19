@@ -6,6 +6,12 @@
     "node": ">=22.13.0"
   },
   "scripts": {
+    "dev:sites": "vinext dev",
+    "build:sites": "vinext build",
+    "start:sites": "vinext start",
+    "dev:vercel": "next dev",
+    "build:vercel": "next build --webpack",
+    "start:vercel": "next start",
     "dev": "vinext dev",
     "build": "vinext build",
     "start": "vinext start",

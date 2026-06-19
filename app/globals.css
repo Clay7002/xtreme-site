@@ -16,13 +16,15 @@
   --green: #6f7f90;
   --steel: #9aa8b7;
   --white: #ffffff;
+  --font-app-sans: Arial, Helvetica, sans-serif;
+  --font-app-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-app-sans);
+  --font-mono: var(--font-app-mono);
 }
 
 * {
@@ -38,7 +40,7 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-app-sans);
 }
 
 a {
