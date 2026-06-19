@@ -52,7 +52,7 @@ export const siteInfo = {
   addressLabel: "2025 Midway Road, Suite E, Carrollton, TX 75006",
   shortAddressLabel: "2025 Midway Rd, Suite E",
   hoursLabel: "Mon-Thu: 8:00 am - 5:30 pm; Fri: partial day; Sat-Sun: Closed",
-  emailLabel: "Add email address",
+  emailLabel: "Call for the fastest response",
   googleReviewsHref: "#reviews",
   googleLeaveReviewHref: "#reviews",
   mapsHref:
@@ -88,16 +88,15 @@ export const footerQuickLinks = [
 ];
 
 export const socialLinks = [
-  { label: "Facebook", href: "#", short: "f" },
-  { label: "Instagram", href: "#", short: "ig" },
-  { label: "Google", href: siteInfo.googleReviewsHref, short: "g" },
+  { label: "Google reviews", href: siteInfo.googleReviewsHref, short: "g" },
 ];
 
 export const trustBadges = [
-  "Lifetime limited warranty",
-  "State of the art facility & equipment",
+  "Lifetime limited workmanship warranty",
+  "State-of-the-art facility & equipment",
   "Expert repair technicians",
   "Works with all major insurance companies",
+  "Carrollton, TX collision repair",
 ];
 
 export const certificationSignals = [

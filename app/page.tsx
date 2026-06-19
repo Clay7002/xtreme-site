@@ -10,6 +10,7 @@ import {
   InsuranceSection,
   IntroSection,
   LocationContactSection,
+  LaunchReadinessSection,
   PageShell,
   ProcessPreview,
   RepairStartChecklist,
@@ -125,6 +126,7 @@ export default function Home() {
         </section>
 
         <LocationContactSection />
+        <LaunchReadinessSection />
         <FinalCTA />
       </main>
     </PageShell>

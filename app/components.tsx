@@ -723,9 +723,10 @@ export function ReviewsSection() {
         <p className="eyebrow">Testimonials & Google reviews</p>
         <h2>From Our Customers</h2>
         <p>
-          Add real Google Reviews, SureCritic feedback, or approved customer
-          testimonials here. The placeholders show the intended format without
-          inventing customer names or ratings.
+          Customer review content should be connected to verified Google or
+          approved testimonial sources before final domain launch. Until then,
+          this section keeps the review path visible without inventing customer
+          feedback.
         </p>
         <div className="review-actions">
           <ButtonLink href="/reviews" track="review:read-more">Read More Reviews</ButtonLink>
@@ -746,7 +747,7 @@ export function ReviewsSection() {
             </div>
             <h3>{review.label}</h3>
             <p>{review.body}</p>
-            <p className="review-attribution">First name L. - verified review placeholder</p>
+            <p className="review-attribution">Verified review source needed before final launch</p>
           </article>
         ))}
       </div>
@@ -780,6 +781,42 @@ export function FAQSection() {
         </details>
       ))}
     </div>
+  );
+}
+
+export function LaunchReadinessSection() {
+  return (
+    <section className="section launch-readiness-section">
+      <div className="container launch-readiness-card">
+        <div>
+          <p className="eyebrow">Before replacing the existing domain</p>
+          <h2>Launch-ready items to confirm before the final website switch.</h2>
+          <p>
+            The site is ready for review, but these business details should be
+            verified before connecting the real Xtreme domain and sending paid
+            traffic or customers to it.
+          </p>
+        </div>
+        <div className="launch-readiness-grid">
+          <article>
+            <strong>Contact details</strong>
+            <span>Confirm phone, address, hours, email preference, and map link.</span>
+          </article>
+          <article>
+            <strong>Reviews & social links</strong>
+            <span>Add verified Google review link and only real approved testimonials.</span>
+          </article>
+          <article>
+            <strong>Photos & certifications</strong>
+            <span>Confirm shop photos, before/after images, and OEM certification badges.</span>
+          </article>
+          <article>
+            <strong>Estimate intake</strong>
+            <span>Decide whether the form should email the shop, connect to CRM, or stay call-first.</span>
+          </article>
+        </div>
+      </div>
+    </section>
   );
 }
 
