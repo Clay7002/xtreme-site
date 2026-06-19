@@ -38,7 +38,7 @@ export default function Home() {
             <SectionIntro
               eyebrow="Auto body repair Carrollton TX"
               title="Start with the service path that fits your repair."
-              text="These panels organize the most important customer journeys: collision repair, insurance claim help, equipment proof points, and practical resources."
+              text="Choose the path that best matches your situation, from collision repair and insurance help to certifications, equipment, and repair resources."
             />
             <ServicePanels />
           </div>
@@ -71,7 +71,7 @@ export default function Home() {
             <SectionIntro
               eyebrow="Why choose Xtreme"
               title="Why Choose Xtreme Collision Repair"
-              text="These trust signals mirror what customers look for when comparing collision repair shops after an accident."
+              text="Xtreme focuses on the details drivers care about after an accident: clear communication, proper repair planning, workmanship, and confidence at pickup."
             />
             <WhyChooseSection />
             <AreasLine />
@@ -108,7 +108,7 @@ export default function Home() {
             <SectionIntro
               eyebrow="Resources / Blog"
               title="Helpful answers before customers start a claim."
-              text="Resource previews improve SEO while positioning Xtreme as a clear, local guide for repair and insurance decisions."
+              text="Helpful repair and insurance answers for Carrollton and North Texas drivers before they start the claim or repair process."
             />
             <ResourcesPreview />
           </div>

@@ -20,16 +20,16 @@ export default function RepairAuthorizationPage() {
             <div>
               <SectionIntro
                 title="Complete authorization details"
-                text="Collect customer, vehicle, claim, authorization, direction-of-pay notes if appropriate, digital signature, and date in one place."
+                text="Provide customer, vehicle, claim, authorization, payment direction, signature, and date details so the shop can review the next step."
               />
               <RepairAuthorizationForm />
             </div>
             <aside className="contact-panel">
               <h2>Before you submit</h2>
               <p>
-                This form should only be used when a customer is ready to move
-                beyond an estimate. The final authorization language should be
-                approved by the business before live use.
+                This form is for customers who are ready to move beyond an
+                estimate. Xtreme will confirm final repair authorization details
+                directly before work proceeds.
               </p>
             </aside>
           </div>

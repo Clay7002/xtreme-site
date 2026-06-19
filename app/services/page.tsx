@@ -27,7 +27,7 @@ export default function ServicesPage() {
             <SectionIntro
               eyebrow="Body shop Carrollton TX"
               title="Core services with clear, unique descriptions"
-              text="Each service explains a specific repair need and includes a Learn More link so customers can move from research to a free estimate."
+              text="Review the repair services Xtreme offers, then request an estimate or call the shop for the best next step."
             />
             <ServicesGrid />
             <AreasLine />

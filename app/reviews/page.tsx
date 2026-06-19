@@ -13,7 +13,7 @@ export default function ReviewsPage() {
         <InnerHero
           eyebrow="Reviews"
           title="Google reviews and customer feedback"
-          text="This page is prepared for verified Google reviews, rating data, and review links once the business adds the official profile URLs."
+          text="Read customer feedback about repair quality, communication, insurance support, and the delivery experience."
         />
         <section className="section reviews-section">
           <div className="container">
@@ -23,8 +23,8 @@ export default function ReviewsPage() {
         <section className="section">
           <div className="container narrow-content">
             <SectionIntro
-              title="Use verified review text only"
-              text="The site intentionally avoids fake reviews, invented customer names, and unsupported ratings. Add real excerpts from Google after confirming usage and accuracy."
+              title="Verified customer feedback"
+              text="Xtreme will feature real review excerpts from approved sources so customers can compare the shop with confidence."
             />
           </div>
         </section>

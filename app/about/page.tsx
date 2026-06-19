@@ -16,7 +16,7 @@ export default function AboutPage() {
         <InnerHero
           eyebrow="About Xtreme Collision Repair"
           title="A local Carrollton body shop focused on clarity, confidence, and accountable repairs"
-          text="Learn how Xtreme Collision Repair supports North Texas drivers with insurance help, repair planning, workmanship warranty messaging, and a customer-friendly estimate process."
+          text="Learn how Xtreme Collision Repair supports North Texas drivers with insurance help, repair planning, workmanship warranty support, and a customer-friendly estimate process."
         />
         <TrustBadges />
         <section className="section">
@@ -26,20 +26,18 @@ export default function AboutPage() {
               text="After a collision, customers need more than a number on a repair estimate. They need clear next steps, organized insurance communication, and a shop that treats the repair plan seriously."
             />
             <p>
-              Xtreme Collision Repair is positioned as a trustworthy collision
-              repair and auto body repair shop in Carrollton, Texas. The site
-              keeps customer-facing proof points close to the top: lifetime
-              limited warranty, modern facility and equipment, expert
-              technicians, insurance claim assistance, and service across
-              Carrollton, Addison, Dallas, Plano, Frisco, Richardson, and nearby
-              North Texas communities.
+              Xtreme Collision Repair is a trusted collision repair and auto
+              body repair shop in Carrollton, Texas. Customers can expect clear
+              communication, lifetime limited workmanship warranty support,
+              modern facility and equipment, experienced technicians, insurance
+              claim assistance, and service across Carrollton, Addison, Dallas,
+              Plano, Frisco, Richardson, and nearby North Texas communities.
             </p>
             <p>
-              Confirmed founding year, owner or team photography, awards,
-              dealership relationships, community involvement, and verified
-              reviews can be added here when available. That keeps the site
-              honest today and ready to become more persuasive as real proof is
-              gathered.
+              Drivers can also look for shop photos, team details, awards,
+              community involvement, and verified customer reviews as Xtreme
+              continues sharing more about the people and process behind the
+              repairs.
             </p>
             <AreasLine />
           </div>
@@ -50,7 +48,7 @@ export default function AboutPage() {
             <SectionIntro
               eyebrow="Careers"
               title="Careers at Xtreme Collision Repair"
-              text="Use this section for future hiring needs, technician openings, estimator roles, office positions, and application instructions when the business is ready to publish them."
+              text="Interested in joining Xtreme Collision Repair? Future openings for technicians, estimators, and office roles can be shared here when positions are available."
             />
           </div>
         </section>

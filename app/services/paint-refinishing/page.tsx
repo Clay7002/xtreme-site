@@ -9,7 +9,7 @@ import {
 export const metadata = {
   title: "Auto Paint & Refinishing in Carrollton, TX | Xtreme Collision Repair",
   description:
-    "Auto paint repair and refinishing in Carrollton, TX with color matching, blending, clearcoat finish, and before-and-after repair photo placeholders.",
+    "Auto paint repair and refinishing in Carrollton, TX with color matching, blending, clearcoat finish, and before-and-after repair examples.",
 };
 
 export default function PaintRefinishingPage() {
@@ -26,14 +26,14 @@ export default function PaintRefinishingPage() {
             <div>
               <SectionIntro
                 title="Color matching, blending, clearcoat, and final appearance review"
-                text="Xtreme's refinishing content is structured around computerized color support, blend planning, surface preparation, clearcoat finish, and warranty-ready quality checks. If Sherwin-Williams certification or paint-system credentials are confirmed, verified wording and logos can be added here."
+                text="Xtreme's refinishing process focuses on computerized color support, blend planning, surface preparation, clearcoat finish, and final quality checks for a clean completed repair."
               />
             </div>
             <div className="check-list light-list">
               <span>Computerized color matching support</span>
               <span>Paint blending and clearcoat finish</span>
               <span>Panel preparation after body repair</span>
-              <span>Before-and-after refinish examples ready</span>
+              <span>Before-and-after refinish examples</span>
             </div>
           </div>
         </section>
@@ -41,8 +41,8 @@ export default function PaintRefinishingPage() {
           <div className="container">
             <SectionIntro
               eyebrow="Refinish examples"
-              title="Ready for real paint and color-match photos"
-              text="Use this area for actual repair photos showing damaged panels, repaired surfaces, and completed color-matched delivery shots."
+              title="Paint and color-match repair examples"
+              text="Review examples showing damaged panels, repaired surfaces, and completed color-matched delivery shots."
             />
             <BeforeAfterSection />
           </div>

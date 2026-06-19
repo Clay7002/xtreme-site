@@ -205,8 +205,8 @@ export function Footer() {
             </span>
           </Link>
           <p>
-            Factory-correct collision repair messaging, insurance claim support,
-            lifetime warranty positioning, and a clear estimate path for North
+            Factory-correct collision repair, insurance claim support, lifetime
+            limited workmanship warranty, and a clear estimate path for North
             Texas drivers.
           </p>
           <p className="footer-note">
@@ -285,7 +285,7 @@ export function Footer() {
       </div>
 
       <div className="container footer-map-row">
-        <div className="map-placeholder" aria-label="Google Map placeholder">
+        <div className="map-placeholder" aria-label="Xtreme Collision Repair location">
           <strong>{siteInfo.shortAddressLabel}</strong>
           <span>{siteInfo.addressLabel}</span>
           <Link className="text-link" data-track="directions:footer-map" href={siteInfo.mapsHref}>
@@ -293,8 +293,7 @@ export function Footer() {
           </Link>
         </div>
         <p className="copyright">
-          Copyright {new Date().getFullYear()} {siteInfo.name}. Contact details
-          shown from the provided existing-site information.
+          Copyright {new Date().getFullYear()} {siteInfo.name}. All rights reserved.
         </p>
       </div>
     </footer>
@@ -475,7 +474,7 @@ export function CompanyStorySection() {
   return (
     <section className="section story-section">
       <div className="container story-layout">
-        <div className="team-photo-placeholder" aria-label="Team photo placeholder">
+        <div className="team-photo-placeholder" aria-label="Xtreme Collision Repair shop equipment">
           <span>Shop Equipment</span>
         </div>
         <div>
@@ -490,7 +489,7 @@ export function CompanyStorySection() {
           <div className="story-proof-grid">
             <span>Local Carrollton presence</span>
             <span>Real repair bay photos</span>
-            <span>Gallery-ready repair work</span>
+            <span>Documented repair work</span>
           </div>
           <ButtonLink href="/about" track="cta:about-story">About Xtreme</ButtonLink>
         </div>
@@ -598,10 +597,10 @@ export function LocationContactSection() {
           <p>
             <strong>Email:</strong> {siteInfo.emailLabel}
           </p>
-          <div className="map-placeholder small-map" aria-label="Google Map placeholder">
-            <strong>Google Map</strong>
-            <span>Embed the verified map for {siteInfo.shortAddressLabel}.</span>
-            <a className="text-link" data-track="directions:map-placeholder" href={siteInfo.mapsHref}>
+          <div className="map-placeholder small-map" aria-label="Xtreme Collision Repair map location">
+            <strong>{siteInfo.shortAddressLabel}</strong>
+            <span>{siteInfo.addressLabel}</span>
+            <a className="text-link" data-track="directions:map-location" href={siteInfo.mapsHref}>
               Open in Google Maps
             </a>
           </div>
@@ -735,10 +734,10 @@ export function ReviewsSection() {
           </ButtonLink>
         </div>
       </div>
-      <div className="review-carousel" aria-label="Review carousel placeholder">
+      <div className="review-carousel" aria-label="Customer review section">
         {reviewPlaceholders.map((review, index) => (
           <article className="review-card" key={`${review.label}-${index}`}>
-            <div className="stars" aria-label="Star rating placeholder">
+            <div className="stars" aria-label="Five star review format">
               <span aria-hidden="true">&#9733;</span>
               <span aria-hidden="true">&#9733;</span>
               <span aria-hidden="true">&#9733;</span>
@@ -790,11 +789,11 @@ export function LaunchReadinessSection() {
       <div className="container launch-readiness-card">
         <div>
           <p className="eyebrow">Before replacing the existing domain</p>
-          <h2>Launch-ready items to confirm before the final website switch.</h2>
+          <h2>Details to confirm before the final domain switch.</h2>
           <p>
-            The site is ready for review, but these business details should be
-            verified before connecting the real Xtreme domain and sending paid
-            traffic or customers to it.
+            Before connecting the primary Xtreme domain, confirm the business
+            details that affect customer trust, contact flow, and estimate
+            requests.
           </p>
         </div>
         <div className="launch-readiness-grid">
@@ -812,7 +811,7 @@ export function LaunchReadinessSection() {
           </article>
           <article>
             <strong>Estimate intake</strong>
-            <span>Decide whether the form should email the shop, connect to CRM, or stay call-first.</span>
+            <span>Decide whether online requests should email the shop, connect to an intake workflow, or stay call-first.</span>
           </article>
         </div>
       </div>
@@ -892,8 +891,8 @@ export function EstimateForm() {
         <div className="form-wide form-callout">
           <strong>Have damage photos?</strong>
           <span>
-            Photo upload is not active on this preview form yet. Call the shop
-            and we&apos;ll explain the best way to share photos for review.
+            Online photo upload is not active yet. Call the shop and we&apos;ll
+            explain the best way to share photos for review.
           </span>
         </div>
         <label>
@@ -917,8 +916,8 @@ export function EstimateForm() {
         </label>
       </div>
       <p className="form-note">
-        This preview form does not submit to a live backend yet. For now, call
-        the shop for the fastest response. Need help now?{" "}
+        Online estimate requests are being finalized. For the fastest response,
+        call the shop directly. Need help now?{" "}
         <a className="text-link" data-track="phone:form-note" href={siteInfo.phoneHref}>
           Call {siteInfo.phoneLabel}
         </a>
@@ -936,9 +935,9 @@ export function RepairAuthorizationForm() {
     <form className="estimate-form" id="repair-authorization" action="/repair-authorization" data-track="form:repair-authorization" method="get">
       <h2>Repair Authorization</h2>
       <p className="form-note">
-        This form is for customers ready to proceed with repairs. Final
-        authorization language, direction of pay wording, and digital signature
-        handling should be reviewed by the business before live use.
+        This form is for customers ready to proceed with repairs. Final authorization
+        details, payment direction, and signature handling will be confirmed with the
+        shop before repair authorization is completed.
       </p>
       <div className="form-grid">
         <label>

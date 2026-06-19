@@ -14,7 +14,7 @@ import {
 export const metadata = {
   title: "Collision Repair in Carrollton, TX | Xtreme Collision Repair",
   description:
-    "Collision repair in Carrollton, TX with structural repair planning, paint and refinishing, insurance claim support, quality control, and lifetime limited warranty messaging.",
+    "Collision repair in Carrollton, TX with structural repair planning, paint and refinishing, insurance claim support, quality control, and lifetime limited workmanship warranty support.",
 };
 
 export default function CollisionRepairPage() {
@@ -62,8 +62,8 @@ export default function CollisionRepairPage() {
           <div className="container">
             <SectionIntro
               eyebrow="Before and after"
-              title="Visual repair proof belongs here"
-              text="Replace these placeholders with real Xtreme repair photos, including matching before-and-after images and short notes about the repair."
+              title="Before-and-after repair examples"
+              text="See repair examples that show visible damage, repair progress, finished panel fit, and the completed exterior appearance."
             />
             <BeforeAfterSection />
           </div>

@@ -6,21 +6,21 @@ export default function PrivacyPolicyPage() {
       <main>
         <InnerHero
           eyebrow="Privacy Policy"
-          title="Privacy policy placeholder"
-          text="Replace this page with the business-approved privacy policy before connecting live analytics, forms, review embeds, or advertising pixels."
+          title="Privacy Policy"
+          text="This page explains the types of information customers may share when requesting an estimate or contacting Xtreme Collision Repair."
         />
         <section className="section">
           <div className="container narrow-content">
             <SectionIntro
               title="Information collected through the estimate form"
-              text="The form is structured to collect contact information, vehicle details, insurance details, damage descriptions, appointment preferences, and photo uploads once a live form handler is connected."
+              text="Estimate requests may include contact information, vehicle details, insurance details, damage descriptions, appointment preferences, and photos if online upload is added in the future."
             />
             <p>
-              This placeholder page should be reviewed by the business and its
-              legal advisor before launch. It should explain how estimate
-              requests are stored, how photos are handled, how customers can
-              request updates, and which third-party tools are used for maps,
-              reviews, analytics, CRM, email, or advertising.
+              Xtreme Collision Repair uses customer information to respond to
+              estimate requests, discuss repair needs, coordinate next steps,
+              and communicate about the vehicle. Customers should contact the
+              shop directly with questions about how their information is used
+              or updated.
             </p>
           </div>
         </section>

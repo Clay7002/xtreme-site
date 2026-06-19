@@ -15,7 +15,7 @@ export default function ContactPage() {
         <InnerHero
           eyebrow="Contact / Get a Free Estimate"
           title="Request a free collision repair estimate"
-          text="Share your phone number, vehicle year, make, model, insurance information, and damage notes. For the fastest response while this preview form is not connected to a live backend, call the shop directly."
+          text="Share your phone number, vehicle year, make, model, insurance information, and damage notes. For the fastest response, call the shop directly."
         />
         <section className="section" id="location">
           <div className="container contact-layout">
@@ -23,7 +23,7 @@ export default function ContactPage() {
               <SectionIntro
                 eyebrow="Estimate request"
                 title="Tell us what happened"
-                text="The form shows the intended estimate intake flow for review. Live submission and photo upload still need backend approval before launch."
+                text="Start with the details below, then call the shop for the fastest response and next-step guidance."
               />
               <RepairStartChecklist />
               <EstimateForm />
@@ -53,9 +53,9 @@ export default function ContactPage() {
                 pickup/drop-off coordination, and insurance communication can
                 be discussed when you request your estimate.
               </p>
-              <div className="map-placeholder small-map" aria-label="Map placeholder">
-                <strong>Google Map</strong>
-                <span>Add verified Google Maps embed for the Carrollton shop.</span>
+              <div className="map-placeholder small-map" aria-label="Xtreme Collision Repair map location">
+                <strong>{siteInfo.shortAddressLabel}</strong>
+                <span>{siteInfo.addressLabel}</span>
                 <a className="text-link" data-track="directions:contact-map" href={siteInfo.mapsHref}>
                   Get directions
                 </a>

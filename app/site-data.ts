@@ -118,7 +118,7 @@ export const certificationSignals = [
   },
   {
     label: "Lifetime Warranty",
-    text: "Workmanship warranty messaging carried forward from the existing site.",
+    text: "Lifetime limited workmanship warranty support on qualifying repairs."
   },
 ];
 
@@ -708,7 +708,7 @@ export const faqs = [
   {
     question: "Do you offer a warranty?",
     answer:
-      "The site carries forward the existing lifetime limited warranty message. Warranty details should be confirmed with the shop and reflected in the final business-approved warranty terms.",
+      "Xtreme offers a lifetime limited workmanship warranty on qualifying repairs. Ask the shop for the written warranty terms that apply to your repair.",
   },
   {
     question: "Can you help with a rental car?",
@@ -718,7 +718,7 @@ export const faqs = [
   {
     question: "Can I upload photos of the damage?",
     answer:
-      "The form includes a photo upload placeholder. A live form handler can be connected later for real photo uploads and estimate routing.",
+      "Online photo upload is not active yet. Call the shop and the team can explain the best way to share damage photos for review.",
   },
   {
     question: "What areas do you serve?",
@@ -729,16 +729,16 @@ export const faqs = [
 
 export const reviewPlaceholders = [
   {
-    label: "Verified Google review placeholder",
-    body: "Add an approved Google review excerpt here with first-name and last-initial attribution after confirming the exact text and profile source.",
+    label: "Repair quality",
+    body: "Verified customer review excerpts will appear here after the official review source is connected.",
   },
   {
-    label: "SureCritic or customer testimonial placeholder",
-    body: "Use this card for a verified comment about repair quality, communication, insurance-claim help, or final delivery experience.",
+    label: "Communication",
+    body: "Customer feedback about updates, insurance coordination, and repair experience can be featured here once approved.",
   },
   {
-    label: "Before-and-after feedback placeholder",
-    body: "Add another approved customer quote here. No fake reviews, invented ratings, or unsupported customer names are included.",
+    label: "Delivery experience",
+    body: "Real customer comments about final pickup, finished repairs, and overall service can be added after verification.",
   },
 ];
 
