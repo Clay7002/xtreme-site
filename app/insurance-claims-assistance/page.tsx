@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import {
   ButtonLink,
   FAQSection,
@@ -36,6 +38,9 @@ export default function InsuranceClaimsAssistancePage() {
                 <ButtonLink href="/resources/what-is-a-collision-repair-supplement" variant="light">
                   What Is a Supplement?
                 </ButtonLink>
+                <ButtonLink href="/resources/what-is-insurance-steering" variant="light">
+                  Insurance Steering
+                </ButtonLink>
               </div>
             </div>
             <div className="check-list light-list">
@@ -54,6 +59,32 @@ export default function InsuranceClaimsAssistancePage() {
               text="The process keeps customers oriented from estimate request through insurance review, hidden-damage documentation, repairs, quality checks, and vehicle delivery."
             />
             <ProcessPreview full />
+          </div>
+        </section>
+        <section className="section">
+          <div className="container">
+            <SectionIntro
+              eyebrow="Customer education"
+              title="Helpful claim and repair-rights resources"
+              text="Learn what to ask before choosing a shop, how supplements work, and why written warranty terms matter."
+            />
+            <div className="service-panel-grid">
+              <article className="service-panel">
+                <h3>Can I choose my body shop?</h3>
+                <p>Understand repair-shop choice, insurer estimates, and the questions worth asking before repairs begin.</p>
+                <Link className="text-link" href="/resources/do-i-have-to-use-insurance-preferred-body-shop">Read the guide</Link>
+              </article>
+              <article className="service-panel">
+                <h3>What is insurance steering?</h3>
+                <p>Learn what it means when an insurer strongly recommends a preferred repair facility after an accident.</p>
+                <Link className="text-link" href="/resources/what-is-insurance-steering">Read the guide</Link>
+              </article>
+              <article className="service-panel">
+                <h3>Who guarantees the repair?</h3>
+                <p>Know what to ask about workmanship warranty, repair responsibility, and written warranty terms.</p>
+                <Link className="text-link" href="/resources/who-guarantees-the-repair">Read the guide</Link>
+              </article>
+            </div>
           </div>
         </section>
         <section className="section">

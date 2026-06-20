@@ -92,11 +92,11 @@ export const socialLinks = [
 ];
 
 export const trustBadges = [
+  "Factory-correct repair planning",
   "Lifetime limited workmanship warranty",
   "State-of-the-art facility & equipment",
   "Expert repair technicians",
   "Works with all major insurance companies",
-  "Carrollton, TX collision repair",
 ];
 
 export const certificationSignals = [
@@ -247,7 +247,7 @@ export const whyChooseItems = [
   },
   {
     title: "Advanced Repair Equipment",
-    text: "The facility is presented around professional tools and equipment for structural, body, measuring, and refinish repairs.",
+    text: "Professional tools and equipment support structural, body, measuring, and refinish repair planning.",
   },
   {
     title: "Paint Color Matching",
@@ -259,11 +259,11 @@ export const whyChooseItems = [
   },
   {
     title: "Clear Communication",
-    text: "Customers are kept oriented around what is happening, what has been approved, and what comes next.",
+    text: "Clear updates help drivers understand what is happening, what has been approved, and what comes next.",
   },
   {
     title: "Rental Car Scheduling",
-    text: "The shop can help coordinate rental options when available so repairs are less disruptive.",
+    text: "The shop can help customers understand rental timing and claim-related transportation details when they apply.",
   },
   {
     title: "Local North Texas Shop",
@@ -288,18 +288,33 @@ export const resourceArticles: ResourceArticle[] = [
     ],
   },
   {
-    title: "Do I Have to Use the Insurance Company’s Preferred Body Shop?",
+    title: "Can I Choose My Own Body Shop in Texas?",
     slug: "do-i-have-to-use-insurance-preferred-body-shop",
     href: "/resources/do-i-have-to-use-insurance-preferred-body-shop",
-    text: "A plain-language overview of repair shop choice, insurer estimates, and how to compare body shops.",
+    text: "A plain-language overview of repair shop choice, insurer estimates, and how to compare body shops after a collision.",
     body: [
-      "Many drivers do not realize they can ask questions and compare repair options before choosing a body shop. Xtreme Collision Repair helps Carrollton and North Texas customers understand estimates and the repair path without turning the conversation into legal advice.",
-      "Look for a shop that explains repair planning, insurance coordination, warranty terms, structural concerns, and quality control clearly.",
+      "After an accident, customers can ask questions, compare repair options, and choose a repair facility that explains the process clearly. Xtreme Collision Repair helps Carrollton and North Texas drivers understand estimates and the repair path without turning the conversation into legal advice.",
+      "Look for a shop that explains repair planning, insurance coordination, warranty terms, structural concerns, parts decisions, and final quality control before you authorize repairs.",
       "This article is educational and is not legal advice.",
     ],
     relatedLinks: [
       { label: "Collision repair services", href: "/services" },
       { label: "Repair process", href: "/repair-process" },
+    ],
+  },
+  {
+    title: "What Is Insurance Steering?",
+    slug: "what-is-insurance-steering",
+    href: "/resources/what-is-insurance-steering",
+    text: "What drivers should know when an insurer recommends a preferred body shop after an accident.",
+    body: [
+      "Insurance steering is a term drivers may hear when an insurer strongly pushes a customer toward a preferred repair facility. A recommendation can be convenient, but customers should still understand the repair plan, warranty terms, parts decisions, and quality-control process before choosing a shop.",
+      "Xtreme Collision Repair helps customers review insurer estimates, ask better repair questions, and understand what information matters before authorizing work.",
+      "This article is educational and is not legal advice.",
+    ],
+    relatedLinks: [
+      { label: "Insurance claims assistance", href: "/insurance-claims-assistance" },
+      { label: "Who guarantees the repair?", href: "/resources/who-guarantees-the-repair" },
     ],
   },
   {
@@ -396,11 +411,11 @@ export const resourceArticles: ResourceArticle[] = [
     title: "Who Guarantees the Repair?",
     slug: "who-guarantees-the-repair",
     href: "/resources/who-guarantees-the-repair",
-    text: "What customers should ask about workmanship warranty, paint finish, parts, and written warranty terms.",
+    text: "What customers should ask about workmanship warranty, repair responsibility, paint finish, parts, and written warranty terms.",
     body: [
-      "Warranty language should be clear before customers authorize repairs. Ask what is covered, what is excluded, and how long workmanship coverage applies.",
-      "Xtreme offers lifetime limited workmanship warranty support on qualifying repairs. Ask the shop for the written terms that apply to your repair.",
-      "This article is educational and is not legal advice.",
+      "Before authorizing repairs, customers should understand who stands behind the workmanship, what warranty terms apply, and how questions are handled after delivery.",
+      "Insurance estimates can help define claim payment, but the repair facility performs the work and should explain its workmanship expectations clearly. Xtreme offers lifetime limited workmanship warranty support on qualifying repairs.",
+      "Ask the shop for the written terms that apply to your repair. This article is educational and is not legal advice.",
     ],
     relatedLinks: [
       { label: "About Xtreme", href: "/about" },
@@ -413,13 +428,28 @@ export const resourceArticles: ResourceArticle[] = [
     href: "/resources/why-proper-collision-repair-is-a-safety-issue",
     text: "Why repairs should consider structure, restraints, sensors, steering, suspension, refinishing, and quality control.",
     body: [
-      "Modern vehicles depend on structural design, airbag/restraint systems, sensors, steering, suspension, and correct panel fit. A proper repair is about more than making the vehicle look good.",
-      "Xtreme's repair process explains inspection, documentation, structural repair planning, refinishing, and quality checks for Carrollton and North Texas drivers.",
-      "This article is educational and is not legal advice.",
+      "Modern vehicles depend on structural design, airbag and restraint systems, sensors, steering, suspension, and correct panel fit. A proper repair is about more than making the vehicle look good.",
+      "Repair procedures, measurements, parts decisions, refinish steps, and calibration coordination can all affect the final result. Customers should ask how the shop plans the repair and checks the vehicle before delivery.",
+      "Xtreme's repair process explains inspection, documentation, structural repair planning, refinishing, and quality checks for Carrollton and North Texas drivers. This article is educational and is not legal advice.",
     ],
     relatedLinks: [
       { label: "Collision repair", href: "/services/collision-repair" },
       { label: "Frame and unibody repair", href: "/services/frame-unibody-repair" },
+    ],
+  },
+  {
+    title: "Whose Repair Standards Should a Body Shop Follow?",
+    slug: "whose-repair-standards-should-a-body-shop-follow",
+    href: "/resources/whose-repair-standards-should-a-body-shop-follow",
+    text: "Why manufacturer repair procedures, equipment, documentation, and quality checks matter after a collision.",
+    body: [
+      "Vehicle manufacturers design the structure, materials, safety systems, sensors, and repair procedures around how the vehicle is built. After a collision, repair planning should consider those standards where applicable.",
+      "Customers should ask how a shop researches repair procedures, documents damage, handles structural or safety-system concerns, and verifies the finished repair before delivery.",
+      "Xtreme Collision Repair focuses on clear repair planning, documentation, and quality checks for North Texas drivers. This article is educational and is not legal advice.",
+    ],
+    relatedLinks: [
+      { label: "Certifications and equipment", href: "/certifications" },
+      { label: "Repair process", href: "/repair-process" },
     ],
   },
 ];

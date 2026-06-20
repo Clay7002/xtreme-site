@@ -308,11 +308,11 @@ export function HeroSection() {
       </div>
       <div className="container hero-content">
         <p className="eyebrow">5-Star collision repair in North Texas</p>
-        <h1>5-Star Collision Repair in North Texas Backed by a Lifetime Limited Warranty</h1>
+        <h1>Factory-Correct Collision Repair in North Texas Backed by a Lifetime Limited Warranty</h1>
         <p className="hero-subheadline">
-          Xtreme Collision Repair restores cars, trucks, and SUVs to factory
-          standards with expert technicians, advanced equipment, and insurance
-          claim support.
+          Xtreme Collision Repair repairs cars, trucks, and SUVs with attention
+          to structure, safety systems, fit, finish, manufacturer procedures,
+          and insurance claim support.
         </p>
         <p className="hero-service-area">{heroServiceArea}</p>
         <div className="hero-actions">
@@ -326,6 +326,7 @@ export function HeroSection() {
         </Link>
         <div className="hero-meta">
           <span>Carrollton auto body repair</span>
+          <span>Factory-correct repair planning</span>
           <span>Works with all major insurance companies</span>
           <span>Lifetime limited workmanship warranty</span>
         </div>
@@ -427,6 +428,44 @@ export function IntroSection() {
             <span>Repairs for cars, trucks, and SUVs</span>
           </div>
           <ButtonLink href="/contact" track="estimate:intro">Start the Process</ButtonLink>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const trustAuthorityItems = [
+  {
+    title: "Repair standards matter",
+    text: "Modern collision repair affects structure, safety systems, panel fit, refinish quality, and long-term vehicle value — not just the visible damage.",
+  },
+  {
+    title: "Documentation protects the repair plan",
+    text: "Damage photos, measurements, insurer estimates, supplements, and repair notes help keep the process clear from intake to delivery.",
+  },
+  {
+    title: "The shop should explain the process",
+    text: "Customers deserve plain-English answers about parts, insurance steps, hidden damage, warranty terms, and what happens before pickup.",
+  },
+];
+
+export function TrustAuthoritySection() {
+  return (
+    <section className="section muted-section">
+      <div className="container">
+        <SectionIntro
+          eyebrow="Repair standards & customer confidence"
+          title="Collision repair is about safety, structure, and trust."
+          text="Xtreme helps North Texas drivers understand the repair plan, insurance path, and quality checks that matter after an accident."
+        />
+        <div className="reason-grid">
+          {trustAuthorityItems.map((item, index) => (
+            <article className="reason-card" key={item.title}>
+              <span className="reason-icon" aria-hidden="true">{index + 1}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
@@ -623,6 +662,82 @@ export function ProcessPreview({ full = false }: { full?: boolean }) {
         </article>
       ))}
     </div>
+  );
+}
+
+export function WarrantyEducationSection() {
+  return (
+    <section className="section">
+      <div className="container split-section light-split-section">
+        <div>
+          <p className="eyebrow">Warranty & repair responsibility</p>
+          <h2>Know who stands behind the repair.</h2>
+          <p>
+            A proper repair should come with clear workmanship expectations and
+            written warranty terms. Xtreme offers lifetime limited workmanship
+            warranty support on qualifying repairs and can explain what applies
+            before authorization.
+          </p>
+          <div className="hero-actions compact-actions">
+            <ButtonLink href="/resources/who-guarantees-the-repair" track="warranty:learn-more">Warranty Questions</ButtonLink>
+            <ButtonLink href="/contact" track="warranty:estimate" variant="light">Ask the Shop</ButtonLink>
+          </div>
+        </div>
+        <div className="check-list light-list">
+          <span>Written warranty terms matter</span>
+          <span>Workmanship expectations should be clear</span>
+          <span>Insurance estimates may not explain repair responsibility</span>
+          <span>Ask questions before authorizing repairs</span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const convenienceItems = [
+  {
+    title: "Drop-off planning",
+    text: "Call before you come in so the team can help with timing, vehicle details, claim information, and the right next step.",
+  },
+  {
+    title: "Rental coordination guidance",
+    text: "If rental coverage is part of the claim, Xtreme can help customers understand timing and what information may be needed.",
+  },
+  {
+    title: "Photo and claim intake",
+    text: "Damage photos, insurer estimates, claim numbers, and contact details help the shop prepare for a more productive first conversation.",
+  },
+  {
+    title: "Repair updates",
+    text: "Clear communication helps customers stay oriented as estimates, supplements, parts, repairs, refinish work, and quality checks move forward.",
+  },
+];
+
+export function ConvenienceSupportSection() {
+  return (
+    <section className="section muted-section">
+      <div className="container">
+        <div className="repair-start-card convenience-card">
+          <div>
+            <p className="eyebrow">Convenience & repair logistics</p>
+            <h3>Make the repair process easier before the vehicle arrives.</h3>
+            <p>
+              Xtreme helps customers plan the practical details around drop-off,
+              insurance information, rental timing, photos, and communication so
+              the first step feels organized.
+            </p>
+          </div>
+          <div className="repair-start-grid">
+            {convenienceItems.map((item) => (
+              <article key={item.title}>
+                <strong>{item.title}</strong>
+                <span>{item.text}</span>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -1030,7 +1145,7 @@ export function ServiceDetail({ service }: { service: Service }) {
           <div>
             <SectionIntro
               title={`${service.title} in Carrollton, TX`}
-              text={`This page is structured for customers searching for ${service.seo.toLowerCase()} and related auto body repair support in ${nearbyAreas.join(", ")}.`}
+              text={`Learn how Xtreme supports ${service.title.toLowerCase()} needs for drivers in ${nearbyAreas.join(", ")} with clear repair planning, insurance coordination, and quality checks.`}
             />
             <div className="check-list light-list">
               {service.bullets.map((bullet) => (

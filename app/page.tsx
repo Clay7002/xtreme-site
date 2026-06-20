@@ -4,6 +4,7 @@ import {
   ButtonLink,
   CertificationStrip,
   CompanyStorySection,
+  ConvenienceSupportSection,
   FAQSection,
   FinalCTA,
   HeroSection,
@@ -17,7 +18,9 @@ import {
   ResourcesPreview,
   SectionIntro,
   ServicePanels,
+  TrustAuthoritySection,
   ValuePropsStrip,
+  WarrantyEducationSection,
   WhyChooseSection,
   WorkGallerySection,
 } from "./components";
@@ -31,6 +34,7 @@ export default function Home() {
 
         <IntroSection />
         <ValuePropsStrip />
+        <TrustAuthoritySection />
 
         <section className="section">
           <div className="container">
@@ -44,6 +48,8 @@ export default function Home() {
         </section>
 
         <InsuranceSection />
+        <WarrantyEducationSection />
+        <ConvenienceSupportSection />
 
         <section className="section">
           <div className="container">
