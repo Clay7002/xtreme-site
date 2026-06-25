@@ -10,7 +10,7 @@ import {
   navLinks,
   nearbyAreas,
   processSteps,
-  customerExperienceItems,
+  featuredReviewItems,
   resourceArticles,
   servicePanels,
   services,
@@ -877,11 +877,11 @@ export function ReviewsSection() {
     <section className="section reviews-section" id="reviews">
       <div className="container">
         <div className="review-summary">
-          <p className="eyebrow">Google reviews</p>
-          <h2>What Our Customers Say</h2>
+          <p className="eyebrow">Featured Google reviews</p>
+          <h2>What real customers say</h2>
           <p>
-            Customers consistently call out clear communication, quality repairs,
-            insurance help, and a process that feels easier to understand.
+            Featured excerpts from Google reviews highlight communication,
+            craftsmanship, and a repair experience that felt smoother than most.
           </p>
           <div className="review-actions">
             <ButtonLink href="/reviews" track="review:read-more">Read More Reviews</ButtonLink>
@@ -891,11 +891,12 @@ export function ReviewsSection() {
           </div>
         </div>
         <div className="review-carousel" aria-label="Customer review section">
-          {customerExperienceItems.map((review, index) => (
-            <article className="review-card" key={`${review.label}-${index}`}>
+          {featuredReviewItems.map((review, index) => (
+            <article className="review-card" key={`${review.source}-${index}`}>
               <span className="reason-icon" aria-hidden="true">{index + 1}</span>
-              <h3>{review.label}</h3>
-              <p>{review.body}</p>
+              <p className="review-quote">“{review.quote}”</p>
+              <h3>{review.source}</h3>
+              <p>{review.context}</p>
             </article>
           ))}
         </div>
@@ -941,7 +942,7 @@ export function FinalCTA() {
           <p className="eyebrow">Ready for a clear next step?</p>
           <h2>Schedule Your Free Repair Plan in Carrollton, TX.</h2>
           <p>
-            Call {siteInfo.phoneLabel} or send vehicle details, photos, and
+            Call {siteInfo.phoneLabel}{" "}or send vehicle details, photos, and
             insurance information. We&apos;ll get back to you within 24-48
             business hours.
           </p>
@@ -964,7 +965,7 @@ export function ScheduleEvaluationSection() {
         <p className="eyebrow">Schedule Your Free Repair Plan</p>
         <h2>Choose a convenient time for our team to review your repair needs.</h2>
         <p>
-          Online scheduling will be available soon. Call {siteInfo.phoneLabel} to get started.
+          Online scheduling will be available soon. Call {siteInfo.phoneLabel}{" "}to get started.
         </p>
       </div>
       <div className="hero-actions compact-actions schedule-actions">

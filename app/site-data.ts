@@ -43,6 +43,12 @@ export type CertificationLogo = {
   tone?: "light" | "dark";
 };
 
+export type FeaturedReviewItem = {
+  quote: string;
+  source: string;
+  context: string;
+};
+
 export const siteInfo = {
   name: "Xtreme Collision Repair",
   city: "Carrollton",
@@ -53,7 +59,7 @@ export const siteInfo = {
   shortAddressLabel: "2025 Midway Rd, Suite E",
   hoursLabel: "Mon-Thu: 8:00 am - 5:30 pm; Fri: partial day; Sat-Sun: Closed",
   googleReviewsHref: "#reviews",
-  googleLeaveReviewHref: "#reviews",
+  googleLeaveReviewHref: "https://g.page/xtreme-collision-repair/review?rc",
   mapsHref:
     "https://www.google.com/maps/search/?api=1&query=2025%20Midway%20Road%20Suite%20E%20Carrollton%20TX%2075006",
 };
@@ -760,18 +766,26 @@ export const faqs = [
   },
 ];
 
-export const customerExperienceItems = [
+export const featuredReviewItems: FeaturedReviewItem[] = [
   {
-    label: "Repair quality",
-    body: "A careful repair plan, quality checks, and a clean finished repair are central to the Xtreme customer experience.",
+    quote: "Working with Xtreme Collision has been a blessing.",
+    source: "5-Star Google Review 2025",
+    context: "Body and paint work that the reviewer said they highly recommend.",
   },
   {
-    label: "Communication",
-    body: "Customers should know what is happening, what information is needed, and what comes next during the repair process.",
+    quote: "Mark Szafranic was very professional and knowledgeable.",
+    source: "5-Star Google Review 2025",
+    context: "Help that stayed on top of the whole repair process.",
   },
   {
-    label: "Delivery experience",
-    body: "Final pickup should feel organized, clear, and confidence-building before the vehicle leaves the shop.",
+    quote: "The whole repair process was extremely smooth.",
+    source: "5-Star Google Review 2025",
+    context: "Weekly status updates and top-tier craftsmanship.",
+  },
+  {
+    quote: "Great communication, and honest.",
+    source: "5-Star Google Review 2025",
+    context: "A safer-feeling first body shop experience with clear updates.",
   },
 ];
 

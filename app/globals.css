@@ -1186,6 +1186,14 @@ svg {
   line-height: 1.65;
 }
 
+.review-quote {
+  margin: 0 0 14px;
+  color: #1e252d;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
 .service-seo {
   margin: 0 0 10px;
   color: var(--red);

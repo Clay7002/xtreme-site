@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   FinalCTA,
   InnerHero,
@@ -8,6 +9,12 @@ import {
 } from "../components";
 import { RepairPlanRequestForm } from "../repair-plan-request-form";
 import { siteInfo } from "../site-data";
+
+export const metadata: Metadata = {
+  title: "Contact Xtreme Collision Repair | Schedule Your Free Repair Plan",
+  description:
+    "Contact Xtreme Collision Repair in Carrollton, TX for collision repair, hail repair, insurance help, and a free repair-plan review with photo upload.",
+};
 
 export default function ContactPage() {
   return (

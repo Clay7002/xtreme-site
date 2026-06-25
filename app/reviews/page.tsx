@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   FinalCTA,
   InnerHero,
@@ -6,20 +7,22 @@ import {
   SectionIntro,
 } from "../components";
 
+export const metadata: Metadata = {
+  title: "Real Google Reviews | Xtreme Collision Repair",
+  description:
+    "Read featured Google review excerpts from Xtreme Collision Repair customers in Carrollton, TX about communication, craftsmanship, and delivery.",
+};
+
 export default function ReviewsPage() {
   return (
     <PageShell>
       <main>
         <InnerHero
-          eyebrow="Customer experience"
-          title="Repair quality, communication, and confidence at delivery"
-          text="Learn what Xtreme prioritizes during the repair experience, from estimate review to final pickup."
+          eyebrow="Real customer reviews"
+          title="Featured Google review excerpts from local customers"
+          text="See the actual customer feedback Xtreme highlights on the site, with notes about repair quality, communication, and delivery."
         />
-        <section className="section reviews-section">
-          <div className="container">
-            <ReviewsSection />
-          </div>
-        </section>
+        <ReviewsSection />
         <section className="section">
           <div className="container narrow-content">
             <SectionIntro
