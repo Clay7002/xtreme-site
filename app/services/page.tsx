@@ -1,6 +1,7 @@
 import {
   AreasLine,
   FinalCTA,
+  HailInspectionSection,
   InnerHero,
   PageShell,
   SectionIntro,
@@ -33,6 +34,7 @@ export default function ServicesPage() {
             <AreasLine />
           </div>
         </section>
+        <HailInspectionSection />
         <FinalCTA />
       </main>
     </PageShell>

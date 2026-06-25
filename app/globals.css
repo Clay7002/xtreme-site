@@ -246,6 +246,10 @@ svg {
   padding-left: 7px;
 }
 
+.site-header .brand-copy {
+  padding-left: 8px;
+}
+
 .brand-mark {
   display: grid;
   width: 42px;
@@ -273,6 +277,13 @@ svg {
   margin-top: 2px;
   color: #c7d0da;
   font-size: 12px;
+}
+
+.site-header .brand small {
+  color: #f0f4f8;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
 }
 
 .nav-links {
@@ -607,6 +618,53 @@ svg {
   font-size: 13px;
 }
 
+.hero-review-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 12px;
+  margin-top: 18px;
+}
+
+.hero-review-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(96, 165, 250, 0.28);
+  border-radius: 999px;
+  padding: 9px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #f8fbff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.hero-review-badge strong {
+  color: #60a5fa;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+.hero-review-note {
+  color: #c8d2df;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero-review-link {
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(96, 165, 250, 0.45);
+  color: #dce9fb;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.hero-review-link:hover {
+  color: var(--white);
+  border-bottom-color: var(--white);
+}
+
 .hero-media {
   position: absolute;
   inset: 0;
@@ -809,8 +867,8 @@ svg {
 
 .certification-heading {
   display: grid;
-  grid-template-columns: 0.95fr 1fr;
-  gap: 28px;
+  grid-template-columns: 1fr;
+  gap: 12px;
   align-items: end;
   padding: 30px 0 24px;
 }
@@ -1078,8 +1136,26 @@ svg {
     var(--white);
 }
 
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.spotlight-card {
+  display: grid;
+  gap: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 24px;
+  background:
+    linear-gradient(180deg, rgba(47, 155, 255, 0.08), transparent 42%),
+    var(--white);
+}
+
 .service-card h3,
 .service-panel h3,
+.spotlight-card h3,
 .reason-card h3,
 .review-card h3,
 .resource-card h3,
@@ -1095,6 +1171,7 @@ svg {
 
 .service-card p,
 .service-panel p,
+.spotlight-card p,
 .reason-card p,
 .review-card p,
 .resource-card p,
@@ -1120,6 +1197,10 @@ svg {
 .text-link {
   color: var(--red);
   font-weight: 900;
+}
+
+.service-detail-actions {
+  margin-top: 20px;
 }
 
 .process-grid {
@@ -1751,6 +1832,14 @@ svg {
   margin-top: 10px;
 }
 
+.schedule-evaluation-panel {
+  margin-top: 24px;
+}
+
+.schedule-actions {
+  margin-top: 22px;
+}
+
 .narrow-content {
   max-width: 820px;
 }
@@ -1835,6 +1924,10 @@ svg {
   outline: 3px solid rgba(47, 155, 255, 0.18);
 }
 
+.estimate-form input[type="file"] {
+  padding: 10px 12px;
+}
+
 .consent-label {
   grid-template-columns: auto 1fr;
   align-items: start;
@@ -1848,6 +1941,33 @@ svg {
 .form-note {
   margin: 18px 0;
   font-size: 14px;
+}
+
+.upload-note {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.form-actions {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.form-status {
+  margin: 16px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.form-status-success {
+  color: #0f6a4f;
+}
+
+.form-status-error {
+  color: #a11b1b;
 }
 
 .contact-panel {
@@ -1973,6 +2093,7 @@ svg {
   .process-grid-full,
   .service-grid,
   .service-panel-grid,
+  .spotlight-grid,
   .reason-grid,
   .gallery-grid,
   .work-gallery-grid,
@@ -2178,6 +2299,7 @@ svg {
   .process-grid-full,
   .service-grid,
   .service-panel-grid,
+  .spotlight-grid,
   .reason-grid,
   .gallery-grid,
   .review-card-grid,

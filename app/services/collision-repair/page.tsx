@@ -1,7 +1,6 @@
 import {
   BeforeAfterSection,
   ButtonLink,
-  EstimateForm,
   FinalCTA,
   InnerHero,
   LocationContactSection,
@@ -9,6 +8,7 @@ import {
   ProcessPreview,
   ReviewsSection,
   SectionIntro,
+  ScheduleEvaluationSection,
 } from "../../components";
 
 export const metadata = {
@@ -34,7 +34,7 @@ export default function CollisionRepairPage() {
                 text="Xtreme Collision Repair helps restore your vehicle as close as possible to pre-accident condition while keeping you informed throughout the process. The repair plan can include damage documentation, structural review, body repair, refinishing, quality control, and insurance claim support."
               />
               <div className="hero-actions compact-actions">
-                <ButtonLink href="/contact" track="estimate:collision-page">Get a Free Estimate</ButtonLink>
+                <ButtonLink href="/contact" track="estimate:collision-page">Schedule Your Free Repair Plan</ButtonLink>
                 <ButtonLink href="/insurance-claims-assistance" variant="light">
                   Insurance Claim Help
                 </ButtonLink>
@@ -76,11 +76,11 @@ export default function CollisionRepairPage() {
         <section className="section">
           <div className="container">
             <SectionIntro
-              eyebrow="Collision estimate"
+              eyebrow="Collision evaluation"
               title="Tell us what happened"
               text="Share vehicle details, insurance information, and damage photos so the shop can review the next step."
             />
-            <EstimateForm />
+            <ScheduleEvaluationSection />
           </div>
         </section>
         <LocationContactSection />

@@ -67,7 +67,7 @@ function StickyBottomCTA() {
         Call Now
       </a>
       <Link data-track="estimate:sticky-mobile" href="/contact">
-        Get Estimate
+        Schedule Your Free Repair Plan
       </Link>
     </div>
   );
@@ -122,7 +122,6 @@ function Header() {
             priority
           />
           <span className="brand-copy">
-            <strong>Factory-Correct Auto Body Repair</strong>
             <small>{siteInfo.city}, {siteInfo.region}</small>
           </span>
         </Link>
@@ -132,6 +131,7 @@ function Header() {
             <Link className="nav-dropdown-trigger" href="/services">Services</Link>
             <div className="dropdown-menu">
               <Link href="/services">All Services</Link>
+              <Link href="/hail-inspection">Hail Repair</Link>
               {services.slice(0, 8).map((service) => (
                 <Link href={service.href} key={service.title}>
                   {service.title}
@@ -179,7 +179,7 @@ function Header() {
           </div>
         </details>
         <div className="header-cta">
-          <ButtonLink href="/contact">Get a Free Estimate</ButtonLink>
+          <ButtonLink href="/contact">Schedule Your Free Repair Plan</ButtonLink>
         </div>
       </div>
     </header>
@@ -238,10 +238,9 @@ export function Footer() {
             <li>
               Hours: <Link href="/contact#hours">{siteInfo.hoursLabel}</Link>
             </li>
-            <li>Email: {siteInfo.emailLabel}</li>
           </ul>
-          <div className="footer-cta">
-            <ButtonLink href="/contact">Get a Free Estimate</ButtonLink>
+        <div className="footer-cta">
+            <ButtonLink href="/contact">Schedule Your Free Repair Plan</ButtonLink>
           </div>
         </section>
 
@@ -277,7 +276,7 @@ export function Footer() {
           </ul>
           <div className="footer-started">
             <h2>Get Started</h2>
-            <Link data-track="estimate:footer" href="/contact">Get a Free Estimate</Link>
+            <Link data-track="estimate:footer" href="/contact">Schedule Your Free Repair Plan</Link>
             <a data-track="phone:footer-started" href={siteInfo.phoneHref}>Call Now</a>
             <a data-track="directions:footer-started" href={siteInfo.mapsHref}>Directions</a>
           </div>
@@ -307,16 +306,16 @@ export function HeroSection() {
         <div className="hero-photo" />
       </div>
       <div className="container hero-content">
-        <p className="eyebrow">5-Star collision repair in North Texas</p>
-        <h1>Factory-Correct Collision Repair in North Texas Backed by a Lifetime Limited Warranty</h1>
+        <p className="eyebrow">5-Star collision & hail repair in North Texas</p>
+        <h1>Collision & Hail Repair in North Texas Backed by a Lifetime Limited Warranty</h1>
         <p className="hero-subheadline">
-          Xtreme Collision Repair repairs cars, trucks, and SUVs with attention
-          to structure, safety systems, fit, finish, manufacturer procedures,
-          and insurance claim support.
+          Xtreme Collision Repair repairs cars, trucks, and SUVs with deductible
+          assistance, a free loaner, manufacturer-certified repairs, and a process
+          built to help put the value back in your vehicle.
         </p>
         <p className="hero-service-area">{heroServiceArea}</p>
         <div className="hero-actions">
-          <ButtonLink href="/contact" track="estimate:hero-primary">Get a Free Estimate</ButtonLink>
+          <ButtonLink href="/contact" track="estimate:hero-primary">Schedule Your Free Repair Plan</ButtonLink>
           <ButtonLink href={siteInfo.phoneHref} track="phone:hero-secondary" variant="secondary">
             Call Now
           </ButtonLink>
@@ -325,10 +324,20 @@ export function HeroSection() {
           View Our Location
         </Link>
         <div className="hero-meta">
-          <span>Carrollton auto body repair</span>
+          <span>Collision & hail repair</span>
           <span>Factory-correct repair planning</span>
-          <span>Works with all major insurance companies</span>
-          <span>Lifetime limited workmanship warranty</span>
+          <span>Deductible assistance</span>
+          <span>Manufacturer-certified repairs</span>
+        </div>
+        <div className="hero-review-strip" aria-label="Google reviews trust strip">
+          <span className="hero-review-badge">
+            <strong>★★★★★</strong>
+            <span>5-Star Google Reviews</span>
+          </span>
+          <span className="hero-review-note">Real customers. Real repairs.</span>
+          <Link className="hero-review-link" data-track="reviews:hero" href="/reviews">
+            Read Reviews
+          </Link>
         </div>
       </div>
     </section>
@@ -339,15 +348,7 @@ export function CertificationStrip() {
   return (
     <section className="certification-strip" aria-label="OEM certification logos">
       <div className="container certification-heading">
-        <div>
-          <p className="eyebrow">OEM certifications & repair programs</p>
-          <h2>Certified repair programs for today&apos;s vehicles</h2>
-        </div>
-        <p>
-          Xtreme Collision Repair maintains manufacturer and repair program
-          credentials that support proper repair planning, equipment standards,
-          and workmanship expectations for modern vehicles.
-        </p>
+        <h2>Manufacturer Certifications</h2>
       </div>
       <div className="container certification-row">
         {certificationLogos.map((logo) => (
@@ -408,26 +409,28 @@ export function IntroSection() {
     <section className="section intro-section" id="intro">
       <div className="container intro-layout">
         <div>
-          <p className="eyebrow">Carrollton collision repair</p>
-          <h2>Premium auto body repair with clear communication from start to finish.</h2>
+          <p className="eyebrow">Carrollton collision & hail repair</p>
+          <h2>Premium auto body repair that helps put the value back in your vehicle.</h2>
         </div>
         <div>
           <p>
             Xtreme Collision Repair is a trusted auto body and collision repair
             shop serving Carrollton and the surrounding North Texas area. Our
             team repairs vehicles with a focus on safety, appearance, structure,
-            and long-term value. From minor dents and scratches to major
+            and long-term value. From hail damage and minor dents to major
             collision damage, we help customers navigate the repair process with
-            clear communication and insurance claim support.
+            clear communication, deductible assistance, a free loaner, and
+            insurance claim support.
           </p>
           <div className="intro-bullets">
-            <span>Lifetime limited warranty</span>
+            <span>Collision & hail repair</span>
+            <span>Deductible assistance</span>
+            <span>Free loaner available</span>
+            <span>Manufacturer-certified repairs</span>
             <span>State-of-the-art facility and equipment</span>
             <span>Expert repair technicians</span>
-            <span>Insurance claims assistance</span>
-            <span>Repairs for cars, trucks, and SUVs</span>
           </div>
-          <ButtonLink href="/contact" track="estimate:intro">Start the Process</ButtonLink>
+          <ButtonLink href="/contact" track="estimate:intro">Schedule Your Free Repair Plan</ButtonLink>
         </div>
       </div>
     </section>
@@ -455,8 +458,8 @@ export function TrustAuthoritySection() {
       <div className="container">
         <SectionIntro
           eyebrow="Repair standards & customer confidence"
-          title="Collision repair is about safety, structure, and trust."
-          text="Xtreme helps North Texas drivers understand the repair plan, insurance path, and quality checks that matter after an accident."
+          title="Collision & hail repair is about safety, structure, value, and trust."
+          text="Xtreme helps North Texas drivers understand the repair plan, insurance path, and quality checks that matter after an accident or hail storm."
         />
         <div className="reason-grid">
           {trustAuthorityItems.map((item, index) => (
@@ -485,6 +488,49 @@ export function ServicePanels() {
         </article>
       ))}
     </div>
+  );
+}
+
+const serviceSpotlightCards = [
+  {
+    title: "Collision repair",
+    eyebrow: "Accident damage",
+    text: "Start with a photo-based repair plan if your vehicle needs structural review, body work, refinishing, or insurance support.",
+    href: "/services/collision-repair",
+    cta: "View collision repair",
+  },
+  {
+    title: "Hail inspection",
+    eyebrow: "Storm damage",
+    text: "Use a dedicated hail path when the paint is still intact and you want a fast inspection before deciding on repair options.",
+    href: "/hail-inspection",
+    cta: "Request hail inspection",
+  },
+];
+
+export function HailCollisionSpotlightSection() {
+  return (
+    <section className="section muted-section">
+      <div className="container">
+        <SectionIntro
+          eyebrow="Pick your next step"
+          title="Start with the repair path that fits the damage."
+          text="Collision damage and hail damage need slightly different first steps. Choose the path that matches what happened and move forward with less guessing."
+        />
+        <div className="spotlight-grid">
+          {serviceSpotlightCards.map((card) => (
+            <article className="spotlight-card" key={card.title}>
+              <p className="eyebrow">{card.eyebrow}</p>
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+              <ButtonLink href={card.href} track={`cta:spotlight:${card.href}`}>
+                {card.cta}
+              </ButtonLink>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -577,7 +623,7 @@ export function RepairStartChecklist() {
   return (
     <div className="repair-start-card">
       <div>
-        <p className="eyebrow">Before you request an estimate</p>
+        <p className="eyebrow">Before you schedule your free repair plan</p>
         <h3>Have these details ready to speed up the first call.</h3>
         <p>
           A clear first request helps Xtreme review the situation faster and
@@ -606,11 +652,11 @@ export function LocationContactSection() {
           <p>
             Conveniently located in Carrollton, Xtreme Collision Repair serves
             drivers from Addison, Dallas, Plano, Frisco, Richardson, and
-            surrounding North Texas communities. Use the estimate form, call the
+            surrounding North Texas communities. Use the contact form, call the
             shop, or get directions before drop off.
           </p>
           <div className="location-actions">
-            <ButtonLink href="/contact" track="estimate:location">Start the Process</ButtonLink>
+            <ButtonLink href="/contact" track="estimate:location">Schedule Your Free Repair Plan</ButtonLink>
             <ButtonLink href={siteInfo.mapsHref} track="directions:location" variant="light">
               Get Directions
             </ButtonLink>
@@ -632,9 +678,6 @@ export function LocationContactSection() {
           </p>
           <p id="hours">
             <strong>Hours:</strong> {siteInfo.hoursLabel}
-          </p>
-          <p>
-            <strong>Email:</strong> {siteInfo.emailLabel}
           </p>
           <div className="map-placeholder small-map" aria-label="Xtreme Collision Repair map location">
             <strong>{siteInfo.shortAddressLabel}</strong>
@@ -720,9 +763,9 @@ export function ConvenienceSupportSection() {
         <div className="repair-start-card convenience-card">
           <div>
             <p className="eyebrow">Convenience & repair logistics</p>
-            <h3>Make the repair process easier before the vehicle arrives.</h3>
+            <h3>Make the first step easier before the vehicle arrives.</h3>
             <p>
-              Xtreme helps customers plan the practical details around drop-off,
+              Xtreme helps customers line up the practical details around drop-off,
               insurance information, rental timing, photos, and communication so
               the first step feels organized.
             </p>
@@ -751,8 +794,7 @@ export function InsuranceSection() {
           <p>
             After an accident, Xtreme Collision Repair helps customers review
             claim details, understand estimates and supplements, and advocate
-            for a proper repair plan that returns the vehicle to pre-accident
-            condition.
+            for a proper repair plan.
           </p>
           <div className="hero-actions compact-actions">
             <ButtonLink href="/insurance-claims-assistance" track="insurance:home-banner">Start Your Claim Repair</ButtonLink>
@@ -832,32 +874,33 @@ export function WorkGallerySection({ limit }: { limit?: number }) {
 
 export function ReviewsSection() {
   return (
-    <div className="reviews-block" id="reviews">
-      <div className="review-summary">
-        <p className="eyebrow">Customer experience</p>
-        <h2>What Drivers Can Expect From Xtreme</h2>
-        <p>
-          Xtreme focuses on repair quality, clear communication, insurance
-          coordination, and an organized delivery experience from estimate to
-          pickup.
-        </p>
-        <div className="review-actions">
-          <ButtonLink href="/reviews" track="review:read-more">Customer Experience</ButtonLink>
-          <ButtonLink href={siteInfo.googleLeaveReviewHref} track="review:leave-review" variant="light">
-            Leave a Review
-          </ButtonLink>
+    <section className="section reviews-section" id="reviews">
+      <div className="container">
+        <div className="review-summary">
+          <p className="eyebrow">Google reviews</p>
+          <h2>What Our Customers Say</h2>
+          <p>
+            Customers consistently call out clear communication, quality repairs,
+            insurance help, and a process that feels easier to understand.
+          </p>
+          <div className="review-actions">
+            <ButtonLink href="/reviews" track="review:read-more">Read More Reviews</ButtonLink>
+            <ButtonLink href={siteInfo.googleLeaveReviewHref} track="review:leave-review" variant="light">
+              Leave a Review
+            </ButtonLink>
+          </div>
+        </div>
+        <div className="review-carousel" aria-label="Customer review section">
+          {customerExperienceItems.map((review, index) => (
+            <article className="review-card" key={`${review.label}-${index}`}>
+              <span className="reason-icon" aria-hidden="true">{index + 1}</span>
+              <h3>{review.label}</h3>
+              <p>{review.body}</p>
+            </article>
+          ))}
         </div>
       </div>
-      <div className="review-carousel" aria-label="Customer review section">
-        {customerExperienceItems.map((review, index) => (
-          <article className="review-card" key={`${review.label}-${index}`}>
-            <span className="reason-icon" aria-hidden="true">{index + 1}</span>
-            <h3>{review.label}</h3>
-            <p>{review.body}</p>
-          </article>
-        ))}
-      </div>
-    </div>
+    </section>
   );
 }
 
@@ -896,7 +939,7 @@ export function FinalCTA() {
       <div className="container final-cta-inner">
         <div>
           <p className="eyebrow">Ready for a clear next step?</p>
-          <h2>Get a free collision repair estimate in Carrollton, TX.</h2>
+          <h2>Schedule Your Free Repair Plan in Carrollton, TX.</h2>
           <p>
             Call {siteInfo.phoneLabel} or send vehicle details, photos, and
             insurance information. We&apos;ll get back to you within 24-48
@@ -904,7 +947,7 @@ export function FinalCTA() {
           </p>
         </div>
         <div className="cta-actions">
-          <ButtonLink href="/contact" track="estimate:final">Get a Free Estimate</ButtonLink>
+          <ButtonLink href="/contact" track="estimate:final">Schedule Your Free Repair Plan</ButtonLink>
           <ButtonLink href={siteInfo.phoneHref} track="phone:final" variant="secondary">
             Call {siteInfo.phoneLabel}
           </ButtonLink>
@@ -914,89 +957,25 @@ export function FinalCTA() {
   );
 }
 
-export function EstimateForm() {
+export function ScheduleEvaluationSection() {
   return (
-    <form className="estimate-form" id="contact" action="/contact" data-track="form:estimate" method="get">
-      <h2>Request a Free Estimate</h2>
-      <div className="form-grid">
-        <label>
-          First Name
-          <input name="first-name" type="text" required />
-        </label>
-        <label>
-          Last Name
-          <input name="last-name" type="text" required />
-        </label>
-        <label>
-          Phone
-          <input name="phone" type="tel" required />
-        </label>
-        <label>
-          Email
-          <input name="email" type="email" required />
-        </label>
-        <label>
-          Vehicle year
-          <input name="vehicle-year" type="text" inputMode="numeric" />
-        </label>
-        <label>
-          Vehicle make
-          <input name="vehicle-make" type="text" />
-        </label>
-        <label>
-          Vehicle model
-          <input name="vehicle-model" type="text" />
-        </label>
-        <label>
-          Insurance company, optional
-          <input name="insurance-company" type="text" />
-        </label>
-        <label>
-          Claim number, optional
-          <input name="claim-number" type="text" />
-        </label>
-        <label className="form-wide">
-          Description of damage
-          <textarea name="damage-description" rows={5} required />
-        </label>
-        <div className="form-wide form-callout">
-          <strong>Have damage photos?</strong>
-          <span>
-            Call the shop and we&apos;ll explain the best way to share damage photos
-            for review.
-          </span>
-        </div>
-        <label>
-          Preferred appointment date
-          <input name="preferred-date" type="date" />
-        </label>
-        <label>
-          Preferred contact method
-          <select name="preferred-contact">
-            <option>Phone call</option>
-            <option>Text message</option>
-            <option>Email</option>
-          </select>
-        </label>
-        <label className="form-wide consent-label">
-          <input name="follow-up-consent" type="checkbox" required />
-          <span>
-            I agree that Xtreme Collision Repair may contact me by phone, text,
-            or email about my estimate request.
-          </span>
-        </label>
+    <section className="contact-panel schedule-evaluation-panel" id="calendar-coming-soon">
+      <div>
+        <p className="eyebrow">Schedule Your Free Repair Plan</p>
+        <h2>Choose a convenient time for our team to review your repair needs.</h2>
+        <p>
+          Online scheduling will be available soon. Call {siteInfo.phoneLabel} to get started.
+        </p>
       </div>
-      <p className="form-note">
-        For the fastest response, call the shop directly. Need help now?{" "}
-        <a className="text-link" data-track="phone:form-note" href={siteInfo.phoneHref}>
+      <div className="hero-actions compact-actions schedule-actions">
+        <ButtonLink href={siteInfo.phoneHref} track="phone:form-note" variant="secondary">
           Call {siteInfo.phoneLabel}
-        </a>
-        .
-      </p>
-      <button className="button button-primary" data-track="form-submit:estimate" type="submit">
-        Get a Free Estimate
-      </button>
-    </form>
+        </ButtonLink>
+        <ButtonLink href="#calendar-coming-soon" variant="light" track="calendar:coming-soon">
+          Calendar Link Coming Soon
+        </ButtonLink>
+      </div>
+    </section>
   );
 }
 
@@ -1087,7 +1066,7 @@ export function ResourceArticleDetail({ article }: { article: ResourceArticle })
                 communities with estimate requests, insurance claim support, and
                 clear repair planning.
               </p>
-              <ButtonLink href="/contact" track={`estimate:article:${article.slug}`}>Get a Free Estimate</ButtonLink>
+              <ButtonLink href="/contact" track={`estimate:article:${article.slug}`}>Schedule Your Free Repair Plan</ButtonLink>
             </div>
             {article.body.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
@@ -1107,7 +1086,7 @@ export function ResourceArticleDetail({ article }: { article: ResourceArticle })
               Questions about damage, insurance estimates, supplements, or the
               repair process? Call or send an estimate request.
             </p>
-            <ButtonLink href="/contact" track={`estimate:article-sidebar:${article.slug}`}>Start the Process</ButtonLink>
+            <ButtonLink href="/contact" track={`estimate:article-sidebar:${article.slug}`}>Schedule Your Free Repair Plan</ButtonLink>
           </aside>
         </div>
       </section>
@@ -1137,6 +1116,8 @@ export function InnerHero({
 }
 
 export function ServiceDetail({ service }: { service: Service }) {
+  const isHailService = service.slug === "hail-damage-paintless-dent-repair";
+
   return (
     <>
       <InnerHero eyebrow={service.seo} title={service.title} text={service.intro} />
@@ -1152,6 +1133,16 @@ export function ServiceDetail({ service }: { service: Service }) {
                 <span key={bullet}>{bullet}</span>
               ))}
             </div>
+            {isHailService ? (
+              <div className="hero-actions compact-actions service-detail-actions">
+                <ButtonLink href="/hail-inspection" track="hail:service-detail">
+                  Request a Hail Inspection
+                </ButtonLink>
+                <ButtonLink href="/contact" track="estimate:service-hail" variant="light">
+                  Schedule Your Free Repair Plan
+                </ButtonLink>
+              </div>
+            ) : null}
           </div>
           <aside className="estimate-panel">
             <h2>Need an estimate?</h2>
@@ -1159,7 +1150,7 @@ export function ServiceDetail({ service }: { service: Service }) {
               Share vehicle details, insurance information, claim number if
               available, and damage photos so the shop can review the request.
             </p>
-            <ButtonLink href="/contact">Get a Free Estimate</ButtonLink>
+            <ButtonLink href="/contact">Schedule Your Free Repair Plan</ButtonLink>
           </aside>
         </div>
       </section>
@@ -1175,6 +1166,34 @@ export function ServiceDetail({ service }: { service: Service }) {
       </section>
       <FinalCTA />
     </>
+  );
+}
+
+export function HailInspectionSection() {
+  return (
+    <section className="section">
+      <div className="container split-section split-section-light">
+        <div>
+          <SectionIntro
+            eyebrow="Dedicated hail repair"
+            title="Need hail repair after a North Texas storm?"
+            text="If the paint is still intact, hail damage may be a good fit for paintless dent repair. If the dents are deeper or the finish is broken, the shop can explain when conventional repair makes more sense."
+          />
+          <div className="hero-actions compact-actions">
+            <ButtonLink href="/contact" track="hail:inspection-primary">Start Hail Repair Review</ButtonLink>
+            <ButtonLink href="/services/hail-damage-repair" track="hail:inspection-secondary" variant="light">
+              View Hail Repair Details
+            </ButtonLink>
+          </div>
+        </div>
+        <div className="check-list light-list">
+          <span>Roof, hood, trunk, and side-panel mapping</span>
+          <span>PDR vs conventional repair guidance</span>
+          <span>Photo upload for faster hail triage</span>
+          <span>Insurance claim and estimate support</span>
+        </div>
+      </div>
+    </section>
   );
 }
 

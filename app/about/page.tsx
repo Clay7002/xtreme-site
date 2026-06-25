@@ -22,23 +22,29 @@ export default function AboutPage() {
         <section className="section">
           <div className="container narrow-content">
             <SectionIntro
-              title="Built around repair quality, communication, and practical claim help"
-              text="After a collision, customers need more than a number on a repair estimate. They need clear next steps, organized insurance communication, and a shop that treats the repair plan seriously."
+              title="Built around clear estimates, accountable repairs, and real follow-through"
+              text="After a collision, customers need more than a number on a page. They need clear next steps, organized communication, and a shop that treats the repair plan seriously."
             />
             <p>
-              Xtreme Collision Repair is a trusted collision repair and auto
-              body repair shop in Carrollton, Texas. Customers can expect clear
-              communication, lifetime limited workmanship warranty support,
-              modern facility and equipment, experienced technicians, insurance
-              claim assistance, and service across Carrollton, Addison, Dallas,
-              Plano, Frisco, Richardson, and nearby North Texas communities.
+              Xtreme Collision Repair is a local collision repair and auto body
+              shop in Carrollton, Texas. Customers can expect clear communication,
+              lifetime limited workmanship warranty support, modern equipment,
+              insurance claim help, and service across Carrollton, Addison,
+              Dallas, Plano, Frisco, Richardson, and nearby North Texas
+              communities.
             </p>
             <p>
-              Drivers can also look for shop photos, team details, awards,
-              community involvement, and verified customer reviews as Xtreme
-              continues sharing more about the people and process behind the
-              repairs.
+              Drivers should also be able to see the people, the process, and the
+              proof behind the repairs. That means real shop photos, customer
+              reviews, and a plain explanation of how the team handles estimate
+              review, repair planning, quality checks, and delivery.
             </p>
+            <div className="check-list light-list">
+              <span>Real customer reviews</span>
+              <span>Warranty-backed workmanship</span>
+              <span>Insurance and concierge support</span>
+              <span>Clear repair planning</span>
+            </div>
             <AreasLine />
           </div>
         </section>

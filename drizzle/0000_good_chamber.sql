@@ -1,0 +1,20 @@
+CREATE TABLE `repair_plan_requests` (
+	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	`request_type` text NOT NULL,
+	`drivable_status` text NOT NULL,
+	`customer_name` text NOT NULL,
+	`phone` text NOT NULL,
+	`email` text NOT NULL,
+	`city` text DEFAULT '' NOT NULL,
+	`vehicle` text NOT NULL,
+	`vin` text DEFAULT '' NOT NULL,
+	`mileage` text DEFAULT '' NOT NULL,
+	`insurance_company` text DEFAULT '' NOT NULL,
+	`claim_number` text DEFAULT '' NOT NULL,
+	`damage_areas` text DEFAULT '' NOT NULL,
+	`notes` text DEFAULT '' NOT NULL,
+	`photo_count` integer DEFAULT 0 NOT NULL,
+	`photo_names` text DEFAULT '[]' NOT NULL,
+	`consent` text DEFAULT 'yes' NOT NULL,
+	`created_at` text DEFAULT CURRENT_TIMESTAMP NOT NULL
+);

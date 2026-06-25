@@ -1,11 +1,12 @@
 import {
-  EstimateForm,
   FinalCTA,
   InnerHero,
   PageShell,
+  ReviewsSection,
   RepairStartChecklist,
   SectionIntro,
 } from "../components";
+import { RepairPlanRequestForm } from "../repair-plan-request-form";
 import { siteInfo } from "../site-data";
 
 export default function ContactPage() {
@@ -13,20 +14,23 @@ export default function ContactPage() {
     <PageShell>
       <main>
         <InnerHero
-          eyebrow="Contact / Get a Free Estimate"
-          title="Request a free collision repair estimate"
-          text="Share your phone number, vehicle year, make, model, insurance information, and damage notes. For the fastest response, call the shop directly."
+          eyebrow="Contact / Schedule Your Free Repair Plan"
+          title="Schedule Your Free Repair Plan"
+          text="Share your phone number, vehicle details, insurance information, and damage photos so the team can review the repair plan."
         />
+        <ReviewsSection />
         <section className="section" id="location">
           <div className="container contact-layout">
             <div>
               <SectionIntro
-                eyebrow="Estimate request"
-                title="Tell us what happened"
-                text="Start with the details below, then call the shop for the fastest response and next-step guidance."
+                eyebrow="Repair plan request"
+                title="Share the basics and upload your photos."
+                text="Use the form below to start a collision or hail repair review. The more details you include, the easier it is for the shop to prepare the next step."
               />
-              <RepairStartChecklist />
-              <EstimateForm />
+              <RepairPlanRequestForm />
+              <div style={{ marginTop: "28px" }}>
+                <RepairStartChecklist />
+              </div>
             </div>
             <aside className="contact-panel">
               <h2>Business information</h2>
@@ -46,12 +50,9 @@ export default function ContactPage() {
                 <strong>Hours:</strong> {siteInfo.hoursLabel}
               </p>
               <p>
-                <strong>Email:</strong> {siteInfo.emailLabel}
-              </p>
-              <p>
                 <strong>Concierge support:</strong> Rental car scheduling,
                 pickup/drop-off coordination, and insurance communication can
-                be discussed when you request your estimate.
+                be discussed when you schedule your repair evaluation.
               </p>
               <div className="map-placeholder small-map" aria-label="Xtreme Collision Repair map location">
                 <strong>{siteInfo.shortAddressLabel}</strong>

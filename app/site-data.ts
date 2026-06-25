@@ -52,7 +52,6 @@ export const siteInfo = {
   addressLabel: "2025 Midway Road, Suite E, Carrollton, TX 75006",
   shortAddressLabel: "2025 Midway Rd, Suite E",
   hoursLabel: "Mon-Thu: 8:00 am - 5:30 pm; Fri: partial day; Sat-Sun: Closed",
-  emailLabel: "Call for the fastest response",
   googleReviewsHref: "#reviews",
   googleLeaveReviewHref: "#reviews",
   mapsHref:
@@ -62,6 +61,7 @@ export const siteInfo = {
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
+  { label: "Hail Repair", href: "/hail-inspection" },
   { label: "Certifications & Equipment", href: "/certifications" },
   { label: "Repair Process", href: "/repair-process" },
   { label: "Insurance Claims", href: "/insurance-claims-assistance" },
@@ -92,10 +92,13 @@ export const socialLinks = [
 ];
 
 export const trustBadges = [
-  "Factory-correct repair planning",
+  "5-Star Google Reviews",
   "Lifetime limited workmanship warranty",
-  "State-of-the-art facility & equipment",
-  "Expert repair technicians",
+  "OEM certifications & equipment",
+  "Concierge pickup & delivery",
+  "Collision & hail repair planning",
+  "Deductible assistance",
+  "Free loaner available",
   "Works with all major insurance companies",
 ];
 
@@ -211,10 +214,10 @@ export const heroServiceArea =
 
 export const servicePanels = [
   {
-    title: "Collision Repair Services",
+    title: "Collision & Hail Repair Services",
     href: "/services",
     cta: "View Services",
-    text: "Explore full auto body repair support, including collision repair, frame and unibody repair, refinishing, hail damage, dent repair, electrical coordination, and final quality checks.",
+    text: "Explore collision repair, hail repair, frame and unibody work, refinishing, dent repair, electrical coordination, and final quality checks.",
   },
   {
     title: "Insurance Claims Assistance",
@@ -238,11 +241,11 @@ export const servicePanels = [
 
 export const whyChooseItems = [
   {
-    title: "Easy Estimate Process",
-    text: "Start online or by phone. We make it simple to get the repair process moving with the right vehicle and damage information.",
+    title: "Collision & Hail Repair",
+    text: "Start online or by phone. We make it simple to get the repair process moving with the right vehicle and damage details.",
   },
   {
-    title: "Insurance Claim Support",
+    title: "Deductible Assistance",
     text: "We help communicate with insurance companies and explain estimates, supplements, approvals, and repair planning clearly.",
   },
   {
@@ -258,8 +261,8 @@ export const whyChooseItems = [
     text: "Xtreme stands behind qualifying workmanship for as long as you own the vehicle, subject to warranty terms.",
   },
   {
-    title: "Clear Communication",
-    text: "Clear updates help drivers understand what is happening, what has been approved, and what comes next.",
+    title: "Value-Back Repair Guidance",
+    text: "Clear updates help drivers understand what is happening, what has been approved, and what comes next while keeping vehicle value in mind.",
   },
   {
     title: "Rental Car Scheduling",
@@ -374,7 +377,7 @@ export const resourceArticles: ResourceArticle[] = [
     ],
     relatedLinks: [
       { label: "Repair process", href: "/repair-process" },
-      { label: "Get a free estimate", href: "/contact" },
+      { label: "Schedule Your Free Repair Plan", href: "/contact" },
     ],
   },
   {
@@ -456,22 +459,6 @@ export const resourceArticles: ResourceArticle[] = [
 
 export const services: Service[] = [
   {
-    title: "Collision Repair",
-    slug: "collision-repair",
-    href: "/services/collision-repair",
-    summary:
-      "Complete collision repair for cars, trucks, and SUVs, from damage review and structural repair planning to refinishing, quality checks, and final delivery.",
-    intro:
-      "Xtreme Collision Repair helps customers in Carrollton and surrounding North Texas areas move from accident damage to a clear repair plan. The shop documents visible damage, coordinates insurance information, and focuses on restoring the vehicle with careful workmanship and communication.",
-    bullets: [
-      "Damage review and repair planning",
-      "Body repair and refinishing coordination",
-      "Insurance estimate and supplement support",
-      "Quality review before vehicle delivery",
-    ],
-    seo: "Collision repair Carrollton TX",
-  },
-  {
     title: "Hail Damage & Paintless Dent Repair",
     slug: "hail-damage-paintless-dent-repair",
     href: "/services/hail-damage-repair",
@@ -486,6 +473,22 @@ export const services: Service[] = [
       "Panel-by-panel repair planning",
     ],
     seo: "Hail damage repair Carrollton TX",
+  },
+  {
+    title: "Collision Repair",
+    slug: "collision-repair",
+    href: "/services/collision-repair",
+    summary:
+      "Complete collision repair for cars, trucks, and SUVs, from damage review and structural repair planning to refinishing, quality checks, and final delivery.",
+    intro:
+      "Xtreme Collision Repair helps customers in Carrollton and surrounding North Texas areas move from accident damage to a clear repair plan. The shop documents visible damage, coordinates insurance information, and focuses on restoring the vehicle with careful workmanship and communication.",
+    bullets: [
+      "Damage review and repair planning",
+      "Body repair and refinishing coordination",
+      "Insurance estimate and supplement support",
+      "Quality review before vehicle delivery",
+    ],
+    seo: "Collision repair Carrollton TX",
   },
   {
     title: "Dents & Scratches Repair",
@@ -669,31 +672,31 @@ export const services: Service[] = [
 export const processSteps = [
   {
     title: "Request an Estimate",
-    text: "Share contact details, vehicle information, damage notes, claim information, and photos so the shop can begin the review.",
+    text: "Share contact details, vehicle information, damage notes, claim details, and photos.",
   },
   {
     title: "Vehicle Inspection",
-    text: "The vehicle details, photos, visible damage, claim information, and customer concerns are reviewed before planning begins.",
+    text: "The shop reviews the vehicle, photos, visible damage, and customer concerns before planning begins.",
   },
   {
     title: "Insurance Review",
-    text: "Claim details, insurer estimates, coverage questions, and supplement needs are organized and explained.",
+    text: "Claim details, insurer estimates, coverage questions, and supplement needs are organized.",
   },
   {
     title: "Disassembly / Hidden Damage Check",
-    text: "When needed, damaged areas are opened up so hidden damage can be documented and reviewed.",
+    text: "When needed, damaged areas are opened so hidden damage can be documented.",
   },
   {
     title: "Repair Plan & Parts",
-    text: "Parts, structure, paint, safety-system coordination, and production steps are organized around the approved estimate.",
+    text: "Parts, structure, paint, safety systems, and production steps are organized around the approved estimate.",
   },
   {
     title: "Structural & Body Repairs",
-    text: "Body, frame, unibody, electrical, refinishing, and related repairs move forward according to the repair plan.",
+    text: "Body, frame, unibody, electrical, refinishing, and related repairs move forward as planned.",
   },
   {
     title: "Paint & Refinishing",
-    text: "Repaired panels are prepped, color matched, blended, clearcoated, and reviewed for appearance.",
+    text: "Repaired panels are prepped, color matched, blended, clearcoated, and checked for appearance.",
   },
   {
     title: "Reassembly & Calibration Coordination",
@@ -705,7 +708,7 @@ export const processSteps = [
   },
   {
     title: "Vehicle Delivery",
-    text: "The customer receives the vehicle back with final notes, warranty expectations, and any follow-up information.",
+    text: "The customer receives final notes, warranty expectations, and any follow-up information.",
   },
 ];
 

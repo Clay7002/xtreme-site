@@ -12,6 +12,7 @@ import {
   IntroSection,
   LocationContactSection,
   PageShell,
+  HailCollisionSpotlightSection,
   ProcessPreview,
   RepairStartChecklist,
   ReviewsSection,
@@ -35,6 +36,7 @@ export default function Home() {
         <IntroSection />
         <ValuePropsStrip />
         <TrustAuthoritySection />
+        <ReviewsSection />
 
         <section className="section">
           <div className="container">
@@ -46,6 +48,8 @@ export default function Home() {
             <ServicePanels />
           </div>
         </section>
+
+        <HailCollisionSpotlightSection />
 
         <InsuranceSection />
         <WarrantyEducationSection />
@@ -61,12 +65,12 @@ export default function Home() {
           <div className="container">
             <SectionIntro
               eyebrow="Repair process"
-              title="A simple process from estimate to vehicle delivery."
+              title="A simple process from repair plan to vehicle delivery."
               text="Customers can see the major milestones before they call, including insurance review, repair planning, quality checks, and final delivery."
             />
             <ProcessPreview />
             <div className="section-cta-row">
-              <ButtonLink href="/contact" track="estimate:process-preview">Ready to start? Get a Free Estimate</ButtonLink>
+              <ButtonLink href="/contact" track="estimate:process-preview">Schedule Your Free Repair Plan</ButtonLink>
             </div>
           </div>
         </section>
@@ -99,12 +103,6 @@ export default function Home() {
             <div className="section-cta-row">
               <ButtonLink href="/gallery" track="gallery:home-preview">View Full Gallery</ButtonLink>
             </div>
-          </div>
-        </section>
-
-        <section className="section reviews-section">
-          <div className="container">
-            <ReviewsSection />
           </div>
         </section>
 
