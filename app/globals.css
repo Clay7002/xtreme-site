@@ -602,6 +602,22 @@ svg {
   margin-top: 30px;
 }
 
+.hero-action-note,
+.contact-review-note {
+  margin: 0;
+  color: var(--slate);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.hero-action-note {
+  max-width: 360px;
+}
+
+.contact-review-note {
+  margin: 16px 0 22px;
+}
+
 .hero-meta {
   display: flex;
   flex-wrap: wrap;

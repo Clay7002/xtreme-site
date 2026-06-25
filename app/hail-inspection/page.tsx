@@ -18,8 +18,8 @@ export default function HailInspectionPage() {
       <main>
         <InnerHero
           eyebrow="Hail repair Carrollton TX"
-          title="Hail repair and inspection in Carrollton, TX"
-          text="North Texas hail can leave dents that are easy to miss until you look closely. Start with a hail-specific review so the shop can map the damage, review your photos, and recommend the next step."
+          title="Hail repair in Carrollton, TX"
+          text="North Texas hail can leave dents that are easy to miss until you look closely. Start with a hail-specific review so the shop can map the damage, review your photos, and recommend the right next step."
         />
         <HailInspectionSection />
         <ReviewsSection />

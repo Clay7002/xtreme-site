@@ -34,6 +34,9 @@ export default function ContactPage() {
                 title="Share the basics and upload your photos."
                 text="Use the form below to start a collision or hail repair review. The more details you include, the easier it is for the shop to prepare the next step."
               />
+              <p className="contact-review-note">
+                Customers mention clear communication and follow-through in the reviews, and this form is the fastest way to start your own repair-plan review.
+              </p>
               <RepairPlanRequestForm />
               <div style={{ marginTop: "28px" }}>
                 <RepairStartChecklist />

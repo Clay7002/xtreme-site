@@ -1193,13 +1193,15 @@ export function HailInspectionSection() {
           />
           <div className="hero-actions compact-actions">
             <ButtonLink href="/contact" track="hail:inspection-primary">Start Hail Repair Review</ButtonLink>
-            <ButtonLink href="/services/hail-damage-repair" track="hail:inspection-secondary" variant="light">
-              View Hail Repair Details
-            </ButtonLink>
+            <p className="hero-action-note">
+              <Link className="text-link" href="/services/hail-damage-repair" data-track="hail:inspection-secondary">
+                See how the shop handles hail repair
+              </Link>
+            </p>
           </div>
         </div>
         <div className="check-list light-list">
-          <span>Roof, hood, trunk, and side-panel mapping</span>
+          <span>Map the roof, hood, trunk, and side panels that took the hit</span>
           <span>PDR vs conventional repair guidance</span>
           <span>Photo upload for faster hail triage</span>
           <span>Insurance claim and estimate support</span>
