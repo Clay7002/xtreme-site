@@ -48,6 +48,29 @@ export function ButtonLink({
   );
 }
 
+function LiveMapEmbed({
+  className,
+  title,
+}: {
+  className?: string;
+  title: string;
+}) {
+  return (
+    <div className={`map-embed ${className ?? ""}`.trim()}>
+      <iframe
+        title={title}
+        src={siteInfo.mapsEmbedHref}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        allowFullScreen
+      />
+      <a className="map-embed-link text-link" data-track="directions:map-embed" href={siteInfo.mapsHref}>
+        Open in Google Maps
+      </a>
+    </div>
+  );
+}
+
 export function PageShell({ children }: { children: ReactNode }) {
   return (
     <>
@@ -284,13 +307,7 @@ export function Footer() {
       </div>
 
       <div className="container footer-map-row">
-        <div className="map-placeholder" aria-label="Xtreme Collision Repair location">
-          <strong>{siteInfo.shortAddressLabel}</strong>
-          <span>{siteInfo.addressLabel}</span>
-          <Link className="text-link" data-track="directions:footer-map" href={siteInfo.mapsHref}>
-            Get directions
-          </Link>
-        </div>
+        <LiveMapEmbed className="footer-map" title="Xtreme Collision Repair location map" />
         <p className="copyright">
           Copyright {new Date().getFullYear()} {siteInfo.name}. All rights reserved.
         </p>
@@ -679,13 +696,7 @@ export function LocationContactSection() {
           <p id="hours">
             <strong>Hours:</strong> {siteInfo.hoursLabel}
           </p>
-          <div className="map-placeholder small-map" aria-label="Xtreme Collision Repair map location">
-            <strong>{siteInfo.shortAddressLabel}</strong>
-            <span>{siteInfo.addressLabel}</span>
-            <a className="text-link" data-track="directions:map-location" href={siteInfo.mapsHref}>
-              Open in Google Maps
-            </a>
-          </div>
+          <LiveMapEmbed className="small-map" title="Xtreme Collision Repair map location" />
         </aside>
       </div>
     </section>
@@ -943,8 +954,8 @@ export function FinalCTA() {
           <h2>Schedule Your Free Repair Plan in Carrollton, TX.</h2>
           <p>
             Call {siteInfo.phoneLabel}{" "}or send vehicle details, photos, and
-            insurance information. We&apos;ll get back to you within 24-48
-            business hours.
+            insurance information. We&apos;ll review your request and follow up with
+            the next step.
           </p>
         </div>
         <div className="cta-actions">

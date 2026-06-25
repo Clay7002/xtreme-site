@@ -62,6 +62,8 @@ export const siteInfo = {
   googleLeaveReviewHref: "https://g.page/xtreme-collision-repair/review?rc",
   mapsHref:
     "https://www.google.com/maps/search/?api=1&query=2025%20Midway%20Road%20Suite%20E%20Carrollton%20TX%2075006",
+  mapsEmbedHref:
+    "https://www.google.com/maps?q=2025%20Midway%20Road%20Suite%20E%20Carrollton%20TX%2075006&output=embed",
 };
 
 export const navLinks = [
@@ -722,7 +724,7 @@ export const faqs = [
   {
     question: "Do I need an appointment for an estimate?",
     answer:
-      "Requesting an estimate first is the best starting point. Call (972) 233-0207 or use the form so the shop can review your vehicle details and follow up within 24-48 hours.",
+      "Requesting an estimate first is the best starting point. Call (972) 233-0207 or use the form so the shop can review your vehicle details and share the next step.",
   },
   {
     question: "Can I choose my own body shop?",

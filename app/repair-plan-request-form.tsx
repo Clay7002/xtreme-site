@@ -225,8 +225,7 @@ export function RepairPlanRequestForm() {
         className={`form-status form-status-${submission.status}`}
         aria-live="polite"
       >
-        {submission.message ||
-          "We usually follow up within 24-48 business hours after review."}
+        {submission.message || "We’ll review the details and follow up with next steps."}
       </p>
     </form>
   );

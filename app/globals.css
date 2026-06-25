@@ -1982,30 +1982,29 @@ svg {
   background: var(--panel);
 }
 
-.map-placeholder {
+.map-embed {
   display: grid;
+  gap: 12px;
+}
+
+.map-embed iframe {
+  width: 100%;
   min-height: 170px;
-  place-items: center;
-  border: 1px dashed #99a5b2;
-  border-radius: 8px;
-  background:
-    linear-gradient(90deg, rgba(47, 118, 104, 0.12) 0 1px, transparent 1px 32px),
-    linear-gradient(0deg, rgba(47, 118, 104, 0.12) 0 1px, transparent 1px 32px),
-    #eef3f1;
-  color: #25313c;
-  padding: 18px;
-  text-align: center;
+  border: 1px solid #99a5b2;
+  border-radius: 10px;
+  background: #eef3f1;
 }
 
-.map-placeholder span {
-  display: block;
-  margin-top: 8px;
-  color: var(--muted);
+.map-embed-link {
+  justify-self: start;
 }
 
-.small-map {
-  margin-top: 20px;
+.small-map iframe {
   min-height: 150px;
+}
+
+.footer-map iframe {
+  min-height: 200px;
 }
 
 .footer {
@@ -2388,7 +2387,7 @@ svg {
     padding: 18px;
   }
 
-  .footer-map-row .map-placeholder {
+  .footer-map-row .map-embed {
     min-height: 150px;
   }
 

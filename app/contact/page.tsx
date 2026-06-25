@@ -61,11 +61,16 @@ export default function ContactPage() {
                 pickup/drop-off coordination, and insurance communication can
                 be discussed when you schedule your repair evaluation.
               </p>
-              <div className="map-placeholder small-map" aria-label="Xtreme Collision Repair map location">
-                <strong>{siteInfo.shortAddressLabel}</strong>
-                <span>{siteInfo.addressLabel}</span>
+              <div className="small-map">
+                <iframe
+                  title="Xtreme Collision Repair map location"
+                  src={siteInfo.mapsEmbedHref}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
                 <a className="text-link" data-track="directions:contact-map" href={siteInfo.mapsHref}>
-                  Get directions
+                  Open in Google Maps
                 </a>
               </div>
             </aside>
