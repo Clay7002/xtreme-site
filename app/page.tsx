@@ -4,13 +4,11 @@ import {
   ButtonLink,
   CertificationStrip,
   CompanyStorySection,
-  FAQSection,
   FinalCTA,
   HeroSection,
   InsuranceSection,
   LocationContactSection,
   PageShell,
-  HailCollisionSpotlightSection,
   ProcessPreview,
   ResourcesPreview,
   SectionIntro,
@@ -25,8 +23,6 @@ export default function Home() {
       <main>
         <HeroSection />
         <CertificationStrip />
-
-        <HailCollisionSpotlightSection />
 
         <InsuranceSection />
         <WarrantyEducationSection />
@@ -84,17 +80,6 @@ export default function Home() {
               text="Helpful repair and insurance answers for Carrollton and North Texas drivers before they start the claim or repair process."
             />
             <ResourcesPreview />
-          </div>
-        </section>
-
-        <section className="section muted-section">
-          <div className="container faq-container">
-            <SectionIntro
-              eyebrow="FAQ"
-              title="Clear answers before customers call"
-              text="These questions reduce uncertainty around estimates, insurance, photos, repair timing, and service areas."
-            />
-            <FAQSection />
           </div>
         </section>
 
