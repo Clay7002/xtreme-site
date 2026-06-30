@@ -509,16 +509,16 @@ const serviceSpotlightCards = [
   {
     title: "Collision repair",
     eyebrow: "Accident damage",
-    text: "Start with a photo-based repair plan if your vehicle needs structural review, body work, refinishing, or insurance support.",
+    text: "Start here if your vehicle needs body work, structural review, refinishing, or help with an insurance claim.",
     href: "/services/collision-repair",
-    cta: "View collision repair",
+    cta: "Start collision repair",
   },
   {
     title: "Hail inspection",
     eyebrow: "Storm damage",
-    text: "Use a dedicated hail path when the paint is still intact and you want a fast inspection before deciding on repair options.",
+    text: "Choose this path when the paint is still intact and you want a quick storm-damage inspection first.",
     href: "/hail-inspection",
-    cta: "Request hail inspection",
+    cta: "Start hail inspection",
   },
 ];
 
@@ -527,9 +527,9 @@ export function HailCollisionSpotlightSection() {
     <section className="section muted-section">
       <div className="container">
         <SectionIntro
-          eyebrow="Pick your next step"
-          title="Start with the repair path that fits the damage."
-          text="Collision damage and hail damage need slightly different first steps. Choose the path that matches what happened and move forward with less guessing."
+          eyebrow="Choose your next step"
+          title="Pick the option that matches the damage."
+          text="Collision damage and hail damage call for different first moves. Choose the path below that fits what happened and move forward with less guessing."
         />
         <div className="spotlight-grid">
           {serviceSpotlightCards.map((card) => (
