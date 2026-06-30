@@ -578,13 +578,6 @@ svg {
   line-height: 1.6;
 }
 
-.hero-location-link {
-  width: fit-content;
-  margin-top: 18px;
-  color: var(--orange);
-  font-weight: 900;
-}
-
 .eyebrow {
   margin: 0 0 12px;
   color: var(--orange);

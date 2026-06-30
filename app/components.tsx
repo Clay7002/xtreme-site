@@ -138,10 +138,10 @@ function Header() {
         <Link className="brand" href="/" aria-label="Xtreme Collision Repair home">
           <Image
             className="brand-logo"
-            src="/brand/xtreme-logo.webp"
+            src="/brand/xtreme-logo.png"
             alt="Xtreme Collision & Hail"
             width={768}
-            height={256}
+            height={250}
             priority
           />
           <span className="brand-copy">
@@ -217,10 +217,10 @@ export function Footer() {
           <Link className="brand footer-brand" href="/">
             <Image
               className="brand-logo"
-              src="/brand/xtreme-logo.webp"
+              src="/brand/xtreme-logo.png"
               alt="Xtreme Collision & Hail"
               width={768}
-              height={256}
+              height={250}
             />
             <span>
               <strong>{siteInfo.name}</strong>
@@ -337,12 +337,9 @@ export function HeroSection() {
             Call Now
           </ButtonLink>
         </div>
-        <Link className="hero-location-link" data-track="directions:hero-location" href="/contact#location">
-          View Our Location
-        </Link>
         <div className="hero-meta">
-          <span>Collision & hail repair</span>
-          <span>Factory-correct repair planning</span>
+          <span>Collision Repair</span>
+          <span>Hail Repair</span>
           <span>Deductible assistance</span>
           <span>Manufacturer-certified repairs</span>
         </div>
