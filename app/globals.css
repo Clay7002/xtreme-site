@@ -237,8 +237,8 @@ svg {
 }
 
 .site-header .brand-logo {
-  width: clamp(250px, 20vw, 340px);
-  max-height: 96px;
+  width: clamp(210px, 18vw, 290px);
+  max-height: 88px;
   border-radius: 0;
 }
 
@@ -2067,7 +2067,7 @@ svg {
 }
 
 .footer-brand .brand-logo {
-  width: 218px;
+  width: 192px;
 }
 
 .footer-map-row {
@@ -2203,8 +2203,8 @@ svg {
   }
 
   .site-header .brand-logo {
-    width: 235px;
-    max-height: 78px;
+    width: 214px;
+    max-height: 72px;
   }
 
   .brand-copy {

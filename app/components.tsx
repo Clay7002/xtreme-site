@@ -138,7 +138,7 @@ function Header() {
         <Link className="brand" href="/" aria-label="Xtreme Collision Repair home">
           <Image
             className="brand-logo"
-            src="/brand/xtreme-logo.jpg"
+            src="/brand/xtreme-logo.png"
             alt="Xtreme Collision & Hail"
             width={768}
             height={250}
@@ -217,7 +217,7 @@ export function Footer() {
           <Link className="brand footer-brand" href="/">
             <Image
               className="brand-logo"
-              src="/brand/xtreme-logo.jpg"
+              src="/brand/xtreme-logo.png"
               alt="Xtreme Collision & Hail"
               width={768}
               height={250}
