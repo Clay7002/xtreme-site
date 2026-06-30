@@ -223,8 +223,8 @@ svg {
 .site-header .brand {
   min-width: 320px;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
+  align-items: center;
+  gap: 6px;
 }
 
 .brand-logo {
@@ -247,7 +247,10 @@ svg {
 }
 
 .site-header .brand-copy {
-  padding-left: 8px;
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  text-align: center;
 }
 
 .brand-mark {
@@ -284,6 +287,7 @@ svg {
   font-size: 15px;
   font-weight: 800;
   letter-spacing: 0.01em;
+  line-height: 1.05;
 }
 
 .nav-links {
@@ -2205,6 +2209,10 @@ svg {
   .site-header .brand-logo {
     width: 214px;
     max-height: 72px;
+  }
+
+  .site-header .brand {
+    align-items: center;
   }
 
   .brand-copy {

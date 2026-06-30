@@ -143,6 +143,7 @@ function Header() {
             width={768}
             height={250}
             priority
+            unoptimized
           />
           <span className="brand-copy">
             <small>{siteInfo.city}, {siteInfo.region}</small>
@@ -221,6 +222,7 @@ export function Footer() {
               alt="Xtreme Collision & Hail"
               width={768}
               height={250}
+              unoptimized
             />
             <span>
               <strong>{siteInfo.name}</strong>
