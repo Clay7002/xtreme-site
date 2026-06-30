@@ -8,16 +8,12 @@ import {
   FinalCTA,
   HeroSection,
   InsuranceSection,
-  IntroSection,
   LocationContactSection,
   PageShell,
   HailCollisionSpotlightSection,
   ProcessPreview,
-  ReviewsSection,
   ResourcesPreview,
   SectionIntro,
-  TrustAuthoritySection,
-  ValuePropsStrip,
   WarrantyEducationSection,
   WhyChooseSection,
   WorkGallerySection,
@@ -29,11 +25,6 @@ export default function Home() {
       <main>
         <HeroSection />
         <CertificationStrip />
-
-        <IntroSection />
-        <ValuePropsStrip />
-        <TrustAuthoritySection />
-        <ReviewsSection />
 
         <HailCollisionSpotlightSection />
 
