@@ -328,8 +328,13 @@ export function CertificationStrip() {
   return (
     <section className="certification-strip" aria-label="OEM certification logos">
       <div className="container certification-heading">
-        <h2>Manufacturer Certifications</h2>
-        <p>OEM program support, factory repair guidance, and calibration-aware repair planning across the brands we work on most.</p>
+        <h2>No Shortcuts Ever</h2>
+        <p>
+          At Xtreme Collision, we are committed to delivering the highest quality collision &amp; hail repairs every time.
+          Every vehicle is repaired using brand new factory body panels by certified technicians who follow manufacturer
+          specifications down to the smallest detail. That&apos;s why at Xtreme, we perform repairs that don&apos;t cut corners
+          — restoring not just the look, but the safety built into your vehicle.
+        </p>
       </div>
       <div className="container certification-row">
         {certificationLogos.map((logo) => (
