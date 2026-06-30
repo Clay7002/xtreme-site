@@ -142,8 +142,9 @@ function Header() {
             alt="Xtreme Collision & Hail"
             width={768}
             height={250}
+            sizes="(max-width: 760px) 190px, 270px"
             priority
-            unoptimized
+            quality={100}
           />
           <span className="brand-copy">
             <small>{siteInfo.city}, {siteInfo.region}</small>
@@ -168,7 +169,6 @@ function Header() {
             <div className="dropdown-menu">
               <Link href="/certifications">OEM Certifications</Link>
               <Link href="/our-facility">Shop Equipment</Link>
-              <Link href="/gallery">Work Gallery</Link>
             </div>
           </div>
           <Link href="/contact">Concierge Pick Up & Delivery</Link>
@@ -222,7 +222,8 @@ export function Footer() {
               alt="Xtreme Collision & Hail"
               width={768}
               height={250}
-              unoptimized
+              sizes="160px"
+              quality={100}
             />
             <span>
               <strong>{siteInfo.name}</strong>
@@ -365,6 +366,7 @@ export function CertificationStrip() {
     <section className="certification-strip" aria-label="OEM certification logos">
       <div className="container certification-heading">
         <h2>Manufacturer Certifications</h2>
+        <p>OEM program support, factory repair guidance, and calibration-aware repair planning across the brands we work on most.</p>
       </div>
       <div className="container certification-row">
         {certificationLogos.map((logo) => (
@@ -886,29 +888,31 @@ export function ReviewsSection() {
   return (
     <section className="section reviews-section" id="reviews">
       <div className="container">
-        <div className="review-summary">
-          <p className="eyebrow">Featured Google reviews</p>
-          <h2>What real customers say</h2>
-          <p>
-            Featured excerpts from Google reviews highlight communication,
-            craftsmanship, and a repair experience that felt smoother than most.
-          </p>
-          <div className="review-actions">
-            <ButtonLink href="/reviews" track="review:read-more">Read More Reviews</ButtonLink>
-            <ButtonLink href={siteInfo.googleLeaveReviewHref} track="review:leave-review" variant="light">
-              Leave a Review
-            </ButtonLink>
+        <div className="reviews-block">
+          <div className="review-summary">
+            <p className="eyebrow">Featured Google reviews</p>
+            <h2>What real customers say</h2>
+            <p>
+              Featured excerpts from Google reviews highlight communication,
+              craftsmanship, and a repair experience that felt smoother than most.
+            </p>
+            <div className="review-actions">
+              <ButtonLink href="/reviews" track="review:read-more">Read More Reviews</ButtonLink>
+              <ButtonLink href={siteInfo.googleLeaveReviewHref} track="review:leave-review" variant="light">
+                Leave a Review
+              </ButtonLink>
+            </div>
           </div>
-        </div>
-        <div className="review-carousel" aria-label="Customer review section">
-          {featuredReviewItems.map((review, index) => (
-            <article className="review-card" key={`${review.source}-${index}`}>
-              <span className="reason-icon" aria-hidden="true">{index + 1}</span>
-              <p className="review-quote">“{review.quote}”</p>
-              <h3>{review.source}</h3>
-              <p>{review.context}</p>
-            </article>
-          ))}
+          <div className="review-carousel" aria-label="Customer review section">
+            {featuredReviewItems.map((review, index) => (
+              <article className="review-card" key={`${review.source}-${index}`}>
+                <span className="reason-icon" aria-hidden="true">{index + 1}</span>
+                <p className="review-quote">“{review.quote}”</p>
+                <h3>{review.source}</h3>
+                <p>{review.context}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -32,12 +32,6 @@ const areas: { title: string; text: string; image?: string; alt?: string }[] = [
     image: "/gallery/work/facility-alignment-rack.webp",
     alt: "Truck on an alignment rack inside a collision repair facility",
   },
-  {
-    title: "Finished Vehicle Gallery",
-    text: "Feature delivery photos and before-and-after repair examples from real Xtreme work.",
-    image: "/gallery/work/gmc-front-after.webp",
-    alt: "Finished GMC front-end repair photographed at Xtreme Collision Repair",
-  },
 ];
 
 export default function OurFacilityPage() {
