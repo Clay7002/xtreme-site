@@ -511,14 +511,14 @@ const serviceSpotlightCards = [
     eyebrow: "Accident damage",
     text: "Start here if your vehicle needs body work, structural review, refinishing, or help with an insurance claim.",
     href: "/services/collision-repair",
-    cta: "Start collision repair",
+    cta: "Schedule collision repair",
   },
   {
     title: "Hail inspection",
     eyebrow: "Storm damage",
     text: "Choose this path when the paint is still intact and you want a quick storm-damage inspection first.",
     href: "/hail-inspection",
-    cta: "Start hail inspection",
+    cta: "Schedule hail repair",
   },
 ];
 
