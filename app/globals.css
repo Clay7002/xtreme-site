@@ -230,18 +230,17 @@ svg {
 
 .brand-logo {
   display: block;
-  width: clamp(142px, 13vw, 188px);
+  width: clamp(150px, 14vw, 196px);
   height: auto;
   flex: 0 0 auto;
   border-radius: 6px;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+  image-rendering: auto;
   object-fit: contain;
 }
 
 .site-header .brand-logo {
-  width: clamp(230px, 19vw, 320px);
-  max-height: 96px;
+  width: clamp(248px, 21vw, 352px);
+  max-height: 104px;
   border-radius: 0;
 }
 
@@ -2075,7 +2074,7 @@ svg {
 }
 
 .footer-brand .brand-logo {
-  width: 208px;
+  width: 224px;
 }
 
 .footer-map-row {
@@ -2216,12 +2215,12 @@ svg {
   }
 
   .brand-logo {
-    width: 156px;
+    width: 166px;
   }
 
   .site-header .brand-logo {
-    width: 214px;
-    max-height: 72px;
+    width: 228px;
+    max-height: 76px;
   }
 
   .site-header .brand {

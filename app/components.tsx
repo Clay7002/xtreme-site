@@ -140,11 +140,12 @@ function Header() {
             className="brand-logo"
             src="/brand/xtreme-logo.png"
             alt="Xtreme Collision & Hail"
-            width={768}
-            height={250}
-            sizes="(max-width: 760px) 190px, 270px"
+            width={1131}
+            height={380}
+            sizes="(max-width: 760px) 214px, 320px"
             priority
             quality={100}
+            unoptimized
           />
           <span className="brand-copy">
             <small>{siteInfo.city}, {siteInfo.region}</small>
@@ -220,10 +221,11 @@ export function Footer() {
               className="brand-logo"
               src="/brand/xtreme-logo.png"
               alt="Xtreme Collision & Hail"
-              width={768}
-              height={250}
-              sizes="160px"
+              width={1131}
+              height={380}
+              sizes="208px"
               quality={100}
+              unoptimized
             />
             <span>
               <strong>{siteInfo.name}</strong>
