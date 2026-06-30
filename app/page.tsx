@@ -18,7 +18,6 @@ import {
   ReviewsSection,
   ResourcesPreview,
   SectionIntro,
-  ServicePanels,
   TrustAuthoritySection,
   ValuePropsStrip,
   WarrantyEducationSection,
@@ -37,17 +36,6 @@ export default function Home() {
         <ValuePropsStrip />
         <TrustAuthoritySection />
         <ReviewsSection />
-
-        <section className="section">
-          <div className="container">
-            <SectionIntro
-              eyebrow="Auto body repair Carrollton TX"
-              title="Start with the service path that fits your repair."
-              text="Choose the path that best matches your situation, from collision repair and insurance help to certifications, equipment, and repair resources."
-            />
-            <ServicePanels />
-          </div>
-        </section>
 
         <HailCollisionSpotlightSection />
 
