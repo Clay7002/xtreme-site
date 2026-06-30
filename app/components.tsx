@@ -109,10 +109,6 @@ function TopContactBar() {
             <span className="top-contact-icon top-contact-icon-clock" aria-hidden="true" />
             <span>{siteInfo.hoursLabel}</span>
           </Link>
-          <a className="top-contact-item top-contact-address" data-track="directions:top-bar" href={siteInfo.mapsHref}>
-            <span className="top-contact-icon top-contact-icon-pin" aria-hidden="true" />
-            <span>{siteInfo.addressLabel}</span>
-          </a>
         </div>
         <div className="social-links" aria-label="Social media links">
           {socialLinks.map((link) => (
@@ -152,38 +148,11 @@ function Header() {
           </span>
         </Link>
         <nav className="nav-links" aria-label="Main navigation">
-          <Link className="nav-active" href="/">Home</Link>
-          <div className="nav-dropdown">
-            <Link className="nav-dropdown-trigger" href="/services">Services</Link>
-            <div className="dropdown-menu">
-              <Link href="/services">All Services</Link>
-              <Link href="/hail-inspection">Hail Repair</Link>
-              {services.slice(0, 8).map((service) => (
-                <Link href={service.href} key={service.title}>
-                  {service.title}
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div className="nav-dropdown">
-            <Link className="nav-dropdown-trigger" href="/certifications">Certifications</Link>
-            <div className="dropdown-menu">
-              <Link href="/certifications">OEM Certifications</Link>
-              <Link href="/our-facility">Shop Equipment</Link>
-            </div>
-          </div>
-          <Link href="/contact">Concierge Pick Up & Delivery</Link>
-          <div className="nav-dropdown">
-            <Link className="nav-dropdown-trigger" href="/about">About</Link>
-            <div className="dropdown-menu">
-              <Link href="/about">About Us</Link>
-              <Link href="/repair-process">Repair Process</Link>
-              <Link href="/insurance-claims-assistance">Insurance Claims</Link>
-              <Link href="/resources">Resources / Blog</Link>
-              <Link href="/reviews">Reviews</Link>
-              <Link href="/contact">Contact</Link>
-            </div>
-          </div>
+          {navLinks.map((link) => (
+            <Link key={link.href} className={link.href === "/" ? "nav-active" : ""} href={link.href}>
+              {link.label}
+            </Link>
+          ))}
         </nav>
         <details className="mobile-menu">
           <summary aria-label="Open navigation menu">Menu</summary>
@@ -291,23 +260,15 @@ export function Footer() {
                 [
                   "collision-repair",
                   "hail-damage-paintless-dent-repair",
-                  "auto-frame-repair",
                   "insurance-claims-assistance",
-                  "color-matching-refinishing",
                 ].includes(service.slug),
               )
               .map((service) => (
-              <li key={service.title}>
-                <Link href={service.href}>{service.title}</Link>
-              </li>
-            ))}
+                <li key={service.title}>
+                  <Link href={service.href}>{service.title}</Link>
+                </li>
+              ))}
           </ul>
-          <div className="footer-started">
-            <h2>Get Started</h2>
-            <Link data-track="estimate:footer" href="/contact">Schedule Your Free Repair Plan</Link>
-            <a data-track="phone:footer-started" href={siteInfo.phoneHref}>Call Now</a>
-            <a data-track="directions:footer-started" href={siteInfo.mapsHref}>Directions</a>
-          </div>
         </section>
       </div>
 
@@ -511,6 +472,21 @@ export function ServicePanels() {
   );
 }
 
+export function HomepageServicesSection() {
+  return (
+    <section className="section homepage-services-section">
+      <div className="container">
+        <SectionIntro
+          eyebrow="Core services"
+          title="Choose the repair path that fits the damage."
+          text="A simple first scan is better than a long menu. Start with the service category that matches what happened, then go deeper from there."
+        />
+        <ServicesGrid limit={4} />
+      </div>
+    </section>
+  );
+}
+
 const serviceSpotlightCards = [
   {
     title: "Collision repair",
@@ -528,31 +504,6 @@ const serviceSpotlightCards = [
   },
 ];
 
-export function HailCollisionSpotlightSection() {
-  return (
-    <section className="section muted-section">
-      <div className="container">
-        <SectionIntro
-          eyebrow="Choose your next step"
-          title="Pick the option that matches the damage."
-          text="Collision damage and hail damage call for different first moves. Choose the path below that fits what happened and move forward with less guessing."
-        />
-        <div className="spotlight-grid">
-          {serviceSpotlightCards.map((card) => (
-            <article className="spotlight-card" key={card.title}>
-              <p className="eyebrow">{card.eyebrow}</p>
-              <h3>{card.title}</h3>
-              <p>{card.text}</p>
-              <ButtonLink href={card.href} track={`cta:spotlight:${card.href}`}>
-                {card.cta}
-              </ButtonLink>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 export function ServicesGrid({ limit }: { limit?: number }) {
   const items = limit ? services.slice(0, limit) : services;
@@ -893,10 +844,10 @@ export function ReviewsSection() {
         <div className="reviews-block">
           <div className="review-summary">
             <p className="eyebrow">Featured Google reviews</p>
-            <h2>What real customers say</h2>
+            <h2>What customers are saying</h2>
             <p>
-              Featured excerpts from Google reviews highlight communication,
-              craftsmanship, and a repair experience that felt smoother than most.
+              Quick excerpts from Google reviews highlight communication and
+              repair quality without adding a lot of page weight.
             </p>
             <div className="review-actions">
               <ButtonLink href="/reviews" track="review:read-more">Read More Reviews</ButtonLink>
@@ -908,7 +859,6 @@ export function ReviewsSection() {
           <div className="review-carousel" aria-label="Customer review section">
             {featuredReviewItems.map((review, index) => (
               <article className="review-card" key={`${review.source}-${index}`}>
-                <span className="reason-icon" aria-hidden="true">{index + 1}</span>
                 <p className="review-quote">“{review.quote}”</p>
                 <h3>{review.source}</h3>
                 <p>{review.context}</p>

@@ -69,27 +69,16 @@ export const siteInfo = {
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Hail Repair", href: "/hail-inspection" },
-  { label: "Certifications & Equipment", href: "/certifications" },
-  { label: "Repair Process", href: "/repair-process" },
-  { label: "Insurance Claims", href: "/insurance-claims-assistance" },
-  { label: "Resources", href: "/resources" },
+  { label: "Certifications", href: "/certifications" },
   { label: "Reviews", href: "/reviews" },
-  { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const footerQuickLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Repair Process", href: "/repair-process" },
+  { label: "Certifications", href: "/certifications" },
   { label: "Reviews", href: "/reviews" },
-  { label: "Our Facility", href: "/our-facility" },
-  { label: "Certifications & Equipment", href: "/certifications" },
-  { label: "Resources", href: "/resources" },
-  { label: "About Us", href: "/about" },
-  { label: "Careers", href: "/about#careers" },
-  { label: "Repair Authorization", href: "/repair-authorization" },
   { label: "Contact", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy-policy" },
 ];
@@ -102,10 +91,8 @@ export const trustBadges = [
   "5-Star Google Reviews",
   "Lifetime limited workmanship warranty",
   "OEM certifications & equipment",
-  "Concierge pickup & delivery",
   "Collision & hail repair planning",
   "Deductible assistance",
-  "Free loaner available",
   "Works with all major insurance companies",
 ];
 

@@ -1,7 +1,7 @@
 import {
   CertificationStrip,
   HeroSection,
-  HailCollisionSpotlightSection,
+  HomepageServicesSection,
   LocationContactSection,
   PageShell,
   ReviewsSection,
@@ -13,7 +13,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <CertificationStrip />
-        <HailCollisionSpotlightSection />
+        <HomepageServicesSection />
         <ReviewsSection />
         <LocationContactSection />
       </main>

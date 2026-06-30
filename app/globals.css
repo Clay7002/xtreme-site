@@ -74,7 +74,7 @@ svg {
 
 .top-contact-inner {
   display: flex;
-  min-height: 40px;
+  min-height: 36px;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
@@ -84,7 +84,7 @@ svg {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 22px;
+  gap: 14px;
 }
 
 .top-contact-item {
@@ -222,7 +222,7 @@ svg {
 }
 
 .site-header .brand {
-  min-width: 352px;
+  min-width: 334px;
   flex-direction: column;
   align-items: center;
   gap: 6px;
@@ -239,8 +239,8 @@ svg {
 }
 
 .site-header .brand-logo {
-  width: clamp(248px, 21vw, 352px);
-  max-height: 104px;
+  width: clamp(236px, 20vw, 332px);
+  max-height: 96px;
   border-radius: 0;
 }
 
@@ -286,7 +286,7 @@ svg {
 
 .site-header .brand small {
   color: #f0f4f8;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 800;
   letter-spacing: 0.01em;
   line-height: 1.05;
@@ -297,7 +297,7 @@ svg {
   flex: 1;
   align-items: center;
   justify-content: flex-end;
-  gap: clamp(16px, 1.8vw, 38px);
+  gap: clamp(18px, 2vw, 28px);
   color: #e5ebf1;
   font-size: 15px;
 }
@@ -598,7 +598,7 @@ svg {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 28px;
+  margin-top: 22px;
 }
 
 .hero-action-note,
@@ -621,7 +621,7 @@ svg {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 22px;
 }
 
 .hero-meta span {
@@ -883,7 +883,7 @@ svg {
 .certification-heading {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
-  gap: 28px;
+  gap: 22px;
   align-items: end;
   padding: 34px 0 22px;
 }
@@ -1104,7 +1104,7 @@ svg {
 
 .section-cta-row {
   display: flex;
-  margin-top: 28px;
+  margin-top: 22px;
 }
 
 .service-grid,
@@ -1697,7 +1697,7 @@ svg {
 .repair-start-card {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
-  gap: 28px;
+  gap: 22px;
   align-items: start;
   border: 1px solid rgba(47, 155, 255, 0.22);
   border-radius: 10px;
@@ -1764,7 +1764,7 @@ svg {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 22px;
 }
 
 .faq-container {
@@ -2080,10 +2080,10 @@ svg {
 .footer-map-row {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 28px;
+  gap: 22px;
   align-items: end;
   margin-top: 28px;
-  padding-top: 22px;
+  padding-top: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
