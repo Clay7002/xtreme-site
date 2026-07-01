@@ -11,10 +11,20 @@ export async function POST(request: Request) {
   const email = textValue(formData, "email");
   const vehicle = textValue(formData, "vehicle");
   const damageAreas = textValue(formData, "damage-areas");
+  const consent = textValue(formData, "consent");
 
-  if (!requestType || !drivableStatus || !customerName || !phone || !email || !vehicle || !damageAreas) {
+  if (
+    !requestType ||
+    !drivableStatus ||
+    !customerName ||
+    !phone ||
+    !email ||
+    !vehicle ||
+    !damageAreas ||
+    !consent
+  ) {
     return Response.json(
-      { message: "Please complete the required fields before submitting." },
+      { message: "Please complete the required fields and text-message consent before submitting." },
       { status: 400 },
     );
   }

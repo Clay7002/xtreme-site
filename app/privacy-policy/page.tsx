@@ -24,6 +24,20 @@ export default function PrivacyPolicyPage() {
             </p>
           </div>
         </section>
+        <section className="section muted-section" id="sms-messaging">
+          <div className="container narrow-content">
+            <SectionIntro
+              title="SMS and text message consent"
+              text="If you opt in, Xtreme Collision Repair may text you about your repair request, appointment updates, estimate status, or follow-up on the vehicle you asked us to review."
+            />
+            <p>
+              Message frequency varies. Message and data rates may apply. Reply
+              STOP to opt out and HELP for help. Consent is not a condition of
+              purchase. We use the phone number you provide to support your
+              service request and related repair communication.
+            </p>
+          </div>
+        </section>
         <FinalCTA />
       </main>
     </PageShell>

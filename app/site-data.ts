@@ -81,6 +81,7 @@ export const footerQuickLinks = [
   { label: "Reviews", href: "/reviews" },
   { label: "Contact", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "SMS Messaging", href: "/privacy-policy#sms-messaging" },
 ];
 
 export const socialLinks = [

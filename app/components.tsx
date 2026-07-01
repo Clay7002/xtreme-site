@@ -616,6 +616,9 @@ const repairStartItems = [
   },
 ];
 
+const messagingConsentCopy =
+  "By checking this box, I agree that Xtreme Collision Repair may contact me by phone, email, or text message about this request, appointment updates, estimate status, and repair follow-up. Message frequency varies. Message and data rates may apply. Reply STOP to opt out and HELP for help. Consent is not a condition of purchase.";
+
 export function RepairStartChecklist() {
   return (
     <div className="repair-start-card">
@@ -1021,8 +1024,7 @@ export function RepairAuthorizationForm() {
         <label className="form-wide consent-label">
           <input name="authorization" type="checkbox" required />
           <span>
-            I authorize Xtreme Collision Repair to review repair needs and
-            contact me about next steps for this vehicle.
+            {messagingConsentCopy}
           </span>
         </label>
         <label>

@@ -20,6 +20,9 @@ type SubmissionState = {
   message: string;
 };
 
+const messagingConsentCopy =
+  "By checking this box, I agree that Xtreme Collision Repair may contact me by phone, email, or text message about this request, appointment updates, estimate status, and repair follow-up. Message frequency varies. Message and data rates may apply. Reply STOP to opt out and HELP for help. Consent is not a condition of purchase.";
+
 export function RepairPlanRequestForm() {
   const [submission, setSubmission] = useState<SubmissionState>({
     status: "idle",
@@ -85,6 +88,9 @@ export function RepairPlanRequestForm() {
           few photos of the damage so the team can review everything together.
         </span>
       </div>
+      <p className="form-disclosure">
+        {messagingConsentCopy}
+      </p>
 
       <div className="form-grid">
         <label>
@@ -202,8 +208,7 @@ export function RepairPlanRequestForm() {
         <label className="form-wide consent-label">
           <input name="consent" type="checkbox" required />
           <span>
-            I authorize Xtreme Collision Repair to review this information and
-            contact me about next steps for this vehicle.
+            {messagingConsentCopy}
           </span>
         </label>
       </div>
