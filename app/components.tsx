@@ -484,28 +484,49 @@ export function HomepageServicesSection() {
         <SectionIntro
           eyebrow="Core services"
           title="Choose the repair path that fits the damage."
-          text="A simple first scan is better than a long menu. Start with the service category that matches what happened, then go deeper from there."
+          text="Start with the service category that matches what happened. The cards below keep the first step simple."
         />
-        <ServicesGrid limit={4} />
+        <div className="homepage-core-services-grid">
+          {homepageCoreServiceCards.map((service) => (
+            <article className="homepage-core-service-card" key={service.title}>
+              <p className="service-seo">{service.seo}</p>
+              <h3>{service.title}</h3>
+              <p>{service.text}</p>
+              <Link className="text-link" href={service.href}>
+                Learn More
+              </Link>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
 
-const serviceSpotlightCards = [
+const homepageCoreServiceCards = [
   {
-    title: "Collision repair",
-    eyebrow: "Accident damage",
-    text: "Start here if your vehicle needs body work, structural review, refinishing, or help with an insurance claim.",
-    href: "/services/collision-repair",
-    cta: "Schedule collision repair",
+    seo: "Hail damage repair Carrollton TX",
+    title: "Hail Damage & Paintless Dent Repair",
+    text: "Quick storm-damage inspections, photo documentation, and paintless dent repair evaluation when the paint is still intact.",
+    href: "/services/hail-damage-repair",
   },
   {
-    title: "Hail inspection",
-    eyebrow: "Storm damage",
-    text: "Choose this path when the paint is still intact and you want a quick storm-damage inspection first.",
-    href: "/hail-inspection",
-    cta: "Schedule hail repair",
+    seo: "Collision repair Carrollton TX",
+    title: "Collision Repair",
+    text: "Complete body repair planning, structural review, refinishing coordination, and final quality checks after an accident.",
+    href: "/services/collision-repair",
+  },
+  {
+    seo: "Dents and scratches repair Carrollton TX",
+    title: "Dents & Scratches Repair",
+    text: "Door dings, parking-lot scrapes, and bumper scuffs are reviewed for the simplest practical repair path.",
+    href: "/services#dents-scratches-repair",
+  },
+  {
+    seo: "Insurance collision repair Carrollton TX",
+    title: "Insurance Claims Assistance",
+    text: "Claim numbers, estimates, supplements, and approvals are organized so the repair plan stays clear.",
+    href: "/insurance-claims-assistance",
   },
 ];
 
