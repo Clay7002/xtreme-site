@@ -34,7 +34,7 @@ export default function CollisionRepairPage() {
                 text="Xtreme Collision Repair helps restore your vehicle as close as possible to pre-accident condition while keeping you informed throughout the process. The repair plan can include damage documentation, structural review, body repair, refinishing, quality control, and insurance claim support."
               />
               <div className="hero-actions compact-actions">
-                <ButtonLink href="/contact" track="estimate:collision-page">Schedule Your Free Repair Plan</ButtonLink>
+                <ButtonLink href="/contact" track="estimate:collision-page">Schedule a Repair Evaluation</ButtonLink>
                 <ButtonLink href="/insurance-claims-assistance" variant="light">
                   Insurance Claim Help
                 </ButtonLink>

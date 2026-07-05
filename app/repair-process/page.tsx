@@ -15,7 +15,7 @@ export default function RepairProcessPage() {
         <InnerHero
           eyebrow="Repair process"
           title="A clear repair process from repair plan to delivery"
-          text="Customers can understand each step before they call, schedule a free repair plan, or drop off a vehicle."
+          text="Customers can understand each step before they call, schedule a repair evaluation, or drop off a vehicle."
         />
         <section className="section">
           <div className="container">
@@ -26,7 +26,7 @@ export default function RepairProcessPage() {
             />
             <ProcessPreview full />
             <div className="section-cta-row">
-              <ButtonLink href="/contact" track="estimate:repair-process">Schedule Your Free Repair Plan</ButtonLink>
+              <ButtonLink href="/contact" track="estimate:repair-process">Schedule a Repair Evaluation</ButtonLink>
             </div>
           </div>
         </section>

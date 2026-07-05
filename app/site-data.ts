@@ -45,8 +45,9 @@ export type CertificationLogo = {
 
 export type FeaturedReviewItem = {
   quote: string;
-  source: string;
-  context: string;
+  name: string;
+  date: string;
+  initials: string;
 };
 
 export const siteInfo = {
@@ -58,7 +59,8 @@ export const siteInfo = {
   addressLabel: "2025 Midway Road, Suite E, Carrollton, TX 75006",
   shortAddressLabel: "2025 Midway Rd, Suite E",
   hoursLabel: "Mon-Thu: 8:00 am - 5:30 pm; Fri: partial day; Sat-Sun: Closed",
-  googleReviewsHref: "#reviews",
+  googleReviewsHref:
+    "https://www.google.com/maps/search/?api=1&query=2025%20Midway%20Road%20Suite%20E%20Carrollton%20TX%2075006",
   googleLeaveReviewHref: "https://g.page/xtreme-collision-repair/review?rc",
   mapsHref:
     "https://www.google.com/maps/search/?api=1&query=2025%20Midway%20Road%20Suite%20E%20Carrollton%20TX%2075006",
@@ -69,27 +71,25 @@ export const siteInfo = {
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Hail Repair", href: "/hail-inspection" },
-  { label: "Certifications & Equipment", href: "/certifications" },
-  { label: "Repair Process", href: "/repair-process" },
-  { label: "Insurance Claims", href: "/insurance-claims-assistance" },
-  { label: "Resources", href: "/resources" },
-  { label: "Reviews", href: "/reviews" },
   { label: "About Us", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Careers", href: "/about#careers" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Find A Location", href: "/contact#location" },
 ];
 
 export const footerQuickLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
+  { label: "Resources", href: "/resources" },
+  { label: "About Us", href: "/about" },
+  { label: "Careers", href: "/about#careers" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Find A Location", href: "/contact#location" },
   { label: "Repair Process", href: "/repair-process" },
   { label: "Reviews", href: "/reviews" },
   { label: "Gallery", href: "/gallery" },
   { label: "Our Facility", href: "/our-facility" },
   { label: "Certifications & Equipment", href: "/certifications" },
-  { label: "Resources", href: "/resources" },
-  { label: "About Us", href: "/about" },
-  { label: "Careers", href: "/about#careers" },
   { label: "Repair Authorization", href: "/repair-authorization" },
   { label: "Contact", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy-policy" },
@@ -217,33 +217,24 @@ export const nearbyAreas = [
   "surrounding North Texas areas",
 ];
 
-export const heroServiceArea =
-  "Serving Carrollton, Addison, Dallas, Plano, Frisco, Richardson, and surrounding North Texas communities.";
-
 export const servicePanels = [
   {
-    title: "Collision & Hail Repair Services",
+    title: "Collision & hail repair",
     href: "/services",
-    cta: "View Services",
-    text: "Explore collision repair, hail repair, frame and unibody work, refinishing, dent repair, electrical coordination, and final quality checks.",
+    cta: "View services",
+    text: "Start here for collision damage, hail damage, frame work, refinishing, and final quality checks.",
   },
   {
     title: "Insurance Claims Assistance",
     href: "/insurance-claims-assistance",
-    cta: "Get Help With a Claim",
-    text: "Bring the claim number, insurance estimate, and damage photos. Xtreme helps organize the claim path, explain supplements, and advocate for a proper repair plan.",
+    cta: "Get claim help",
+    text: "Bring the claim number, insurance estimate, and damage photos. Xtreme helps organize the claim path and explain supplements.",
   },
   {
-    title: "Customer Resources",
+    title: "Repair resources",
     href: "/resources",
-    cta: "Visit Resources",
-    text: "Learn what to do after an accident, how repair estimates work, what supplements are, and why proper structural repair matters.",
-  },
-  {
-    title: "Certifications & Equipment",
-    href: "/certifications",
-    cta: "Learn More",
-    text: "See OEM certification logos, repair equipment, paint systems, and repair standards that help support quality collision repairs.",
+    cta: "Visit resources",
+    text: "Learn what to do after an accident, how estimates work, and why repair standards matter.",
   },
 ];
 
@@ -385,7 +376,7 @@ export const resourceArticles: ResourceArticle[] = [
     ],
     relatedLinks: [
       { label: "Repair process", href: "/repair-process" },
-      { label: "Schedule Your Free Repair Plan", href: "/contact" },
+      { label: "Schedule a Repair Evaluation", href: "/contact" },
     ],
   },
   {
@@ -770,24 +761,22 @@ export const faqs = [
 
 export const featuredReviewItems: FeaturedReviewItem[] = [
   {
-    quote: "Working with Xtreme Collision has been a blessing.",
-    source: "5-Star Google Review 2025",
-    context: "Body and paint work that the reviewer said they highly recommend.",
+    quote: "Great customer service. My car looks great after the service. Highly recommended.",
+    name: "Tam Nguyen",
+    date: "June 20, 2026",
+    initials: "TN",
   },
   {
-    quote: "Mark Szafranic was very professional and knowledgeable.",
-    source: "5-Star Google Review 2025",
-    context: "Help that stayed on top of the whole repair process.",
+    quote: "Working with Xtreme Collision has been a blessing.",
+    name: "David Felipe Mondragón Floyd",
+    date: "June 19, 2026",
+    initials: "DF",
   },
   {
     quote: "The whole repair process was extremely smooth.",
-    source: "5-Star Google Review 2025",
-    context: "Weekly status updates and top-tier craftsmanship.",
-  },
-  {
-    quote: "Great communication, and honest.",
-    source: "5-Star Google Review 2025",
-    context: "A safer-feeling first body shop experience with clear updates.",
+    name: "Kathy Krug",
+    date: "June 18, 2026",
+    initials: "KK",
   },
 ];
 

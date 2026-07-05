@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import {
+  ButtonLink,
   FinalCTA,
   InnerHero,
   PageShell,
-  ReviewsSection,
   RepairStartChecklist,
   SectionIntro,
 } from "../components";
@@ -11,9 +11,9 @@ import { RepairPlanRequestForm } from "../repair-plan-request-form";
 import { siteInfo } from "../site-data";
 
 export const metadata: Metadata = {
-  title: "Contact Xtreme Collision Repair | Schedule Your Free Repair Plan",
+  title: "Contact Xtreme Collision Repair | Call, Get Directions, or Request Service",
   description:
-    "Contact Xtreme Collision Repair in Carrollton, TX for collision repair, hail repair, insurance help, and a free repair-plan review with photo upload.",
+    "Contact Xtreme Collision Repair in Carrollton, TX for collision repair, hail repair, insurance help, phone support, and directions to the shop.",
 };
 
 export default function ContactPage() {
@@ -21,22 +21,26 @@ export default function ContactPage() {
     <PageShell>
       <main>
         <InnerHero
-          eyebrow="Contact / Schedule Your Free Repair Plan"
-          title="Schedule Your Free Repair Plan"
-          text="Share your phone number, vehicle details, insurance information, and damage photos so the team can review the repair plan."
+          eyebrow="Contact / Schedule a Repair Evaluation"
+          title="Schedule a Repair Evaluation"
+          text="Call the shop for the fastest response or use the contact details below to plan your visit, share vehicle information, and get directions."
         />
-        <ReviewsSection />
+        <div className="container contact-hero-actions">
+          <ButtonLink href={siteInfo.phoneHref} track="phone:contact-hero">
+            Call Now
+          </ButtonLink>
+          <ButtonLink href={siteInfo.mapsHref} track="directions:contact-hero" variant="light">
+            Get Directions
+          </ButtonLink>
+        </div>
         <section className="section" id="location">
           <div className="container contact-layout">
             <div>
               <SectionIntro
-                eyebrow="Repair plan request"
-                title="Share the basics and upload your photos."
-                text="Use the form below to start a collision or hail repair review. The more details you include, the easier it is for the shop to prepare the next step."
+                eyebrow="Repair evaluation"
+                title="Start with a quick call or visit."
+                text="Use the contact details below for collision, hail, or insurance-related repair planning. Call if you need the fastest response."
               />
-              <p className="contact-review-note">
-                Customers mention clear communication and follow-through in the reviews, and this form is the fastest way to start your own repair-plan review.
-              </p>
               <RepairPlanRequestForm />
               <div style={{ marginTop: "28px" }}>
                 <RepairStartChecklist />

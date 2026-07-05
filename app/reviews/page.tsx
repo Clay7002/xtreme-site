@@ -4,7 +4,6 @@ import {
   InnerHero,
   PageShell,
   ReviewsSection,
-  SectionIntro,
 } from "../components";
 
 export const metadata: Metadata = {
@@ -20,17 +19,9 @@ export default function ReviewsPage() {
         <InnerHero
           eyebrow="Real customer reviews"
           title="Featured Google review excerpts from local customers"
-          text="See the actual customer feedback Xtreme highlights on the site, with notes about repair quality, communication, and delivery."
+          text="See featured customer feedback Xtreme highlights on the site, then jump to the public Google profile or review form for the full record."
         />
         <ReviewsSection />
-        <section className="section">
-          <div className="container narrow-content">
-            <SectionIntro
-              title="A customer experience built around clarity"
-              text="Xtreme focuses on clear repair communication, organized insurance support, careful quality checks, and a smoother pickup experience."
-            />
-          </div>
-        </section>
         <FinalCTA />
       </main>
     </PageShell>
