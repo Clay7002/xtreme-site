@@ -511,7 +511,7 @@ const homepageCoreServiceCards = [
     seo: "Hail damage repair Carrollton TX",
     title: "Hail Damage & Paintless Dent Repair",
     text: "Quick storm-damage inspections, photo documentation, and paintless dent repair evaluation when the paint is still intact.",
-    href: "/services/hail-damage-repair",
+    href: "/hail-repair",
   },
   {
     seo: "Collision repair Carrollton TX",
@@ -1180,8 +1180,8 @@ export function HailInspectionSection() {
           <div className="hero-actions compact-actions">
             <ButtonLink href="/contact" track="hail:inspection-primary">Start Hail Repair Review</ButtonLink>
             <p className="hero-action-note">
-              <Link className="text-link" href="/services/hail-damage-repair" data-track="hail:inspection-secondary">
-                See how the shop handles hail repair
+              <Link className="text-link" href="/hail-repair" data-track="hail:inspection-secondary">
+                See the dedicated hail repair page
               </Link>
             </p>
           </div>
