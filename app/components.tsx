@@ -290,7 +290,10 @@ export function HeroSection() {
       </div>
       <div className="container hero-content">
         <p className="eyebrow">5-Star collision & hail repair in North Texas</p>
-        <h1>Collision & Hail Repair in North Texas Backed by a Lifetime Limited Warranty</h1>
+        <h1>
+          <span className="hero-title-desktop">Collision &amp; Hail Repair in North Texas Backed by a Lifetime Limited Warranty</span>
+          <span className="hero-title-mobile">Collision &amp; Hail Repair Backed by a Lifetime Warranty</span>
+        </h1>
         <p className="hero-subheadline">
           Xtreme Collision Repair repairs cars, trucks, and SUVs with deductible
           assistance, a free loaner, manufacturer-certified repairs, and a process

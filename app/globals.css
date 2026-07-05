@@ -566,6 +566,10 @@ svg {
   line-height: 1;
 }
 
+.hero-title-mobile {
+  display: none;
+}
+
 .hero-subheadline,
 .inner-hero p {
   max-width: 760px;
@@ -2227,7 +2231,7 @@ svg {
 
 @media (max-width: 760px) {
   body {
-    padding-bottom: 72px;
+    padding-bottom: 96px;
   }
 
   .container {
@@ -2236,10 +2240,10 @@ svg {
 
   .top-contact-inner {
     min-height: 0;
-    flex-direction: row;
-    align-items: center;
-    gap: 6px;
-    padding: 9px 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px 0;
   }
 
   .top-contact-links {
@@ -2255,9 +2259,24 @@ svg {
     display: none;
   }
 
+  .top-contact-item {
+    min-width: 0;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  .top-contact-call {
+    justify-content: flex-start;
+  }
+
+  .top-contact-call .top-contact-value {
+    display: inline;
+  }
+
   .header-inner {
-    gap: 14px;
-    min-height: 88px;
+    gap: 12px;
+    min-height: 76px;
+    padding: 12px 0 14px;
   }
 
   .brand {
@@ -2265,16 +2284,17 @@ svg {
   }
 
   .brand-logo {
-    width: 166px;
+    width: 164px;
   }
 
   .site-header .brand-logo {
-    width: 228px;
-    max-height: 76px;
+    width: 212px;
+    max-height: 66px;
   }
 
   .site-header .brand {
     align-items: center;
+    gap: 2px;
   }
 
   .brand-copy {
@@ -2293,6 +2313,28 @@ svg {
     margin-left: 0;
   }
 
+  .mobile-menu summary {
+    min-height: 40px;
+    border-color: rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 8px 14px 8px 13px;
+    font-size: 13px;
+    letter-spacing: 0.01em;
+  }
+
+  .mobile-menu summary::before {
+    width: 14px;
+    height: 10px;
+    margin-right: 8px;
+    border-radius: 0;
+    background:
+      linear-gradient(currentColor, currentColor) 0 0 / 100% 2px no-repeat,
+      linear-gradient(currentColor, currentColor) 0 50% / 100% 2px no-repeat,
+      linear-gradient(currentColor, currentColor) 0 100% / 100% 2px no-repeat;
+    content: "";
+  }
+
   .mobile-menu-panel {
     right: 0;
   }
@@ -2305,18 +2347,21 @@ svg {
     z-index: 80;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    gap: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.14);
     background: rgba(8, 10, 15, 0.96);
-    padding: 10px 14px;
+    padding: 9px 12px calc(10px + env(safe-area-inset-bottom));
     box-shadow: 0 -14px 34px rgba(0, 0, 0, 0.28);
   }
 
   .sticky-mobile-cta a {
     display: grid;
-    min-height: 48px;
+    min-height: 46px;
     place-items: center;
     border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 13px;
+    line-height: 1.1;
     background: var(--orange);
     color: var(--white);
     font-weight: 900;
@@ -2333,26 +2378,60 @@ svg {
   }
 
   .hero-content {
-    padding: 58px 0 52px;
+    padding: 42px 0 112px;
   }
 
   .hero-content h1,
   .inner-hero h1 {
-    font-size: 40px;
-    line-height: 1.05;
+    max-width: 13ch;
+    font-size: 37px;
+    line-height: 1.02;
+  }
+
+  .hero-title-desktop {
+    display: none;
+  }
+
+  .hero-title-mobile {
+    display: block;
   }
 
   .hero-subheadline,
   .hero-service-area,
   .inner-hero p {
-    font-size: 17px;
-    line-height: 1.58;
+    max-width: 36ch;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .hero-service-area {
+    max-width: 32ch;
+  }
+
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .hero-actions .button-secondary {
+    width: fit-content;
+    min-width: 46%;
+    max-width: 62%;
+    padding-inline: 16px;
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .hero-actions .button-primary {
+    box-shadow: 0 14px 30px rgba(47, 155, 255, 0.2);
   }
 
   .hero::before {
     background:
       linear-gradient(180deg, rgba(15, 20, 28, 0.97) 0%, rgba(15, 20, 28, 0.88) 54%, rgba(15, 20, 28, 0.7) 100%),
       linear-gradient(90deg, rgba(15, 20, 28, 0.92), rgba(15, 20, 28, 0.45));
+  }
+
+  .site-header::before {
+    display: none;
   }
 
   .shop-visual {
